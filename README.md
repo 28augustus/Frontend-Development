@@ -39,12 +39,12 @@ link naar de website die je gaat namaken óf de naam/omschrijving van je eigen o
 #### Screenshot(s) van de eerste pagina (small screen):
 
 De nieuwe bibliotheek Home pagina
-<img src="(readme-images/de-nieuwe-bibliotheek-home-pagina.png)" width="375px" alt="Roze pagina van de nieuwe bibliotheek met een storing notificatie en daaronder de titel Heel Nederland leest">
+<img src="readme-images/de-nieuwe-bibliotheek-home-pagina.png" width="375px" alt="Roze pagina van de nieuwe bibliotheek met een storing notificatie en daaronder de titel Heel Nederland leest">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 
 De nieuwe bibliotheek Educatie pagina  
- <img src="(readme-images/de-nieuwe-bibliotheek-educatie-pagina.png)" width="375px" alt="Roze pagina van de nieuwe bibliotheek met de titel De leukste activiteiten voor scholen, met daaronder uitleg">
+ <img src="readme-images/de-nieuwe-bibliotheek-educatie-pagina.png" width="375px" alt="Roze pagina van de nieuwe bibliotheek met de titel De leukste activiteiten voor scholen, met daaronder uitleg">
 
 </details>
 
