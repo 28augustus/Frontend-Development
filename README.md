@@ -33,17 +33,17 @@ Surface plane
 
 ### Je opdracht:
 
-https://www.denieuwebibliotheek.nl/
+https://www.hva.nl/
 link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
 
 #### Screenshot(s) van de eerste pagina (small screen):
 
-De nieuwe bibliotheek Home pagina
+De HvA Home pagina
 <img src="readme-images/hva-home.png" width="375px" alt="Roze pagina van de nieuwe bibliotheek met een storing notificatie en daaronder de titel Heel Nederland leest">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 
-De nieuwe bibliotheek Educatie pagina  
+De HvA CMD pagina  
  <img src="readme-images/hva-cmd.png" width="375px" alt="Roze pagina van de nieuwe bibliotheek met de titel De leukste activiteiten voor scholen, met daaronder uitleg">
 
 </details>
@@ -57,9 +57,7 @@ De nieuwe bibliotheek Educatie pagina
 
 Lijst met je bevindingen die in de test naar voren kwamen:
 
-(-- IS ROOT, ZODAT JE ALLES DIE KLEUR KAN GEVEN, EN IK ZIE AL METEEN DAT IK DAT NIET SNEL GEBRUIK.
-
-DE ANDERE CODE NAMAKEN WAS LASTIG, OMDAT IK NIET WIST WAAR IK NAAR MOEST GAAN KIJKEN, MAAR HET WERKT NU EINDELIJK WEL)
+1. Op de HvA website vertelt de verteller wat er in de tabs staan, maar hij gaat er heel vaak opnieuw overheen. Dus als hij het eerste deel heeft gehad, dan vertelt hij dat als nog er bij. Dus het duurt super lang om er doorheen te gaan, aangezien hij alles opnieuw blijft lezen.
 
 </details>
 
