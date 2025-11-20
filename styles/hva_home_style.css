@@ -1,0 +1,39 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+/****************/
+/* Heb nog dark en light modus nodig met @media. 
+Om dit snel te doen kan je met roots werken en de text, 
+BG en Footer BG aan te passen hieronder, maar dan voor media (komt later) */
+/****************/
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+main {
+  background-color: var(--color-background);
+}
+
+/* De H1 kan niet in algemeen staan dit moet worden aangepast (voor nu om te kijken hoe het er uit ziet */
+h1,
+h2,
+h3,
+p,
+a {
+  color: var(--color-text);
+}
+
+img {
+  max-width: 100%;
+}

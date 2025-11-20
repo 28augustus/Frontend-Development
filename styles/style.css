@@ -1,27 +1,42 @@
+@font-face {
+  font-family: "MY POPPINS";
+  src: url("../fonts/e807dee2426166ad-s.p.woff2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MY POPPINS";
+  src: url("../fonts/851c14db057e20c2-s.p.woff2");
+  font-style: italic;
+}
+
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
-
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+
+/****************/
+/* Heb nog dark en light modus nodig met @media. 
+Om dit snel te doen kan je met roots werken en de text, 
+BG en Footer BG aan te passen hieronder, maar dan voor media (komt later) */
+/****************/
+
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+  /* startje */
+  --color-text: #fff;
+  --color-background: #351fb7;
+  --color-header-background: #351fb7;
+  --color-footer-background: #000;
+  --color-menu-color: #fff;
 }
-
-
-
-
 
 /****************/
 /* JOUW STYLING */
@@ -29,3 +44,93 @@
 
 /* jouw code */
 
+body {
+  font-family: "MY POPPINS";
+}
+
+main {
+  background-color: var(--color-background);
+}
+
+header {
+  background-color: var(--color-header-background);
+}
+
+header img {
+  max-width: 100%;
+  /* max-width: 48em; */
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+a {
+  color: var(--color-text);
+}
+
+button[aria-label="toggle menu"] {
+  appearance: none;
+
+  width: 2.5em;
+  aspect-ratio: 1/1;
+
+  background-color: var(--color-header-background);
+  border: none;
+  padding: 0;
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+button span {
+  display: block;
+
+  width: 1.5em;
+  height: 0.1em;
+  background-color: var(--color-menu-color);
+
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+button span:nth-of-type(1) {
+  translate: 0 -0.3em;
+}
+
+button span:nth-of-type(3) {
+  translate: 0 0.3em;
+}
+
+button.is-open span:nth-of-type(1) {
+  translate: 0 0;
+  rotate: 45deg;
+}
+
+button.is-open span:nth-of-type(3) {
+  translate: 0 0;
+  rotate: -45deg;
+}
+
+/**************/
+Tussenblok
+/**************/
+
+img {
+  max-width: 100%;
+}
+
+footer {
+  background-color: var(--color-footer-background);
+}
+
+footer a {
+  text-decoration: none;
+  line-height: 2.5em;
+}
+
+footer img {
+  max-width: 10%;
+}

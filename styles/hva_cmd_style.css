@@ -1,0 +1,22 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+/****************/
+/* Heb nog dark en light modus nodig met @media. 
+Om dit snel te doen kan je met roots werken en de text, 
+BG en Footer BG aan te passen hieronder, maar dan voor media (komt later) */
+/****************/
+
+/****************/
+/* JOUW STYLING */
+/****************/
