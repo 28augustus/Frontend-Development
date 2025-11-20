@@ -39,12 +39,12 @@ link naar de website die je gaat namaken óf de naam/omschrijving van je eigen o
 #### Screenshot(s) van de eerste pagina (small screen):
 
 De HvA Home pagina
-<img src="readme-images/hva_home.png" width="375px" alt="Roze pagina van de nieuwe bibliotheek met een storing notificatie en daaronder de titel Heel Nederland leest">
+<img src="readme-images/hva_home.png" width="375px" alt="HvA home pagina">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 
 De HvA CMD pagina  
- <img src="readme-images/hva_cmd.png" width="375px" alt="Roze pagina van de nieuwe bibliotheek met de titel De leukste activiteiten voor scholen, met daaronder uitleg">
+ <img src="readme-images/hva_cmd.png" width="375px" alt="CMD introductie pagina">
 
 </details>
 
@@ -78,16 +78,16 @@ Lijst met je bevindingen die in de test naar voren kwamen:
 
 ### de hele pagina:
 
-  <img src="readme-images/hva_home.svg" width="375px" alt="breakdown van de hele pagina">
-  <img src="readme-images/hva_cmd.svg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown_hva_home.svg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown_hva_cmd.svg" width="375px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu):
 
-  <img src="readme-images/hva_menu.svg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/breakdown_hva_menu.svg" width="375px" alt="breakdown van een dynamisch deel">
 
 ### wellicht nog een dynamisch deel (bijv filter):
 
-  <img src="readme-images/hva_zoek_functie.svg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/breakdown_hva_zoek_functie.svg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
