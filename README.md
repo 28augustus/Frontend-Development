@@ -57,8 +57,18 @@ De HvA CMD pagina
 
 Lijst met je bevindingen die in de test naar voren kwamen:
 
-1. Op de HvA website vertelt de verteller wat er in de tabs staan, maar hij gaat er heel vaak opnieuw overheen. Dus als hij het eerste deel heeft gehad, dan vertelt hij dat als nog er bij. Dus het duurt super lang om er doorheen te gaan, aangezien hij alles opnieuw blijft lezen.
+1. De screenreader zegt undefined, er is dus een label die leeg is of ontbreekt.
+2. De zoekfunctie heeft visueel een pop-up, voor als je vaker iets zoekt, dan komt dat woord terug als een pop-up, maar de screen-reader leest dat niet.
+3. De zoekknop wordt vermeld als uitgeschakeld, maar je ziet niet waar of wat het is, aangezien je gewoon kan zoeken (kan iemand tot verwarring brengen).
+4. Bij de carousel staan er pijlen om er door heen te navigeren, als je helemaal tot het einde gaat klikken en verder wilt gaan met de TAB functie, dan spring je terug naar het begin van de pagina, het zelfde gebeurt als je terug wilt klikken met de knoppen.
 
+<!-- 5 en 6 en 7 moeten nog beter worden onderzocht -->
+
+5. In de footer staat alles als een H2, behalve het Social kopje, dat is een H3
+6. Instagram heeft geen alt tekst, maar Facebook en LinkedIn hebben dat wel. (De screenreader)
+7. De carousel wordt het eerste list item volledig vertelt, maar de rest niet echt, alleen de kopjes
+
+8. Iets dame opviel is dat op de CMD pagina zijn de H2 kleiner dan de H3, maar specifiek gedeelte
 </details>
 
 ## Breakdownschets (week 1)
@@ -68,7 +78,7 @@ Lijst met je bevindingen die in de test naar voren kwamen:
 
 ### de hele pagina:
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="pdf/hva_home.pdf" width="375px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu):
 
@@ -98,6 +108,10 @@ samen met je groepje opstellen
 | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
 | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
 | ...            | ...                | ...          | ...              |
+
+Hoe haal ik de tekst meer naar links?
+Er staat een svg voor de pijl, maar ik kan het niet vinden, is er een andere maneir?
+Hoe pas ik de order aan H2 actueel en H3's?
 
 ### Verslag van meeting
 
