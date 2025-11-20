@@ -78,14 +78,8 @@ Lijst met je bevindingen die in de test naar voren kwamen:
 
 ### de hele pagina:
 
-<!--
-Source - https://stackoverflow.com/a
-Posted by Batfan, modified by community. See post 'Timeline' for change history
-Retrieved 2025-11-20, License - CC BY-SA 4.0
--->
-  <embed src="file:///C:/Users/jadas/OneDrive%20-%20HvA/Documenten/HVA/Leerjaar%202/Frontend%20Development/Week%201/Project/basiswebsite/pdf/hva_home.pdf" width="500" height="375">
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/hva_home.svg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/hva_cmd.svg" width="375px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu):
 
