@@ -58,17 +58,28 @@ De HvA CMD pagina
 Lijst met je bevindingen die in de test naar voren kwamen:
 
 1. De screenreader zegt undefined, er is dus een label die leeg is of ontbreekt.
+   <img src="readme-images/hva_undefined.png" width="375px" alt="Blauw vak in scherm op hva home pagina">
+
 2. De zoekfunctie heeft visueel een pop-up, voor als je vaker iets zoekt, dan komt dat woord terug als een pop-up, maar de screen-reader leest dat niet.
+   <img src="readme-images/hva_zoekbalk_pop_up.png" width="375px" alt="Blauw vak in scherm op hva home pagina">
+
 3. De zoekknop wordt vermeld als uitgeschakeld, maar je ziet niet waar of wat het is, aangezien je gewoon kan zoeken (kan iemand tot verwarring brengen).
 4. Bij de carousel staan er pijlen om er door heen te navigeren, als je helemaal tot het einde gaat klikken en verder wilt gaan met de TAB functie, dan spring je terug naar het begin van de pagina, het zelfde gebeurt als je terug wilt klikken met de knoppen.
+   <img src="readme-images/hva_pijlen.png" width="375px" alt="Blauw vak in scherm op hva home pagina">
 
 <!-- 5 en 6 en 7 moeten nog beter worden onderzocht -->
 
 5. In de footer staat alles als een H2, behalve het Social kopje, dat is een H3
-6. Instagram heeft geen alt tekst, maar Facebook en LinkedIn hebben dat wel. (De screenreader)
-7. De carousel wordt het eerste list item volledig vertelt, maar de rest niet echt, alleen de kopjes
+   <img src="readme-images/hva_social_en_instagram.png" width="375px" alt="Blauw vak in scherm op hva home pagina">
 
-8. Iets dame opviel is dat op de CMD pagina zijn de H2 kleiner dan de H3, maar specifiek gedeelte
+6. Instagram heeft geen alt tekst, maar Facebook en LinkedIn hebben dat wel. (De screenreader)
+   <img src="readme-images/hva_social_en_instagram.png" width="375px" alt="Blauw vak in scherm op hva home pagina">
+
+7. De carousel wordt het eerste list item volledig vertelt, maar de rest niet echt, alleen de kopjes
+   <img src="readme-images/hva_pijlen.png" width="375px" alt="Blauw vak in scherm op hva home pagina">
+8. Iets dat mij opviel is dat op de CMD pagina zijn de H2 kleiner dan de H3, maar specifiek gedeelte
+   <img src="readme-images/hva_cmd_h2_en_h3.png" width="375px" alt="Blauw vak in scherm op hva home pagina">
+
 </details>
 
 ## Breakdownschets (week 1)
@@ -110,9 +121,30 @@ samen met je groepje opstellen
 | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
 | ...            | ...                | ...          | ...              |
 
-Hoe haal ik de tekst meer naar links?
-Er staat een svg voor de pijl, maar ik kan het niet vinden, is er een andere maneir?
-Hoe pas ik de order aan H2 actueel en H3's?
+Jada
+
+1. Hoe haal ik de tekst meer naar links?
+2. Er staat een svg voor de pijl, maar ik kan het niet vinden, is er een andere maneir?
+3. Hoe pas ik de order aan H2 actueel en H3's?
+
+Daniël
+
+1. Hoe kan ik makkelijk meerdere hamburger menu’s gebruiken
+2. ⁠Font face lijkt niet te werken bij mij
+3. ⁠Hoe kan ik mijn video in het aan de zijkanten laten wegvagen
+
+Annabel
+
+1. Waarom doet mijn hamburger menu het de ene keer wel en de andere keer niet?
+2. ⁠hoe zorg ik ervoor dat de navigatie op de index mee schaalt als het scherm groter wordt?
+3. ⁠hoe zorg ik voor witruimte rond de tekst?
+4. ⁠hoe zet ik de h1 en de p die daarbij hoort in het midden als het niet in een container zit?
+
+Sid
+
+1. Hoe verwerk ik advertenties in mn pagina.
+2. ⁠hoe maak ik zo'n achtergrond zoals op de echte site
+3. ⁠hoe maak ik een zoekbalk
 
 ### Verslag van meeting
 
