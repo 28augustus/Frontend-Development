@@ -150,9 +150,9 @@ Sid
 
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
+- Ik moet mijn alt teksten beter gaan schrijven, nu staat er nog te weinig
+- De tijd kan ik met <time> aanspreken
+- Voor iconen moet ik svg's gebruiken vanuit svgrepo
 - ...
 
 </details>
@@ -175,6 +175,18 @@ samen met je groepje opstellen
 | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
 | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
 | ...            | ...                | ...          | ...              |
+
+Jada
+
+1. Hoe krijg ik de svg en link naast elkaar?
+2. Hoe krijg ik een zwart vierkant achter mijn time
+3. Hoe krijg ik mijn H1 samen met de nav (dat de background een geheel is)?
+
+Daniël
+
+Annabel
+
+Sid
 
 ### Verslag van meeting
 
