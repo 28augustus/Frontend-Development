@@ -193,6 +193,10 @@ Annabel
 
 Sid
 
+1. Is er echt geen betere en overzichtelijkere manier om css te stylen?
+2. Zijn er dingen die ik op dit punt beter kan herstructureren voordat ik verder ga?
+3. Is het verstandig om eerst de volledige dektop-versie af te maken voordat ik overstap naar responsive?
+
 ### Verslag van meeting
 
 hier na afloop snel de uitkomsten van de meeting vastleggen
