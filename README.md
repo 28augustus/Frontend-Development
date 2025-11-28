@@ -186,6 +186,11 @@ Daniël
 
 Annabel
 
+1. Hoe krijg ik die h2 in het midden van de pagina, positioneren lijkt niet te helpen
+2. ⁠hoe krijg ik de video en h2 in het midden.
+3. ⁠is het genoeg?
+4. ⁠moet het logo een svg zijn
+
 Sid
 
 ### Verslag van meeting
