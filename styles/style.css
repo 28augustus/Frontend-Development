@@ -34,8 +34,11 @@ BG en Footer BG aan te passen hieronder, maar dan voor media (komt later) */
   --color-text: #fff;
   --color-background: #351fb7;
   --color-header-background: #351fb7;
+  --color-nav-background: #25167a;
   --color-footer-background: #000;
   --color-menu-color: #fff;
+  --spacing-md:0 5%;;
+
 }
 
 /****************/
@@ -48,21 +51,44 @@ body {
   font-family: "MY POPPINS";
 }
 
-main {
-  background-color: var(--color-background);
-}
-
 header {
   background-color: var(--color-header-background);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 header img {
-  max-width: 100%;
+  max-width: 40%;
   /* max-width: 48em; */
 }
 
-ul {
-  list-style: none;
+main {
+  background-color: var(--color-background);
+  display: grid;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+main section:nth-of-type(1) {
+  background-color: var(--color-nav-background);
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+h1 {
+  background-color: var(--color-nav-background);
+  font-weight: 800;
+}
+
+a {
+  text-decoration: none;
 }
 
 p,
@@ -73,7 +99,7 @@ a {
 button[aria-label="toggle menu"] {
   appearance: none;
 
-  width: 2.5em;
+  width: 0.5em;
   aspect-ratio: 1/1;
 
   background-color: var(--color-header-background);
@@ -109,28 +135,58 @@ button.is-open span:nth-of-type(1) {
   rotate: 45deg;
 }
 
+button.is-open span:nth-of-type(2) {
+  scale: 0 1;
+}
+
 button.is-open span:nth-of-type(3) {
   translate: 0 0;
   rotate: -45deg;
 }
 
-/**************/
-Tussenblok
-/**************/
-
 img {
   max-width: 100%;
 }
 
+/**************
+Footer styling
+**************/
+
 footer {
   background-color: var(--color-footer-background);
+  display: grid;
+}
+
+footer h2 {
+  font-size: 1em;
+  position: relative;
+
+  width: fit-content;
+}
+
+footer h2::after {
+  content: "";
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--color-text);
+  position: absolute;
+  bottom: -0.4em;
+  left: 0.8em;
+}
+
+footer section {
+  padding: 0 3%;
+}
+
+footer section:nth-of-type(5) {
+  padding: 0;
+}
+
+footer svg {
+  padding-right: 0.6em;
 }
 
 footer a {
-  text-decoration: none;
   line-height: 2.5em;
-}
-
-footer img {
-  max-width: 10%;
+  font-size: 0.9em;
 }

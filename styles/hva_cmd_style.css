@@ -10,13 +10,27 @@
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
-
-/****************/
-/* Heb nog dark en light modus nodig met @media. 
-Om dit snel te doen kan je met roots werken en de text, 
-BG en Footer BG aan te passen hieronder, maar dan voor media (komt later) */
-/****************/
-
+:root {
+  /* startje */
+  --color-text: #fff;
+  --color-background: #351fb7;
+  --color-header-background: #351fb7;
+  --color-nav-background: #25167a;
+  --color-footer-background: #000;
+  --color-menu-color: #fff;
+}
 /****************/
 /* JOUW STYLING */
 /****************/
+
+h1,
+h2,
+h3,
+p,
+a {
+  color: var(--color-text);
+}
+
+footer {
+  color: var(--color-text);
+}
