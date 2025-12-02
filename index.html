@@ -26,10 +26,21 @@
         <span> </span>
       </button>
 
-      <img
+      <ul aria-hidden="true">
+        <li><a href="#">Studeren</a></li>
+        <li><a href="#">onderzoek</a></li>
+        <li><a href="#">Over de HvA</a></li>
+        <li><a href="#">NL</a></li>
+      </ul>
+
+      <a href="">
+        <img
         src="images/hva_logo_small.png"
         alt="Logo van Hogeschool van Amsterdam. Het logo navigatie naar home pagina"
       />
+      </a>
+
+      
 
       <button>
         <svg
@@ -82,9 +93,9 @@
     </header>
 
     <main>
-      <h1>Stap in jouw toekomst</h1>
-
+      
       <section>
+        <h1>Stap in jouw toekomst</h1>
         <h2>Direct naar</h2>
         <!--Navigatie Start pagina begin-->
         <ul>
@@ -116,7 +127,7 @@
             <a
               href="https://www.hva.nl/studeren/onderwijs/alle-opleidingen-en-cursussen"
               >Alle opleidingen
-              </a>
+            </a>
           </li>
 
           <li>
@@ -249,27 +260,16 @@
       </section>
 
       <section>
-        <h2><strong>Open dag 13 december</strong></h2>
-        <!-- Aria label voor december? -->
+        <h2>Open dag 13 december</h2>
+        <p>
+          <time>13 dec</time>
+          <time>10.00 - 14.00</time>
+        </p>
 
-           <time><strong>13 dec</strong></time>
-           <time>10.00 - 14.00</time>
-           <!-- <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-             <g
-             id="SVGRepo_tracerCarrier"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              <rect x="1" y="1" width="5" height="5" fill="#FFFFFF"></rect>
-            </g>
-          </svg> -->
-          
-          <img
+        <img
           src="images/hva_people_walking.jpg"
           alt="dummy img. HvA Studenten"
-          />
+        />
 
         <p>
           Wil je meer weten over onze opleidingen en de sfeer proeven op de
@@ -277,6 +277,7 @@
           november.
         </p>
 
+        <a href="https://www.hva.nl/studeren/studiekeuze/open-dagen">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -300,17 +301,15 @@
               ></path>
             </g>
           </svg>
-
-          <a href="https://www.hva.nl/studeren/studiekeuze/open-dagen"
-            >Meer open dag info en aanmelden</a
-          >
+          Meer open dag info en aanmelden</a
+        >
       </section>
 
       <section>
         <h2>Actueel</h2>
 
         <article>
-          <h3><strong> Creatieve AI-oplossingen ontwerpen</strong></h3>
+          <h3>Creatieve AI-oplossingen ontwerpen</h3>
 
           <img
             src="images/hva_carousel_ai_art.jpg"
@@ -322,7 +321,9 @@
             minor ‘AI voor Creatieve Denkers en Ontwerpers’ laten onze studenten
             zien wat kunstmatige intelligentie allemaal te bieden heeft.
           </p>
-
+          <a
+            href="https://www.hva.nl/nieuws/2025/9/experimenteren-mag-studenten-ontwerpen-creatieve-ai-oplossingen"
+          >
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -346,15 +347,12 @@
                 ></path>
               </g>
             </svg>
-
-            <a
-              href="https://www.hva.nl/nieuws/2025/9/experimenteren-mag-studenten-ontwerpen-creatieve-ai-oplossingen"
-              ><strong>Ontdek wat onze studenten doen met AI</strong></a
-            >
+            Ontdek wat onze studenten doen met AI
+          </a>
         </article>
 
         <article>
-          <h3><strong>Ouderen helpen gezonder te eten</strong></h3>
+          <h3>Ouderen helpen gezonder te eten</h3>
 
           <p>
             Studenten Voeding en Diëtetiek Fadoua en Falak ondersteunden tijdens
@@ -368,6 +366,9 @@
             alt="dummy img. HvA studenten"
           />
 
+          <a
+            href="https://www.hva.nl/nieuws/2025/9/ik-wil-mensen-helpen-gezond-te-blijven.-met-voeding-kun-je-heel-veel-bereiken-ook-preventief"
+          >
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -391,18 +392,13 @@
                 ></path>
               </g>
             </svg>
-
-            <a
-              href="https://www.hva.nl/nieuws/2025/9/ik-wil-mensen-helpen-gezond-te-blijven.-met-voeding-kun-je-heel-veel-bereiken-ook-preventief"
-              ><strong>Lees het verhaal van Fadoua en Falak</strong></a
-            >
+            Lees het verhaal van Fadoua en Falak
+          </a>
         </article>
 
         <!-- Meer white space -->
         <article>
-          <h3>
-            <strong>Oplossingen bedenken voor slimmer energieverbruik</strong>
-          </h3>
+          <h3>Oplossingen bedenken voor slimmer energieverbruik</h3>
 
           <p>
             Student mechanical engineering Christian studeerde af op een
@@ -416,7 +412,9 @@
             alt="dummy img. HvA studenten"
           />
 
-            <svg
+          <a
+            href="https://www.hva.nl/nieuws/2025/8/uiteindelijk-wil-ik-bijdragen-aan-een-duurzame-en-efficiente-samenleving"
+            ><svg
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -439,18 +437,15 @@
                 ></path>
               </g>
             </svg>
-
-            <a
-              href="https://www.hva.nl/nieuws/2025/8/uiteindelijk-wil-ik-bijdragen-aan-een-duurzame-en-efficiente-samenleving"
-              ><strong>Lees het verhaal van Christian</strong></a
-            >
+            Lees het verhaal van Christian
+          </a>
         </article>
       </section>
     </main>
 
     <footer>
       <section>
-        <h2><strong>studeren</strong></h2>
+        <h2>studeren</h2>
 
         <ul>
           <li>
@@ -502,7 +497,7 @@
       </section>
 
       <section>
-        <h2><strong>Samenwerken</strong></h2>
+        <h2>Samenwerken</h2>
 
         <ul>
           <li>
@@ -532,7 +527,7 @@
       </section>
 
       <section>
-        <h2><strong>Over de HvA</strong></h2>
+        <h2>Over de HvA</h2>
 
         <ul>
           <li>
@@ -560,7 +555,7 @@
       </section>
 
       <section>
-        <h2><strong>Social</strong></h2>
+        <h2>Social</h2>
 
         <ul>
           <li>
