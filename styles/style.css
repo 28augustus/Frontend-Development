@@ -1,3 +1,7 @@
+/**************/
+/* FONTS */
+/**************/
+
 @font-face {
   font-family: "MY POPPINS";
   src: url("../fonts/e807dee2426166ad-s.p.woff2");
@@ -10,17 +14,8 @@
   font-style: italic;
 }
 
-/**************/
-/* CSS REMEDY */
-/**************/
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
 /*********************/
-/* CUSTOM PROPERTIES */
+/* KLEURTJES */
 /*********************/
 
 /****************/
@@ -37,54 +32,26 @@ BG en Footer BG aan te passen hieronder, maar dan voor media (komt later) */
   --color-nav-background: #25167a;
   --color-footer-background: #000;
   --color-menu-color: #fff;
-  --spacing-md:0 5%;;
-
+  --spacing-md: 0 5%;
 }
 
-/****************/
-/* JOUW STYLING */
-/****************/
+/**************/
+/*ALGEMENE STYLING */
+/**************/
 
-/* jouw code */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "MY POPPINS";
 }
 
-header {
-  background-color: var(--color-header-background);
-  display: flex;
-  justify-content: space-around;
-  padding-top: 5%;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-header img {
-  max-width: 40%;
-  /* max-width: 48em; */
-}
-
-main {
-  background-color: var(--color-background);
-  display: grid;
-  /* display: flex;
-  flex-direction: column; */
-}
-
-main section:nth-of-type(1) {
-  background-color: var(--color-nav-background);
-}
-
 button {
   border: none;
   background: none;
-}
-
-h1 {
-  background-color: var(--color-nav-background);
-  font-weight: 800;
 }
 
 a {
@@ -96,10 +63,35 @@ a {
   color: var(--color-text);
 }
 
+img {
+  max-width: 100%;
+}
+
+/**************/
+/* HEADER */
+/**************/
+
+header {
+  background-color: var(--color-header-background);
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* logo */
+header img {
+  max-width: 40vw;
+}
+
+/* menu button */
+
 button[aria-label="toggle menu"] {
   appearance: none;
 
-  width: 0.5em;
+  /* width: 0.5em; */
   aspect-ratio: 1/1;
 
   background-color: var(--color-header-background);
@@ -144,34 +136,40 @@ button.is-open span:nth-of-type(3) {
   rotate: -45deg;
 }
 
-img {
-  max-width: 100%;
+/* nav header */
+header ul {
+  position: static;
+  translate: 0 0;
+  padding: 0;
+  background: none;
+}
+
+header li {
+  display: none;
+}
+
+/**************/
+/* MAIN */
+/**************/
+
+main {
+  background-color: var(--color-background);
+  display: grid;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+main section:nth-of-type(1) {
+  background-color: var(--color-nav-background);
 }
 
 /**************
-Footer styling
+FOOTER 
 **************/
 
 footer {
   background-color: var(--color-footer-background);
   display: grid;
-}
-
-footer h2 {
-  font-size: 1em;
-  position: relative;
-
-  width: fit-content;
-}
-
-footer h2::after {
-  content: "";
-  width: 100%;
-  height: 0.1em;
-  background-color: var(--color-text);
-  position: absolute;
-  bottom: -0.4em;
-  left: 0.8em;
 }
 
 footer section {
@@ -182,11 +180,31 @@ footer section:nth-of-type(5) {
   padding: 0;
 }
 
-footer svg {
-  padding-right: 0.6em;
+footer h2 {
+  font-size: 1em;
+  position: relative;
+
+  width: fit-content;
 }
+
+/* streepje */
+footer h2::after {
+  content: "";
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--color-text);
+  position: absolute;
+  bottom: -0.4em;
+  left: 0.8em;
+}
+
+/* socials */
 
 footer a {
   line-height: 2.5em;
   font-size: 0.9em;
+}
+
+footer svg {
+  padding-right: 0.6em;
 }
