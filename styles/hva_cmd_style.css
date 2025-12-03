@@ -1,25 +1,3 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-  /* startje */
-  --color-text: #fff;
-  --color-background: #351fb7;
-  --color-header-background: #351fb7;
-  --color-nav-background: #25167a;
-  --color-footer-background: #000;
-  --color-menu-color: #fff;
-  --pink-headings: #F35279;
-}
 /****************/
 /* JOUW STYLING */
 /****************/

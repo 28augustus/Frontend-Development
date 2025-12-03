@@ -18,22 +18,50 @@
 /* KLEURTJES */
 /*********************/
 
-/****************/
-/* Heb nog dark en light modus nodig met @media. 
-Om dit snel te doen kan je met roots werken en de text, 
-BG en Footer BG aan te passen hieronder, maar dan voor media (komt later) */
-/****************/
-
-:root {
-  /* startje */
-  --color-text: #fff;
-  --color-background: #351fb7;
-  --color-header-background: #351fb7;
-  --color-nav-background: #25167a;
-  --color-footer-background: #000;
+:root { 
+  /* colors */
+  --color-header-background: #F35279;
+  --color-footer-background: #F35279;
+  --color-nav-background: #fff;
   --color-menu-color: #fff;
-  --spacing-md: 0 5%;
+  --pink-headings: #F35279;
+  --color-text: #21146b;
+  --icon-color: #21146b;
+  --color-button: #fff;
+  --color-after-line: #21146b;
+  --time-block-color: #F35279;
+} 
+
+/* spacing */
+/* --spacing-md: 0 5%; */
+
+/* STATES */
+/* --color-button-background-active */
+
+/* fonts */
+/* --font-states-main-hover: 2em;
+--font-states-footer-hover: 1.5em;
+ 
+footer a, 
+footer button {
+  font-size: 1.05em;
+} */
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --color-header-background: #351fb7;
+  --color-footer-background: #000;
+  --color-nav-background: #25167a;
+  --color-menu-color: #fff;
+  --color-text: #fff;
+  --icon-color: #fff;
+  --color-button: #000;
+  --color-background: #351fb7;
+  --time-block-color: #000;
 }
+}
+
 
 /**************/
 /*ALGEMENE STYLING */
@@ -65,6 +93,14 @@ a {
 
 img {
   max-width: 100%;
+}
+
+svg {
+  color: var(--icon-color); 
+}
+
+button {
+  color: var(--color-button);
 }
 
 /**************/
@@ -187,6 +223,10 @@ footer h2 {
   width: fit-content;
 }
 
+footer li {
+  list-style: none;
+}
+
 /* streepje */
 footer h2::after {
   content: "";
@@ -208,3 +248,46 @@ footer a {
 footer svg {
   padding-right: 0.6em;
 }
+
+/**************
+STATES
+**************/
+
+/* 
+Unvisited
+Visited
+Hover
+Active
+Focus */
+
+main a:hover {
+  font-size: var(--font-states-main-hover);
+}
+
+footer a:hover {
+  font-size: var(--font-states-footer-hover);
+}
+
+button:active {
+  background-color: #21146b;
+  border-color: #F35279;
+  color: #fff;
+}
+
+/*
+
+a:focus {
+
+}
+
+a:focus-visible {
+
+}
+
+a:visited {
+
+}
+
+a:link {
+
+} */
