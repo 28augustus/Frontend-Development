@@ -1,0 +1,173 @@
+/**************/
+/*ALGEMENE STYLING */
+/**************/
+
+h1,
+h2,
+h3 {
+  color: var(--color-text);
+}
+
+/**************/
+/* MAIN */
+/**************/
+
+/* h2 styling Direct naar*/
+main section:nth-child(1) h2 {
+  font-size: 1em;
+  font-weight: 900;
+  padding: 0 10%;
+}
+
+/* h2 Styling Open dag 13 december*/
+main section:nth-of-type(2) {
+  padding: 10% 0;
+}
+
+/* h2 Actueel Section(3)*/
+main section:nth-child(3) > h2 {
+  font-size: 2em;
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+}
+
+/* h2 Open dag 13 decmeber*/
+main section:nth-last-of-type(2) h2 {
+  grid-column: 1/-1;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+/*h3 styling alle artikels*/
+main section > article h3 {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+/* Nav Li's centreren met de svg pijlen*/
+main li {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigatie tussenruimte en font styling*/
+main section:nth-child(1) ul > li {
+  padding: 0.5em;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+/* img styling section(2) Open dag 13 december*/
+section:nth-of-type(2) img {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  padding: 0% 10%;
+}
+
+/* Beiden zorgen ervoor dat de H2 boven de img staan en 
+de H3 er onder je kan ook inplaats van grid flex gebruiken*/
+article {
+  display: grid;
+  padding: 7.4% 5%;
+}
+
+article img {
+  order: -1;
+}
+
+/* Maakt de lijn onder de a's kleiner (after)*/
+main section a {
+  position: relative;
+  width: fit-content;
+}
+
+/*BLOCK zelf*/
+section:nth-last-of-type(2) p:nth-of-type(1) {
+  grid-column: 2/-1;
+  grid-row: 2/-2;
+  z-index: 1;
+  align-self: end;
+  text-align: center;
+  background-color: var( --time-block-color);
+  padding: 1.5em;
+  position: absolute;
+}
+
+/* Maakt het block een block*/
+main section:nth-of-type(2) p > time {
+  display: grid;
+  grid-template-columns: 3.5em 1fr;
+  position: relative;
+  text-align: left;
+}
+
+/* Time text 13dec*/
+time:nth-child(1) {
+  font-size: 1.3em;
+  font-weight: 900;
+}
+
+/* Time text 10.00 - 14.00*/
+time:nth-child(2) {
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+/* Lijntjes onder elke (a) element*/
+main section > article a::after {
+  content: "";
+  width: 100%;
+  height: 0.15em;
+  background-color: var(--color-after-line);
+  position: absolute;
+  bottom: -0.3em;
+  left: 0.8em;
+}
+
+/* Lijn onder de (a) element sectie(2)*/
+main section:nth-of-type(2) a::after {
+  content: "";
+  width: 100%;
+  height: 0.15em;
+  background-color: var(--color-after-line);
+  position: absolute;
+  bottom: -0.3em;
+  left: 0.8em;
+}
+
+/*2e artikel pijl met link*/
+article:nth-of-type(2) a {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Section(2) a centreren svg pijlen */
+main section:nth-of-type(2) a {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+/* Section(3) alle articles hieronder 
+centreren de svg pijlen met de a's*/
+section:nth-of-type(3) article:nth-of-type(1) a {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+section:nth-of-type(3) article:nth-of-type(2) a {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+section:nth-of-type(3) article:nth-of-type(3) a {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+/* Kijk of je de padding op de img alleen kan plaatsen?
+Of kijk of de padding op iets anders kan en of gap gebruiken*/
