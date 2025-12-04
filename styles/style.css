@@ -1,3 +1,5 @@
+/* BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll */
+
 /**************/
 /* FONTS */
 /**************/
@@ -18,54 +20,45 @@
 /* KLEURTJES */
 /*********************/
 
-:root { 
+:root {
   /* colors */
-  --color-header-background: #F35279;
-  --color-footer-background: #F35279;
+  --color-header-background: #f35279;
+  --color-footer-background: #f35279;
   --color-nav-background: #fff;
   --color-menu-color: #fff;
-  --pink-headings: #F35279;
+  --pink-headings: #f35279;
   --color-text: #21146b;
   --icon-color: #21146b;
   --color-button: #fff;
   --color-after-line: #21146b;
-  --time-block-color: #F35279;
+  --time-block-color: #f35279;
 
   /* spacing */
   --padding-0: 0;
-  --padding-5: 5%;
+  --padding-5: 0 5%;
   --spacing-md: 0 5%;
-  
+
   /* States */
   --color-button-background-active: #21146b;
-  
-  
+
   --font-states-main-hover: 2em;
   --font-states-footer-hover: 1.5em;
-   
-  
-  
-
-} 
-
-
-
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --color-header-background: #351fb7;
-  --color-footer-background: #000;
-  --color-nav-background: #25167a;
-  --color-menu-color: #fff;
-  --color-text: #fff;
-  --icon-color: #fff;
-  --color-button: #000;
-  --color-background: #351fb7;
-  --color-after-line: #fff;
-  --time-block-color: #000;
+    --color-header-background: #351fb7;
+    --color-footer-background: #000;
+    --color-nav-background: #25167a;
+    --color-menu-color: #fff;
+    --color-text: #fff;
+    --icon-color: #fff;
+    --color-button: #000;
+    --color-background: #351fb7;
+    --color-after-line: #fff;
+    --time-block-color: #000;
+  }
 }
-}
-
 
 /**************/
 /*ALGEMENE STYLING */
@@ -100,7 +93,7 @@ img {
 }
 
 svg {
-  color: var(--icon-color); 
+  color: var(--icon-color);
 }
 
 button {
@@ -119,6 +112,14 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
+
+  /* position: fixed;/ */
+  /* top: 0; */
+  transition: 0.7s;
+}
+
+header.foetsie {
+  translate: 0 -100%;
 }
 
 /* logo */
@@ -126,8 +127,10 @@ header img {
   max-width: 40vw;
 }
 
-/* menu button */
+/* BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll */
+/* Sticky Header */
 
+/* menu button */
 button[aria-label="toggle menu"] {
   appearance: none;
 
@@ -249,6 +252,11 @@ footer a {
   font-size: 0.9em;
 }
 
+footer img {
+  max-width: 30vh;
+  padding: var(--padding-5);
+}
+
 footer svg {
   padding-right: 0.6em;
 }
@@ -274,7 +282,7 @@ footer a:hover {
 
 button:active {
   background-color: #21146b;
-  border-color: #F35279;
+  border-color: #f35279;
   color: #fff;
 }
 
@@ -296,6 +304,7 @@ a:link {
 
 } */
 
+/* Facebook animatie */
 @keyframes facebook-animation {
   0% {
     rotate: 0deg;
@@ -314,15 +323,14 @@ svg[aria-label="facebook-animation"]:hover {
   animation-iteration-count: 3;
 }
 
+/* Instagram animatie */
 @keyframes instagram-animation {
   0% {
-    rotate: 0deg;
     scale: 1;
   }
 
   100% {
-    rotate: 180deg;
-    scale: 10;
+    scale: 5;
   }
 }
 
@@ -332,6 +340,7 @@ svg[aria-label="instagram-animation"]:hover {
   animation-iteration-count: 3;
 }
 
+/* LinkedIn animatie */
 @keyframes LinkedIn-animation {
   0% {
     rotate: 0deg;
