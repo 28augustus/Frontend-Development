@@ -1,51 +1,6 @@
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* Alle a's (linkjes) in de main */
-main section a {
-  font-size: 1em;
-  position: relative;
-
-  width: fit-content;
-}
-
-/* Lijntjes onder elke a element */
-
-main section > article a::after {
-  content: "";
-  width: 100%;
-  height: 0.15em;
-  background-color: var(--color-text);
-  position: absolute;
-  bottom: -0.3em;
-  left: 0.8em;
-}
-
-/* De Svg en de a uitlijnen */
-section:nth-of-type(3) 
-article:nth-of-type(1) 
-a {
-  display: flex;
-  align-items: center;
-  gap: .25em;
-}
-
-section:nth-of-type(3) 
-article:nth-of-type(2) 
-a {
-  display: flex;
-  align-items: center;
-  gap: .25em;
-}
-
-section:nth-of-type(3) 
-article:nth-of-type(3) 
-a {
-  display: flex;
-  align-items: center;
-  gap: .25em;
-}
+/**************/
+/* MAIN */
+/**************/
 
 h1 {
   color: var(--pink-headings);
@@ -63,30 +18,218 @@ main section:nth-of-type(3) h2 {
   font-size: 1em;
 }
 
-section:nth-of-type(3) h3 {
+main section:nth-of-type(2) h3 {
+  color: var(--color-h3-heading-carousel);
+}
+
+main section:nth-of-type(4) svg {
+  max-width: 10%;
+}
+
+main section:nth-of-type(2) a {
+  font-weight: 900;
+}
+
+main li {
+  display: grid;
+}
+
+main h3 {
+  order: 2;
+}
+
+main img {
+  order: 1;
+}
+
+main p {
+  order: 3;
+}
+
+/* WEL NODIG? OF KAN DE SVG IN DE P */
+main section:nth-of-type(4) svg {
+ order: 4
+}
+
+main section:nth-of-type(2) {
+  padding: 20% 0;
+}
+
+/* Carousel: bronvermelding: https://codepen.io/shooft/pen/QwjQGZe?editors=1100*/
+main ul {
+  display: flex;
+  overflow-x: visible;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+
+  gap: 1em;
+  position: relative;
+}
+
+main li {
+  flex-basis: 50%;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  list-style-type: none;
+}
+
+main li img {
+  max-width: 100%;
+}
+
+main ul::scroll-button(*) {
+  width: 3em;
+  aspect-ratio: 1;
+
+  background-color: var(--block-color);
+  border: none;
+  cursor: pointer;
+
+  font-size: 1.5em;
+
+  position: absolute;
+  left: 4.4em;
+
+  /* margin: .5%; */
+}
+
+main ul::scroll-button(right) {
+  /* eerst wat je ziet / dan wat je hoort */
+  content: "→" / "volgende in de carousel";
+  /* ruimte van de rechterkant */
+  right: clamp(1.5rem, 5vw, 2rem);
+}
+
+main ul::scroll-button(left) {
+  content: "←" / "Terug naar vorige in de carousel";
+  left: clamp(1.5rem, 5vw, 2rem);
+}
+
+main ul::scroll-button(*):disabled {
+  opacity: 0.5;
+}
+
+/* Before met daaronder de fit to h2 */
+main article > h2::before {
+  content: "";
+  height: 100%;
+  width: 0.20em;
+  background-color: var(--color-after-line-h2);
+  position: absolute;
+  left: 0;
+}
+
+main article > h2 {
+  position: relative;
+  padding-left: 1em;
+}
+
+main article {
+  padding: 1.5em;
+}
+
+
+/* After met daaronder de fit to h3 */
+main section:nth-of-type(2) h3::after {
+  content: "";
+  width: 100%;
+  height: 0.15em;
+  background-color: var(--color-after-line-h3);
+  position: absolute;
+  bottom: -0.3em;
+  left: 0;
+}
+
+main section:nth-of-type(2) h3 {
+  position: relative;
+  width: fit-content;
+}
+
+/* Alle ****a's**** (linkjes) in de main */
+main section a {
+  font-size: 1em;
+  position: relative;
+
+  width: fit-content;
+}
+
+/* Lijntjes onder elke ****a**** element */
+main section:nth-of-type(2) a::after {
+  content: "";
+  width: 100%;
+  height: 0.15em;
+  background-color: var(--color-after-line);
+  position: absolute;
+  bottom: -0.3em;
+  left: 0.8em;
+}
+
+main section > article a::after {
+  content: "";
+  width: 100%;
+  height: 0.15em;
+  background-color: var(--color-after-line);
+  position: absolute;
+  bottom: -0.3em;
+  left: 0.8em;
+}
+
+/* De Svg en de p uitlijnen */
+main section:nth-of-type(4) p {
+  display: flex;
+  flex-direction: row-reverse;
+  width: fit-content;
+}
+
+/* De Svg en de a uitlijnen */
+main section:nth-of-type(2) a {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  padding-top: 15%;
+}
+
+main section:nth-of-type(3) article:nth-of-type(1) a {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+main section:nth-of-type(3) article:nth-of-type(2) a {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+main section:nth-of-type(3) article:nth-of-type(3) a {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+main section:nth-of-type(3) h3 {
   font-size: 2em;
   font-weight: 800;
 }
 
 /* Verandert de volgorde van de laatste sectie in main */
-section:nth-of-type(4) {
+main section:nth-of-type(4) {
   display: flex;
   flex-direction: column;
 }
 
-section:nth-of-type(4) h2 {
+main section:nth-of-type(4) h2 {
   order: 1;
 }
 
-section:nth-of-type(4) img {
-  order: 2;
-}
-
-section:nth-of-type(4) ul {
+main section:nth-of-type(4) ul {
   order: 3;
 }
 
-/*Footer styling*/
-footer {
-  color: var(--color-text);
+main section:nth-of-type(4) img {
+  order: 2;
 }

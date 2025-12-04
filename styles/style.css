@@ -23,7 +23,6 @@
 :root {
   /* colors */
   --color-header-background: #f35279;
-  --color-footer-background: #f35279;
   --color-nav-background: #fff;
   --color-menu-color: #fff;
   --pink-headings: #f35279;
@@ -31,7 +30,13 @@
   --icon-color: #21146b;
   --color-button: #fff;
   --color-after-line: #21146b;
-  --time-block-color: #f35279;
+  --color-footer-background: #f35279;
+  
+  /* 2e pagina colors */
+  --block-color: #f35279;
+  --color-h3-heading-carousel: #f35279;
+  --color-after-line-h2: #f35279;
+  --color-after-line-h3: #f35279;
 
   /* spacing */
   --padding-0: 0;
@@ -48,7 +53,6 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-header-background: #351fb7;
-    --color-footer-background: #000;
     --color-nav-background: #25167a;
     --color-menu-color: #fff;
     --color-text: #fff;
@@ -56,7 +60,13 @@
     --color-button: #000;
     --color-background: #351fb7;
     --color-after-line: #fff;
-    --time-block-color: #000;
+    --color-footer-background: #000;
+    
+    /* 2e pagina colors */
+    --block-color: #000;
+    --color-h3-heading-carousel: #f35279;
+    --color-after-line-h2: #f35279;
+    --color-after-line-h3: #fff;
   }
 }
 
