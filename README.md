@@ -201,9 +201,9 @@ Sid
 
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
+- Svg gewoon in de a plaatsen
+- Het vriekant maak je met grid, daarvan heb ik een voorbeeld gekregen
+- De H1 kon ik plaatsen in de section
 - ...
 
 </details>
@@ -237,6 +237,20 @@ samen met je groepje opstellen
 | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
 | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
 | ...            | ...                | ...          | ...              |
+
+Jada
+
+1. Hoe zorg ik dat de tekst niet uit mijn kader gaat
+2. Hoe kan ik er voor zorgen als je op de carousel komt je nog verder omlaag kan scrollen
+3. Hie krijg ik de pijlen in de buttons van mijn carrousel een andere kleur
+
+## Daniël
+
+Annabel
+
+1. Hoe laatste TD selecteren van tabel
+
+## Sid
 
 ### Verslag van meeting
 
