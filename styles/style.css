@@ -30,22 +30,25 @@
   --color-button: #fff;
   --color-after-line: #21146b;
   --time-block-color: #F35279;
+
+  /* spacing */
+  --padding-0: 0;
+  --padding-5: 5%;
+  --spacing-md: 0 5%;
+  
+  /* States */
+  --color-button-background-active: #21146b;
+  
+  
+  --font-states-main-hover: 2em;
+  --font-states-footer-hover: 1.5em;
+   
+  
+  
+
 } 
 
-/* spacing */
-/* --spacing-md: 0 5%; */
 
-/* STATES */
-/* --color-button-background-active */
-
-/* fonts */
-/* --font-states-main-hover: 2em;
---font-states-footer-hover: 1.5em;
- 
-footer a, 
-footer button {
-  font-size: 1.05em;
-} */
 
 
 @media (prefers-color-scheme: dark) {
@@ -58,6 +61,7 @@ footer button {
   --icon-color: #fff;
   --color-button: #000;
   --color-background: #351fb7;
+  --color-after-line: #fff;
   --time-block-color: #000;
 }
 }
@@ -132,7 +136,7 @@ button[aria-label="toggle menu"] {
 
   background-color: var(--color-header-background);
   border: none;
-  padding: 0;
+  padding: var(--padding-0);
 
   display: grid;
   justify-items: center;
@@ -176,7 +180,7 @@ button.is-open span:nth-of-type(3) {
 header ul {
   position: static;
   translate: 0 0;
-  padding: 0;
+  padding: var(--padding-0);
   background: none;
 }
 
@@ -209,15 +213,15 @@ footer {
 }
 
 footer section {
-  padding: 0 3%;
+  padding: var(--padding-5);
 }
 
 footer section:nth-of-type(5) {
-  padding: 0;
+  padding: var(--padding-0);
 }
 
 footer h2 {
-  font-size: 1em;
+  font-size: var();
   position: relative;
 
   width: fit-content;
@@ -291,3 +295,57 @@ a:visited {
 a:link {
 
 } */
+
+@keyframes facebook-animation {
+  0% {
+    rotate: 0deg;
+    scale: 1;
+  }
+
+  100% {
+    rotate: 180deg;
+    scale: 10;
+  }
+}
+
+svg[aria-label="facebook-animation"]:hover {
+  animation-name: facebook-animation;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+}
+
+@keyframes instagram-animation {
+  0% {
+    rotate: 0deg;
+    scale: 1;
+  }
+
+  100% {
+    rotate: 180deg;
+    scale: 10;
+  }
+}
+
+svg[aria-label="instagram-animation"]:hover {
+  animation-name: instagram-animation;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+}
+
+@keyframes LinkedIn-animation {
+  0% {
+    rotate: 0deg;
+    scale: 1;
+  }
+
+  100% {
+    rotate: 180deg;
+    scale: 10;
+  }
+}
+
+svg[aria-label="LinkedIn-animation"]:hover {
+  animation-name: LinkedIn-animation;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+}
