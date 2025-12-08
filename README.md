@@ -80,6 +80,25 @@ Lijst met je bevindingen die in de test naar voren kwamen:
 8. Iets dat mij opviel is dat op de CMD pagina zijn de H2 kleiner dan de H3, maar specifiek gedeelte
    <img src="readme-images/hva_cmd_h2_en_h3.png" width="375px" alt="Blauw vak in scherm op hva home pagina">
 
+
+WCAG checklist wat niet goed is HvA:
+1. Hun HTML heeft errors (meer errors dan op de afbeelding te zien is)
+  <img src="readme-images/1_wcag_html_validation.png" width="375px" alt="Errors op validator checker, waarvan 1 attribute text not allowed on element a at this point. 2 Element div not allowed as child of element button in this context"> 
+  <img src="readme-images/1_wcag_html_validation_all.png" width="375px" alt="Alle erros, warnings en info's gegroepeerd"> 
+
+2. Check to see that keyboard focus order matches the visual layout: Moet het plusje als eerst? Voor mij voelt dat gewoon niet heel goed, maar ik heb er ook niet heel veel ervaring in.
+  <img src="readme-images/1_wcag_keyboard.png" width="375px" alt="Website van HvA Over de opleiding met een rode cirkel om een plusje"> 
+
+3. YouTube video's spelen op een andere pagina af? geen idee wat het precies is, maar het is makkelijk te sluiten, maar ik schrijf het als nog even hier op.
+  <img src="readme-images/1_wcag_controls_aparte_tab.png" width="375px" alt="Website van HvA Video Aftudeerproject van CMD-student Joop"> 
+
+4. Ze hebben geen Light/Dark mode, alleen 1 modus (zie alle vorige afbeeldingen van de website)
+
+5. Voor high contrast mode had ik no, ben vergeten waarom, maar heb het niet kunnen vinden, dus ook geen voorbeeld dan, maar wel gewoon even opschrijven, zodat het genoteerd staat.
+
+6. De roze contrast voor kleine letters op de CMD pagina is niet goed.
+  <img src="readme-images/1_wcag_color_contrast.png" width="375px" alt="Carousel op de HvA website neem een virtueel kijke bij CMD"> 
+
 </details>
 
 ## Breakdownschets (week 1)
@@ -153,7 +172,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 - Ik moet mijn alt teksten beter gaan schrijven, nu staat er nog te weinig
 - De tijd kan ik met <time> aanspreken
 - Voor iconen moet ik svg's gebruiken vanuit svgrepo
-- ...
+- De order kan je gewoon met order aanpassen
 
 </details>
 
@@ -216,6 +235,24 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 ### Bevindingen
 
 Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+Sommigen dingen waren niet van toepassing, omdat ik die niet heb gemaakt, zoals video's, dus daar ga ik het niet over hebben.
+
+
+WCAG Checklist
+<!-- BELANGRIJK UPDATE NODIG AANGEZIEN PAGINA NOG IN BEHANDELING IS -->
+1. HTML is validated en geen errors 
+
+2. Does the site only allow portrait orientation?. Mehh op computer is het niet echt mooi.
+
+3. Ik gebruik buttons elements voor buttons
+
+4. Dark en light mode is supported bij mij
+
+5. Prefers-reduced-motion available
+
+6. Ik heb mijn contrast gecontroleerd
+
+7. 
 
 </details>
 
