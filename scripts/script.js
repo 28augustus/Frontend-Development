@@ -1,7 +1,9 @@
 // JavaScript Document
 console.log("hi");
 
+//Bronvermelding Roos Buskermolen: deNav
 const deMenuButton = document.querySelector("button");
+const deNav = document.querySelector("nav");
 
 // 2
 const headerElem = document.querySelector("header");
@@ -14,9 +16,10 @@ deMenuButton.onclick = toggleMenu;
 
 function toggleMenu() {
   deMenuButton.classList.toggle("is-open");
+  deNav.classList.toggle("geopend");
 }
 
-//Bronvermelding sticky header: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll
+//Bronvermelding sticky header: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll + Sanne 't Hooft
 
 /* get the current page position */
 let prevScrollpos = window.pageYOffset;
