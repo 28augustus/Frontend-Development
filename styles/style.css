@@ -23,15 +23,16 @@
 :root {
   /* colors */
   --color-header-background: #f35279;
-  --color-nav-background: #fff;
+  --color-nav-background: #f35279;
   --color-menu-color: #fff;
   --pink-headings: #f35279;
+  --color-text-nav-p: #fff;
   --color-text: #21146b;
   --icon-color: #21146b;
   --color-button: #fff;
   --color-after-line: #21146b;
   --color-footer-background: #f35279;
-  
+
   /* 2e pagina colors */
   --block-color: #f35279;
   --color-h3-heading-carousel: #f35279;
@@ -61,7 +62,7 @@
     --color-background: #351fb7;
     --color-after-line: #fff;
     --color-footer-background: #000;
-    
+
     /* 2e pagina colors */
     --block-color: #000;
     --color-h3-heading-carousel: #f35279;
@@ -80,8 +81,12 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   font-family: "MY POPPINS";
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
 }
 
 button {
@@ -118,6 +123,7 @@ header {
   background-color: var(--color-header-background);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 5% 5%;
   position: sticky;
   top: 0;
@@ -135,6 +141,62 @@ header.foetsie {
 /* logo */
 header img {
   max-width: 40vw;
+  z-index: 1;
+}
+
+header svg {
+  max-width: 8vw;
+}
+
+/* BRONVERMELDING https://codepen.io/shooft/pen/Qwjaojy?editors=0110 
+https://codepen.io/shooft/pen/myepoJo?editors=0110*/
+
+nav {
+  position:fixed;
+  /* Vervanging voor top, bottom, left and right */
+  inset: 0;
+  z-index: 2;
+
+  translate: 0 -100%;
+  transition: .3s;
+
+  background: var(--color-nav-background);
+}
+
+nav.toonMenu {
+  transform: 0% 0%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  
+  padding: 20% 10%;
+  gap: 1em;
+
+  list-style: none;
+
+}
+
+nav p {
+  color: var(--color-text-nav-p);
+  font-weight: 900;
+}
+
+nav a {
+  padding: var(--padding-5);
+}
+
+nav details {
+  padding: 0 10%;
+}
+
+/* BRONVERMELDING: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ 
+Vermeld flex of inline flex.  en bij align-self kan alleen vertical-align op non flex-items*/
+nav li > a, 
+nav li svg {
+  display: inline-flex;
+  vertical-align: middle;
 }
 
 /* BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll */
@@ -142,10 +204,12 @@ header img {
 
 /* menu button */
 button[aria-label="toggle menu"] {
-  appearance: none;
+  position: fixed;
+  z-index: 3;
 
-  /* width: 0.5em; */
+  appearance: none;
   aspect-ratio: 1/1;
+  /* z-index: 100; */
 
   background-color: var(--color-header-background);
   border: none;
@@ -154,7 +218,9 @@ button[aria-label="toggle menu"] {
   display: grid;
   justify-items: center;
   align-items: center;
+
 }
+
 
 button span {
   display: block;
@@ -169,37 +235,33 @@ button span {
 
 button span:nth-of-type(1) {
   translate: 0 -0.3em;
+  transition: .3s;
 }
 
 button span:nth-of-type(3) {
   translate: 0 0.3em;
+  transition: .3s;
 }
 
 button.is-open span:nth-of-type(1) {
   translate: 0 0;
   rotate: 45deg;
+  transition: .3s;
 }
 
 button.is-open span:nth-of-type(2) {
   scale: 0 1;
+  transition: .3s;
 }
 
 button.is-open span:nth-of-type(3) {
   translate: 0 0;
   rotate: -45deg;
+  transition: .3s;
 }
 
-/* nav header */
-header ul {
-  position: static;
-  translate: 0 0;
-  padding: var(--padding-0);
-  background: none;
-}
 
-header li {
-  display: none;
-}
+
 
 /**************/
 /* MAIN */
@@ -282,13 +344,13 @@ Hover
 Active
 Focus */
 
-main a:hover {
+/* main a:hover {
   font-size: var(--font-states-main-hover);
 }
 
 footer a:hover {
   font-size: var(--font-states-footer-hover);
-}
+} */
 
 button:active {
   background-color: #21146b;
