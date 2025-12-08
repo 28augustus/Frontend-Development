@@ -256,9 +256,11 @@ Annabel
 
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
+- Lijstje read.me van surface plane opties
+- De carousel max-widt geven, zodat de rest van de pagina binnen de border blijft
+- De carousel moetst scroll-snap-type: x mandatory; krijgen, zodat je er overheen kan scrollen en niet vast loopt op de pagina
+- De svg in de button en fill weg en de fill in de css stylen zelf
+- Haal alle styling in svg fill weg, geen styling daar.
 - ...
 
 </details>
