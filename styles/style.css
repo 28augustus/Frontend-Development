@@ -26,13 +26,20 @@
   --color-nav-background: #f35279;
   --color-menu-color: #fff;
   --pink-headings: #f35279;
+
+  --icon-color-nav-svg: #fff;
   --color-text-nav-p: #fff;
+  --color-text-nav-a: #21146b;
+
   --color-text: #21146b;
   --icon-color: #21146b;
+
   --color-button: #fff;
   --color-after-line: #21146b;
   --color-footer-background: #f35279;
 
+  --color-detail-summary: #21146b;
+  
   /* 2e pagina colors */
   --block-color: #f35279;
   --color-h3-heading-carousel: #f35279;
@@ -44,32 +51,84 @@
   --padding-5: 0 5%;
   --spacing-md: 0 5%;
 
-  /* States */
-  --color-button-background-active: #21146b;
+  /* animatie */
+  --animation-duration: 1s;
+  --animation-iteration-count: 3;
 
-  --font-states-main-hover: 2em;
-  --font-states-footer-hover: 1.5em;
+  --transition-3: .3s;
+  --transition-5: .5s;
+  --transition-7: .7s;
+
+  /* States */
+  --hover-lijn: underline .5em #25167a;
+  --hover-header-img: #21146b;
+  --hover-button: #21146b;
+
+
+  --focus-header-state: #21146b; /* Als het symbool/state wit is dan gebruik deze kleur*/
+  --focus-background-pink: #fff;
+  --focus-background-main: #f35279;
+  --focus-text: #21146b;
+
+  --focus-padding: 1em;
+  --focus-font-weight-p: 900;
 }
+
+
+
+
+/* header img:focus {
+  background-color: var(--hover-header-img);
+  transition: var(--transition-5);
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-header-background: #351fb7;
-    --color-nav-background: #25167a;
+    --color-background: #351fb7;
     --color-menu-color: #fff;
+    --color-nav-background: #25167a;
+
+    --color-text-nav-p: #fff;
+    --color-text-nav-a: #f35279;
+    --icon-color-nav-svg: #fff;
+    
     --color-text: #fff;
     --icon-color: #fff;
+
     --color-button: #000;
-    --color-background: #351fb7;
     --color-after-line: #fff;
     --color-footer-background: #000;
 
+    --color-detail-summary: #fff;
+    
     /* 2e pagina colors */
     --block-color: #000;
     --color-h3-heading-carousel: #f35279;
     --color-after-line-h2: #f35279;
     --color-after-line-h3: #fff;
+
+    /* font */
+    --font-pink-weight: 900;
+
+    /* states */
+    --hover-lijn: underline .5em #f35279;
+    --hover-header-img: #f35279;
+    --hover-button: #f35279;
+
+    --focus-header-state: #f35278; /* Als het symbool/state wit is dan gebruik deze kleur*/
+    --focus-background-pink: #fff;
+    --focus-text: #21146b;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *{
+    animation: none;
+  }
+}
+
+
 
 /**************/
 /*ALGEMENE STYLING */
@@ -81,12 +140,8 @@
   box-sizing: border-box;
 }
 
-html,
 body {
   font-family: "MY POPPINS";
-  margin: 0;
-  padding: 0;
-  overflow-wrap: break-word;
 }
 
 button {
@@ -107,8 +162,13 @@ img {
   max-width: 100%;
 }
 
-svg {
+main svg, 
+footer svg {
   color: var(--icon-color);
+}
+
+nav svg {
+  color: var(--icon-color-nav-svg);
 }
 
 button {
@@ -123,7 +183,6 @@ header {
   background-color: var(--color-header-background);
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 5% 5%;
   position: sticky;
   top: 0;
@@ -131,7 +190,7 @@ header {
 
   /* position: fixed;/ */
   /* top: 0; */
-  transition: 0.7s;
+  transition: var(--transition-7);
 }
 
 header.foetsie {
@@ -141,54 +200,57 @@ header.foetsie {
 /* logo */
 header img {
   max-width: 40vw;
-  z-index: 1;
 }
 
-header svg {
-  max-width: 8vw;
-}
-
-/* BRONVERMELDING https://codepen.io/shooft/pen/Qwjaojy?editors=0110 
-https://codepen.io/shooft/pen/myepoJo?editors=0110*/
-
+/* BRONVERMELDING: Roos Buskermolen (nav (translate) en nav.geopend) */
 nav {
-  position:fixed;
-  /* Vervanging voor top, bottom, left and right */
+  position: fixed;
   inset: 0;
-  z-index: 2;
 
-  translate: 0 -100%;
-  transition: .3s;
-
-  background: var(--color-nav-background);
+  translate: 0 -1000%;
+  transition:translate .3s;
+  background-color: var(--color-header-background);
 }
 
-nav.toonMenu {
-  transform: 0% 0%;
+nav.geopend {
+  translate: 0 0;
 }
 
-nav ul {
-  display: flex;
-  flex-direction: column;
-  
-  padding: 20% 10%;
-  gap: 1em;
-
-  list-style: none;
-
+/* Zet de hele ul wat lager */
+header nav ul {
+  padding: 15% 0;
+  font-weight: var(--font-pink-weight);
 }
 
-nav p {
+/* Zet tussenruimtes bij elke li item */
+nav li {
+  padding: 2% 0;
+}
+
+nav li > a {
+  padding: 5% 10%;
+  color: var(--color-text-nav-a);
+}
+
+/* Zet de tekst van de muur af */
+nav p{
   color: var(--color-text-nav-p);
-  font-weight: 900;
-}
-
-nav a {
   padding: var(--padding-5);
+  margin: 0;
 }
 
 nav details {
   padding: 0 10%;
+  color: var(--color-detail-summary);
+}
+
+nav svg {
+  color: var(--icon-color-nav-svg);
+  max-width: 10vw;
+}
+
+nav a {
+  padding: var(--padding-5);
 }
 
 /* BRONVERMELDING: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ 
@@ -199,17 +261,18 @@ nav li svg {
   vertical-align: middle;
 }
 
+
+
 /* BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll */
 /* Sticky Header */
 
 /* menu button */
 button[aria-label="toggle menu"] {
-  position: fixed;
-  z-index: 3;
-
   appearance: none;
+  z-index: 1;
+
+  /* width: 0.5em; */
   aspect-ratio: 1/1;
-  /* z-index: 100; */
 
   background-color: var(--color-header-background);
   border: none;
@@ -218,50 +281,54 @@ button[aria-label="toggle menu"] {
   display: grid;
   justify-items: center;
   align-items: center;
-
 }
-
 
 button span {
   display: block;
 
-  width: 1.5em;
-  height: 0.1em;
+  width: 2.5em;
+  height: .3em;
   background-color: var(--color-menu-color);
+  border-radius: 2em;
 
   grid-row-start: 1;
   grid-column-start: 1;
 }
 
 button span:nth-of-type(1) {
-  translate: 0 -0.3em;
-  transition: .3s;
+  translate: 0 -1em;
+  transition: var(--transition-3);
 }
 
 button span:nth-of-type(3) {
-  translate: 0 0.3em;
-  transition: .3s;
+  translate: 0 1em;
+  transition: var(--transition-3);
 }
 
 button.is-open span:nth-of-type(1) {
   translate: 0 0;
   rotate: 45deg;
-  transition: .3s;
+  transition: var(--transition-3);
 }
 
 button.is-open span:nth-of-type(2) {
   scale: 0 1;
-  transition: .3s;
+  transition: var(--transition-3);
 }
 
 button.is-open span:nth-of-type(3) {
   translate: 0 0;
   rotate: -45deg;
-  transition: .3s;
+  transition: var(--transition-3);
 }
 
-
-
+/* nav header */
+header ul {
+  position: static;
+  translate: 0 0;
+  padding: var(--padding-0);
+  background: none;
+}
 
 /**************/
 /* MAIN */
@@ -337,6 +404,43 @@ footer svg {
 STATES
 **************/
 
+button:hover {
+  background-color: var(--hover-button);
+  transition: var(--transition-5);
+}
+
+header img:hover {
+  background-color: var(--hover-header-img);
+  transition: var(--transition-5);
+}
+
+a:hover {
+  text-decoration: var(--hover-lijn);
+}
+
+
+header li> a:focus,
+main section:nth-of-type(1) a:focus, 
+footer a:focus {
+  background-color: var(--focus-background-pink);
+  color: var(--focus-text);
+
+  font-weight: var(--focus-font-weight-p);
+  padding: var(--focus-padding);
+}
+
+header button:focus {
+  background-color: var(--focus-header-state);
+}
+
+main a:focus {
+  background-color: var(--focus-background-main);
+  color: var(--focus-text);
+
+  font-weight: var(--focus-font-weight-p);
+  padding: var(--focus-padding);
+}
+
 /* 
 Unvisited
 Visited
@@ -344,19 +448,7 @@ Hover
 Active
 Focus */
 
-/* main a:hover {
-  font-size: var(--font-states-main-hover);
-}
 
-footer a:hover {
-  font-size: var(--font-states-footer-hover);
-} */
-
-button:active {
-  background-color: #21146b;
-  border-color: #f35279;
-  color: #fff;
-}
 
 /*
 
@@ -391,8 +483,8 @@ a:link {
 
 svg[aria-label="facebook-animation"]:hover {
   animation-name: facebook-animation;
-  animation-duration: 1s;
-  animation-iteration-count: 3;
+  animation-duration: var(--animation-duration);
+  animation-iteration-count: var(--animation-iteration-count);
 }
 
 /* Instagram animatie */
@@ -408,8 +500,8 @@ svg[aria-label="facebook-animation"]:hover {
 
 svg[aria-label="instagram-animation"]:hover {
   animation-name: instagram-animation;
-  animation-duration: 1s;
-  animation-iteration-count: 3;
+  animation-duration: var(--animation-duration);
+  animation-iteration-count: var(--animation-iteration-count);
 }
 
 /* LinkedIn animatie */
@@ -427,6 +519,6 @@ svg[aria-label="instagram-animation"]:hover {
 
 svg[aria-label="LinkedIn-animation"]:hover {
   animation-name: LinkedIn-animation;
-  animation-duration: 1s;
-  animation-iteration-count: 3;
+  animation-duration: var(--animation-duration);
+  animation-iteration-count: var(--animation-iteration-count);
 }

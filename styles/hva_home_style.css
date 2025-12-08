@@ -109,8 +109,9 @@ time:nth-child(1) {
 }
 
 /* Time text 10.00 - 14.00*/
-time:nth-child(2), time:nth-child(3) {
+time:nth-child(2) {
   font-size: 0.8em;
+  white-space: nowrap;
 }
 
 /* Lijntjes onder elke (a) element*/

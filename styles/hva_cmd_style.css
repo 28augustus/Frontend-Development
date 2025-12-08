@@ -48,7 +48,7 @@ main p {
 
 /* WEL NODIG? OF KAN DE SVG IN DE P */
 main section:nth-of-type(4) svg {
- order: 4
+  order: 4;
 }
 
 main section:nth-of-type(2) {
@@ -64,7 +64,7 @@ main ul {
   scroll-behavior: smooth;
   overscroll-behavior-x: contain;
   scrollbar-width: thin;
-  gap: .5em;
+  gap: 0.5em;
   position: relative;
 }
 
@@ -114,7 +114,7 @@ main ul::scroll-button(*):disabled {
 main article > h2::before {
   content: "";
   height: 100%;
-  width: 0.20em;
+  width: 0.2em;
   background-color: var(--color-after-line-h2);
   position: absolute;
   left: 0;
@@ -128,7 +128,6 @@ main article > h2 {
 main article {
   padding: 1.5em;
 }
-
 
 /* After met daaronder de fit to h3 */
 main section:nth-of-type(2) h3::after {
