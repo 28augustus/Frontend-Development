@@ -30,6 +30,7 @@ main section:nth-of-type(2) a {
   font-weight: 900;
 }
 
+
 main li {
   display: grid;
 }
@@ -66,6 +67,7 @@ main ul {
   scrollbar-width: thin;
   gap: 0.5em;
   position: relative;
+  padding: 15% 0;
 }
 
 main li {
@@ -78,6 +80,7 @@ main li img {
   max-width: 100%;
 }
 
+/* Bronvermelding: Carousel: https://codepen.io/shooft/pen/QwjQGZe */
 main ul::scroll-button(*) {
   width: 3em;
   aspect-ratio: 1;
@@ -90,8 +93,6 @@ main ul::scroll-button(*) {
 
   position: absolute;
   left: 4.4em;
-
-  /* margin: .5%; */
 }
 
 main ul::scroll-button(right) {
