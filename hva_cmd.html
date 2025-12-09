@@ -13,96 +13,58 @@
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   </head>
 
+  <!--*************************************************************************************
+   Bronvermelding, skip to main https://www.a11y-collective.com/blog/skip-to-main-content/ 
+   ****************************************************************************************-->
+   
   <body>
-    <a href="#main">Het menu overslaan en naar de inhoud gaan</a>
+    <!-- Skip naar main -->
+    <a href="#main-content">Het menu overslaan en naar de inhoud gaan</a>
 
+    <!-- Zorgt dat de header weg gaat als je scrolt en terug komt als je omhoog gaat -->
     <header aria-label="StickyHeader">
-      <!--Heeft het een andere naam nodig voor screen reader?-->
       <button aria-label="toggle menu">
         <span> </span>
         <span> </span>
         <span> </span>
       </button>
+
+      <!-- Als het menu is geopend -->
       <nav>
         <ul>
           <li>
-            <p>
-              Studeren
-            </p>
-            <a href="#">
-              Vind de opleiding of cursus die bij je past
-            </a>
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g stroke-width="0"></g>
-              <g
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g>
-                <path
-                  d="M4 12H20M12 4V20"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </g>
-            </svg>
-          </li>
-          <li>
-            <p>
-              Onderzoek
-            </p>
-            <a href="#">
-              Ontdek ons onderzoek
-            </a>
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g stroke-width="0"></g>
-              <g
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g>
-                <path
-                  d="M4 12H20M12 4V20"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </g>
-            </svg>
+            <p>Studeren</p>
 
+            <a href="#"> Vind de opleiding of cursus die bij je past </a>
+            <svg aria-label="Open voor meer informatue over de opleingen of cursses die bij je passen"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g stroke-width="0"></g>
+              <g stroke-linecap="round" stroke-linejoin="round"></g>
+              <g>
+                <path
+                  d="M4 12H20M12 4V20"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
           </li>
 
           <li>
-
-            <p>
-              Over de HvA
-            </p>
-
-            <a href="index.html">
-              Alles over onze organisatie
-            </a>
-
-            <svg
+            <p>Onderzoek</p>
+            <a href="#"> Ontdek ons onderzoek </a>
+            <svg aria-label="Open voor meer informatie over ons onderzoek"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <g stroke-width="0"></g>
-              <g
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
+              <g stroke-linecap="round" stroke-linejoin="round"></g>
               <g>
                 <path
                   d="M4 12H20M12 4V20"
@@ -115,25 +77,47 @@
             </svg>
           </li>
 
+          <li>
+            <p>Over de HvA</p>
+
+            <a href="index.html"> Alles over onze organisatie </a>
+
+            <svg aria-label="Open voor meer informatie over onze organisatie"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g stroke-width="0"></g>
+              <g stroke-linecap="round" stroke-linejoin="round"></g>
+              <g>
+                <path
+                  d="M4 12H20M12 4V20"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </li>
         </ul>
 
+        <!-- Taal dropdown-->
         <details>
-          <summary>
-            NL
-          </summary>
+          <summary>NL</summary>
         </details>
       </nav>
 
       <a href="#">
         <img
           src="images/hva_logo_small.png"
-          alt="Logo van Hogeschool van Amsterdam. Het logo navigeerd naar onze home pagina"
+          alt="Logo van Hogeschool van Amsterdam. Het logo navigeerd naar hun home pagina. Dat is de huidige pagina waarop u zich bevindt"
         />
       </a>
 
-      <button aria-label="Zoekbalk">
-        <a href="hva_cmd.html">
-          <svg
+      <!-- Zoekbalk (vergrootglas) -->
+        <a href="hva_cmd.html" aria-label="Zoekbalk om naar de cmd pagina te gaan">
+          <svg aria-label="Koppeling naar"
             viewBox="0 0 32 32"
             enable-background="new 0 0 32 32"
             version="1.1"
@@ -158,6 +142,7 @@
                 stroke-miterlimit="10"
                 stroke-width="3.2"
               ></circle>
+
               <line
                 fill="none"
                 stroke="#ffffff"
@@ -172,29 +157,31 @@
               ></line>
             </g>
           </svg>
-
         </a>
-      </button>
     </header>
 
-    <!--Nog doen-->
-    <main>
+  
+    <!-- Waar de main content begint -->
+    <main id="main-content">
       <h1>Communication and Multimedia Design</h1>
-      <!--TWIJFEL OVER DIT-->
+      <p>Bachelor, voltijd, 4 jaar </p>
+
+      
       <section>
-        <p>Bachelor, voltijd, 4 jaar</p>
-        <!--Er zitten meer linkjes er in
-        DAT MOET NOG WORDEN INGEVULD
-        SECTION IS NIET AF-->
         <a
           href="#"
           >Over de opleiding</a
         >
+
       </section>
+
       <!--CAROUSEL AREA-->
       <section>
         <h2>Ervaar de opleiding</h2>
+
         <ul>
+
+          <!--1e kaart-->
           <li>
             <h3>Neem een virtueel kijkje bij CMD</h3>
 
@@ -204,8 +191,10 @@
               Ontdek of de opleiding CMD in Amsterdam iets voor jou is, volg
               onze virtuele 360 graden tour!
             </p>
+
           </li>
 
+          <!--2e kaart-->
           <li>
             <h3>Studentenwerk. Onze grote trots!</h3>
 
@@ -217,9 +206,10 @@
             <p>
               Benieuwd welke projecten je gaat doen tijdens je studie
               Communication and Multimedia Design (CMD)?
-            </p>
+            </p>            
           </li>
 
+          <!--3e kaart-->
           <li>
             <h3>CMD-student Bente aan het woord</h3>
 
@@ -235,6 +225,7 @@
             </p>
           </li>
 
+          <!--4e kaart-->
           <li>
             <h3>CMD-student Bahaa aan het woord</h3>
 
@@ -251,9 +242,10 @@
           </li>
         </ul>
 
+        <!--Link na carousel onder de buttons-->
         <a
           href="#"
-          ><svg
+          ><svg aria-label="Koppeling naar"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -276,6 +268,7 @@
         </a>
       </section>
 
+      <!--Sectie(3) de extra iformatie -->
       <section>
         <article>
           <h2>Toelatingseisen</h2>
@@ -288,7 +281,7 @@
 
           <a
             href="#"
-            ><svg
+            ><svg aria-label="Koppeling naar"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -307,6 +300,7 @@
                 ></path>
               </g>
             </svg>
+
             Lees meer over toelating
           </a>
         </article>
@@ -314,14 +308,16 @@
         <article>
           <h2>Benodigde tijd</h2>
           <h3>40 uur per week</h3>
+
           <p>
             In jaar 1 heb je minimaal 16 contacturen per week. Daarnaast besteed
             je 24 uur per week met medestudenten aan projecten en onderzoeken,
             maak je opdrachten en bereid je je voor op lessen en tentamens.
           </p>
+
           <a
             href="#"
-            ><svg
+            ><svg aria-label="Koppeling naar"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -340,6 +336,7 @@
                 ></path>
               </g>
             </svg>
+
             Lees meer over studielast
           </a>
         </article>
@@ -347,15 +344,17 @@
         <article>
           <h2>Kosten</h2>
           <h3>Collegegeld en extra kosten</h3>
+
           <p>
             Naast het jaarlijks vastgestelde collegegeld moet je rekening houden
             met ongeveer € 300 per jaar voor boeken, readers en vakmaterialen.
             Houd ook rekening met de aanschaf van een laptop.
           </p>
+
           <a
             href="#"
           >
-            <svg
+            <svg aria-label="Koppeling naar"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -374,15 +373,18 @@
                 ></path>
               </g>
             </svg>
+
             Lees meer over studiekosten
           </a>
         </article>
       </section>
 
+      <!--Sectie(4) Weten of de cmd op,eiding voor jouw is-->
       <section>
         <h2>Voor wie?</h2>
+
         <p>
-        <svg
+        <svg aria-label="Koppeling naar"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -402,12 +404,12 @@
               </g>
             </g>
           </svg>
+
           Je hebt passie voor (digital) design en het creatieve proces.
         </p>
 
-        
         <p>
-        <svg
+        <svg aria-label="Koppeling naar"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -427,12 +429,12 @@
               </g>
             </g>
           </svg>
+
           Je hebt een nieuwsgierige, onderzoekende houding en bent kritisch.
         </p>
 
-
         <p>
-        <svg
+        <svg aria-label="Koppeling naar"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -452,13 +454,13 @@
               </g>
             </g>
           </svg>
+
           Je hebt interesse in multimedia en vindt het leuk om met digitale
           ontwerpen te werken.
         </p>
 
-
         <p>
-        <svg
+        <svg aria-label="Koppeling naar"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -478,12 +480,12 @@
               </g>
             </g>
           </svg>
+
           Je kunt goed samenwerken en staat open voor andere ideeën.
         </p>
 
-
         <p>
-        <svg
+        <svg aria-label="Koppeling naar"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -503,45 +505,56 @@
               </g>
             </g>
           </svg>
+
           Je bent bereid om nieuwe digitale vaardigheden te leren en toe te
           passen.
         </p>
 
-        <!--MOET NOG NAAR KIJKEN-->
         <img
           src="images/hva_girl_standing.jpg"
           alt=""
         />
       </section>
+
     </main>
 
+    <!-- Footer, h2 zijn de kopjes met daarin de a's -->
     <footer>
       <section>
         <h2>studeren</h2>
+
         <ul>
           <li>
             <a href="#">Opleidingen-en-cursussen</a>
           </li>
+
           <li>
             <a href="#">Open dag</a>
           </li>
+
           <li>
             <a href="#">Inschrijven</a>
           </li>
+
           <li>
             <a href="#">Start Opleiding</a>
           </li>
+
           <li>
             <a href="#">Collegegeld</a>
           </li>
+
           <li>
             <a href="#">Jaarrooster</a>
           </li>
+
           <li>
             <a href="#">Info voor werkenden</a>
           </li>
+
         </ul>
       </section>
+
       <section>
         <h2>Samenwerken</h2>
 
@@ -565,6 +578,7 @@
           <li>
             <a href="#">Onderwijs- en Innovatieplein</a>
           </li>
+
         </ul>
       </section>
 
@@ -594,6 +608,7 @@
         </ul>
       </section>
 
+      <!-- Footer social media sectie -->
       <section>
         <h2>Social</h2>
 
@@ -634,7 +649,7 @@
                 </g>
               </g>
             </svg>
-            <a href="#">Facebook</a>
+            <a href="#" aria-label="Bezoek de Facebook pagina van de Hogeschool van Amsterdam">Facebook</a>
           </li>
 
           <li>
@@ -667,7 +682,7 @@
                 ></path>
               </g>
             </svg>
-            <a href="#">Instagram</a>
+            <a href="#" aria-label="Bezoek de Instagram pagina van de Hogeschool van Amsterdam">Instagram</a>
           </li>
 
           <li>
@@ -706,8 +721,8 @@
                 </g>
               </g>
             </svg>
-            <!-- Bezoek de LinkedIn pagina van de Hogeschool van Amsterdam -->
-            <a href="#">LinkedIn</a>
+
+            <a href="#" aria-label="Bezoek de LinkedIn pagina van de Hogeschool van Amsterdam">LinkedIn</a>
           </li>
         </ul>
       </section>
@@ -734,6 +749,7 @@
         <button>Aanpassen cookie-instellingen</button>
       </section>
 
+      <!-- Footer afbeelding van creating tommorow, Light en Dark mode -->
       <picture>
         <source
           srcset="images/creating_tommorow.png"

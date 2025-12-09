@@ -9,27 +9,31 @@
     <link href="styles/hva_home_style.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   </head>
-  <!--*******************************************************************************************************
-  1. Alles is SVG, voor je arrow moet je de width of heigth aanpassen, maar niet de andere, dus 1 van de 2.
-  2. Om een vlak er op te krijgen gebruik je de svg's en fix je het met position, kijk naar les 6 week 3 DLO.
-  3. De footer doe je door in de Li te plaatsen en dan in css aan te spreken, dmv display: flex bijv row ofzo
-  ********************************************************************************************************-->
-  <body>
-    <a href="#main">Het menu overslaan en naar de inhoud gaan</a>
 
+  <!--*************************************************************************************
+   Bronvermelding, skip to main https://www.a11y-collective.com/blog/skip-to-main-content/ 
+   ****************************************************************************************-->
+
+  <body>
+     <!-- Skip naar main -->
+    <a href="#main-content">Het menu overslaan en naar de inhoud gaan</a>
+
+    <!-- Zorgt dat de header weg gaat als je scrolt en terug komt als je omhoog gaat -->
     <header aria-label="StickyHeader">
-      <!--Heeft het een andere naam nodig voor screen reader?-->
       <button aria-label="toggle menu">
         <span> </span>
         <span> </span>
         <span> </span>
       </button>
+
+      <!-- Als het menu is geopend -->
       <nav>
         <ul>
           <li>
             <p>Studeren</p>
+
             <a href="#"> Vind de opleiding of cursus die bij je past </a>
-            <svg
+            <svg 
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +79,7 @@
 
             <a href="index.html"> Alles over onze organisatie </a>
 
-            <svg
+            <svg 
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -95,6 +99,7 @@
           </li>
         </ul>
 
+        <!-- Taal dropdown-->
         <details>
           <summary>NL</summary>
         </details>
@@ -107,10 +112,9 @@
         />
       </a>
 
-      <button aria-label="Zoekbalk">
-        <!--ARIA LABEL???-->
-        <a href="hva_cmd.html">
-          <svg
+      <!-- Zoekbalk (vergrootglas) -->
+        <a href="hva_cmd.html" >
+          <svg aria-label="Zoekbalk om naar de cmd pagina te gaan"
             viewBox="0 0 32 32"
             enable-background="new 0 0 32 32"
             version="1.1"
@@ -135,6 +139,7 @@
                 stroke-miterlimit="10"
                 stroke-width="3.2"
               ></circle>
+
               <line
                 fill="none"
                 stroke="#ffffff"
@@ -150,17 +155,19 @@
             </g>
           </svg>
         </a>
-      </button>
     </header>
 
-    <main>
+
+    <!-- Waar de main content begint -->
+    <main id="main-content">
       <section>
         <h1>Stap in jouw toekomst</h1>
         <h2>Direct naar</h2>
-        <!--Navigatie Start pagina begin-->
+
+        <!--Navigatie (na de header)-->
         <ul>
           <li>
-            <svg
+            <svg 
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -181,8 +188,9 @@
             </svg>
             <a href="#">Alle opleidingen </a>
           </li>
+
           <li>
-            <svg
+            <svg 
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -203,8 +211,9 @@
             </svg>
             <a href="#">Open dagen</a>
           </li>
+
           <li>
-            <svg
+            <svg 
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -225,8 +234,9 @@
             </svg>
             <a href="#">Inschrijven</a>
           </li>
+
           <li>
-            <svg
+            <svg 
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -247,8 +257,9 @@
             </svg>
             <a href="#">Stages en afstudeeropdrachten</a>
           </li>
+
           <li>
-            <svg
+            <svg 
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -270,12 +281,14 @@
             <a href="#">Werken bij de HvA</a>
           </li>
         </ul>
-        <!--Navigatie Start pagina Eind-->
+
         <img
           src="images/hva_foto_gym.jpg"
           alt="Hogeschool van Amsterdam HBO studeren en onderzoeken HvA. Afbeelding van een gymzaal met spelende kinderen."
         />
       </section>
+
+      <!-- Sectie(2) -->
       <section>
         <h2>Open dag 13 december</h2>
         <p>
@@ -284,14 +297,14 @@
             >14.00</time
           >
         </p>
-        <img src="images/hva_people_walking.jpg" alt="#" />
+        <img src="images/hva_people_walking.jpg" alt="" />
         <p>
           Wil je meer weten over onze opleidingen en de sfeer proeven op de
           campus? De eerstvolgende open dag op locatie is op zaterdag 8
           november.
         </p>
         <a href="#">
-          <svg
+          <svg aria-label="Koppeling naar"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -313,21 +326,27 @@
           Meer open dag info en aanmelden</a
         >
       </section>
+
+      <!-- sectie(3) met de articles (img > h3 > a)-->
       <section>
         <h2>Actueel</h2>
+
         <article>
           <h3>Creatieve AI-oplossingen ontwerpen</h3>
+
           <img
             src="images/hva_carousel_ai_art.jpg"
             alt="Een afbeelding van Ai kunst met verschillende kanten van gezichten van een vrouw er op"
           />
+
           <p>
             Van AI inzetten tijdens het rij-examen tot artificiele kunst. In de
             minor ‘AI voor Creatieve Denkers en Ontwerpers’ laten onze studenten
             zien wat kunstmatige intelligentie allemaal te bieden heeft.
           </p>
+
           <a href="#">
-            <svg
+            <svg aria-label="Koppeling naar"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -348,9 +367,13 @@
             </svg>
             Ontdek wat onze studenten doen met AI
           </a>
+
         </article>
+
+
         <article>
           <h3>Ouderen helpen gezonder te eten</h3>
+
           <p>
             Studenten Voeding en Diëtetiek Fadoua en Falak ondersteunden tijdens
             hun stage een groep Marokkaanse ouderen bij het verbeteren van hun
@@ -361,8 +384,9 @@
             src="images/hva_carousel_girls.jpg"
             alt="Foto van Fadoua en Falak samen geposeerd lachend naar de camera"
           />
+
           <a href="#">
-            <svg
+            <svg aria-label="Koppeling naar"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -384,21 +408,24 @@
             Lees het verhaal van Fadoua en Falak
           </a>
         </article>
-        <!-- Meer white space -->
+
+
         <article>
           <h3>Oplossingen bedenken voor slimmer energieverbruik</h3>
+
           <p>
             Student mechanical engineering Christian studeerde af op een
             onderzoek naar vibraties bij windturbines op zee. Hij werkt aan een
             toekomst waarin windenergie een waardevolle energiebron is.
           </p>
-        
+
           <img
             src="images/hva_carousel_girl_sitting.jpg"
             alt="HvA student in een doos op haar computer als voorbeeld voor het bedenken voor slimmer energieverbruik"
           />
+
           <a href="#"
-            ><svg
+            ><svg aria-label="Koppeling naar"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -419,36 +446,48 @@
             </svg>
             Lees het verhaal van Christian
           </a>
+
         </article>
       </section>
     </main>
+
+    <!-- Footer, h2 zijn de kopjes met daarin de a's -->
     <footer>
       <section>
         <h2>studeren</h2>
+
         <ul>
           <li>
             <a href="#">Opleidingen-en-cursussen</a>
           </li>
+
           <li>
             <a href="#">Open dag</a>
           </li>
+
           <li>
             <a href="#">Inschrijven</a>
           </li>
+
           <li>
             <a href="#">Start Opleiding</a>
           </li>
+
           <li>
             <a href="#">Collegegeld</a>
           </li>
+
           <li>
             <a href="#">Jaarrooster</a>
           </li>
+
           <li>
             <a href="#">Info voor werkenden</a>
           </li>
+
         </ul>
       </section>
+
       <section>
         <h2>Samenwerken</h2>
 
@@ -472,6 +511,7 @@
           <li>
             <a href="#">Onderwijs- en Innovatieplein</a>
           </li>
+
         </ul>
       </section>
 
@@ -501,6 +541,7 @@
         </ul>
       </section>
 
+      <!-- Footer social media sectie -->
       <section>
         <h2>Social</h2>
 
@@ -541,11 +582,11 @@
                 </g>
               </g>
             </svg>
-            <a href="#">Facebook</a>
+            <a href="#" aria-label="Bezoek de Facebook pagina van de Hogeschool van Amsterdam">Facebook</a>
           </li>
 
           <li>
-            <svg
+            <svg 
               aria-label="instagram-animation"
               viewBox="0 0 24 24"
               fill="none"
@@ -574,7 +615,7 @@
                 ></path>
               </g>
             </svg>
-            <a href="#">Instagram</a>
+            <a href="#" aria-label="Bezoek de Instagram pagina van de Hogeschool van Amsterdam">Instagram</a>
           </li>
 
           <li>
@@ -613,8 +654,8 @@
                 </g>
               </g>
             </svg>
-            <!-- Bezoek de LinkedIn pagina van de Hogeschool van Amsterdam -->
-            <a href="#">LinkedIn</a>
+
+            <a href="#" aria-label="Bezoek de LinkedIn pagina van de Hogeschool van Amsterdam">LinkedIn</a>
           </li>
         </ul>
       </section>
@@ -641,6 +682,7 @@
         <button>Aanpassen cookie-instellingen</button>
       </section>
 
+      <!-- Footer afbeelding van creating tommorow, Light en Dark mode -->
       <picture>
         <source
           srcset="images/creating_tommorow.png"

@@ -22,7 +22,16 @@ Blauw
 
 #### Je focus:
 
-Surface plane
+Surface plane:
+1. prefers-reduced-motion
+2. Animaties: hover, micro-interactie
+3. SVG stylen en animeren
+4. Custom properties (meer dan alleen kleur)
+5. Micro interacties 
+6. States van controls (hover, focused etc.)
+
+EXTRA
+7. Ik heb 1x has() gebruikt, maar wel met hulp, maar zelf bedacht dat ik het kon gebruiken
 
 </details>
 
@@ -66,8 +75,6 @@ Lijst met je bevindingen die in de test naar voren kwamen:
 3. De zoekknop wordt vermeld als uitgeschakeld, maar je ziet niet waar of wat het is, aangezien je gewoon kan zoeken (kan iemand tot verwarring brengen).
 4. Bij de carousel staan er pijlen om er door heen te navigeren, als je helemaal tot het einde gaat klikken en verder wilt gaan met de TAB functie, dan spring je terug naar het begin van de pagina, het zelfde gebeurt als je terug wilt klikken met de knoppen.
    <img src="readme-images/hva_pijlen.png" width="375px" alt="Blauw vak in scherm op hva home pagina">
-
-<!-- 5 en 6 en 7 moeten nog beter worden onderzocht -->
 
 5. In de footer staat alles als een H2, behalve het Social kopje, dat is een H3
    <img src="readme-images/hva_social_en_instagram.png" width="375px" alt="Blauw vak in scherm op hva home pagina">
@@ -236,10 +243,12 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 Sommigen dingen waren niet van toepassing, omdat ik die niet heb gemaakt, zoals video's, dus daar ga ik het niet over hebben.
-
+1. Ik heb uitgebreidere img teksten geschreven
+2. Ook een skip to main link, maar daar ook meer uitleg bij geplaatst
+3. Het logo img heeft ook een iets bredere beschrijving
+4. De zoekbalk heeft een bredere beschrijving
 
 WCAG Checklist
-<!-- BELANGRIJK UPDATE NODIG AANGEZIEN PAGINA NOG IN BEHANDELING IS -->
 1. HTML is validated en geen errors 
 
 2. Does the site only allow portrait orientation?. Mehh op computer is het niet echt mooi.
@@ -250,9 +259,9 @@ WCAG Checklist
 
 5. Prefers-reduced-motion available
 
-6. Ik heb mijn contrast gecontroleerd
+6. Ik heb mijn contrast gecontroleerd en was goed
 
-7. 
+
 
 </details>
 
@@ -262,7 +271,9 @@ WCAG Checklist
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
 ### Stand van zaken
+Mijn carousel liet de tekst buiten beeld gaan, en je kon niet scrollen er op.
 
+Maar voor de rest, ik heb best snel de pagina kunnen maken en schrijven, dus ben er tevreden mee.
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
 ### Agenda voor meeting
@@ -313,15 +324,38 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Dit ging goed/Heb ik geleerd:
 
-Korte omschrijving met plaatjes
+Ik heb geleerd hoe ik een menu uit laat klappen, het was een gedoe, maar uiteindelijk is het mij gelukt.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/eindopdracht_1_menu_uitklappen.png" width="375px" alt="Top">
+
+Ook heb ik geleerd hoe ik met nth-type-of-child moet werken.
+
+  <img src="readme-images/eindopdracht_1_nth.png" width="375px" alt="Top">
+
+Ook heb ik geleerd dat je een p of svg in een a element kan doen, en dat een h1 in een sectie kan staan
+
+  <img src="readme-images/eindopdracht_1_elementen_in_a.png" width="375px" alt="Top">
+
+  Ook heb ik geleerd animaties maken en vele andere dingen tijdens de les, zoals root, keyframes, etc. Ik kan mij nu niet alles herrineren, maar wel veel nieuwe dingen geleerd, of ik het nou heb toegepast of niet.
+
+Voor de focus kan je blijkbaar niet op een svg zetten, dus eerst werkte de img focus niet, ik had het met rust gelaten, maar na ChaGPT gevraagd waarom het niet werkte vertelde hij dat het niet kan op svg en liet een voorbeeld zien. Dit was voor mijn vergrootglas, dus ik heb het toegepast ook op de img en het werkte daar ook.
 
 ### Dit was lastig/Is niet gelukt:
 
-Korte omschrijving met plaatjes
+De carousel heb ik niet perfect gemaakt, zo zijn er nog kleine dingen die niet goed zijn, zoals wanneer je het opschaalt het er niet best uit ziet. De tekst is niet met elkaar allemaal gelijk.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/eindopdracht_2_carousel.png" width="375px" alt="bummer">
+
+De plus heb ik niet uitgewerkt, dat had ik graag nog willen doen.
+
+  <img src="readme-images/eindopdracht_2_plus_uitwerken.png" width="375px" alt="bummer">
+
+De tijd blok was verandert, nadat ik de error had opgelost. Ik moest 2 tijdblokken maken, waardoor de tekst werd verpest.
+
+  <img src="readme-images/eindopdracht_2_tijd_blok_verbeteren.png" width="375px" alt="bummer">
+
+
+  
 </details>
 
 ## Bronnenlijst
@@ -333,8 +367,36 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 Nb. ChatGpT en andere AI horen er ook bij.
 Nb. Vermeld de bronnen ook in je code.
 
-1. bron 1
-2. bron 2
-3. ...
+1. ChatGPT:
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ Chatgpt heeft uitgelegd wat ik nodig had om mijn menu te centreren en de website heeft het verder uitgelegd
+- Code laten uitleggen wat het doet en errors laten bekijken uitleggen (Header menu, Niet gelukt en heb het gevraagd aan een klas genoot : Roos Buskermolen)
+- has(): PROMPT: Oh sorry ik wil dat de p die nu onder aan de pagina staat, wil ik direct onder de h1 hebben. Dus hoe spreek ik de p direct onder de h1 aan? ANTWOORD: 
+/* De p direct onder h1 moet bovenaan */
+main h1:has(+ p) + p {
+  order: 0;
+}
 
+- PROMPT: Waarom werkt dit niet? header > a > svg:focus{ background-color: var(--focus-header-state); }, want zonder svg werkt het wel. ANTWOORD: Je moet de focus op de <a> zetten, niet op de <svg>. 
+header > a:focus svg {
+  background-color: var(--focus-header-state);
+}
+
+
+
+2. HTML:
+- BRONVERMELDING, skip to main https://www.a11y-collective.com/blog/skip-to-main-content/ (uitleggen hoe je de skip to main link kan maken en waar ik wat moet plaatsen)
+
+3. CSS:
+- BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll (Hoe de header sticky show hide kan maken)
+- BRONVERMELDING: skip to main https://www.a11y-collective.com/blog/skip-to-main-content/ En Roos Buskermolen: body > a code uitgeleg, zodat het wel werkt, ik had de vekeerde naam gegeven
+- BRONVERMELDING: Roos Buskermolen (nav (translate) en nav.geopend) Ze heeft geholpen met js code de nav schrijven en in html de regels toevoegen van translate, zodat het werkte en open ging (menu)
+- BRONVERMELDING: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ Vermeld flex of inline flex.  en bij align-self kan alleen vertical-align op non flex-items
+- BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll Weer de sticky header met hulp van Sanne 't Hooft om het te laten werken
+
+- BRONVERMELDING: Carousel: https://codepen.io/shooft/pen/QwjQGZe?editors=1100* hoe de carousel gemaakt moet worden
+- BRONVERMELDING: Carousel: https://codepen.io/shooft/pen/QwjQGZe Hoe de buttons moeten worden gemaakt
+
+4. JS:
+- BRONVERMELDING Roos Buskermolen: deNav (geholpen wat ik moest plaatsen in js)
+- BRONVERMELDING sticky header: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll + Sanne 't Hooft (Hoe de header weg gaat als je omlaag scrolt en terug wanneer je omhoog scrolt)
 </details>
