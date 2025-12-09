@@ -189,7 +189,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
 ### Stand van zaken
-
+De time was nog niet goed <img src="readme-images/week_1_time.png" width="375px" alt="Time blok">
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
 ### Agenda voor meeting
@@ -275,6 +275,8 @@ Mijn carousel liet de tekst buiten beeld gaan, en je kon niet scrollen er op.
 
 Maar voor de rest, ik heb best snel de pagina kunnen maken en schrijven, dus ben er tevreden mee.
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+na de lessen had ik een geval dat mijn tekst in beeld kwam van de header, maar is nu wel opgelost
+<img src="readme-images/week_3_tekst_in_beeld.png" width="375px" alt="Header nav in beeld">
 
 ### Agenda voor meeting
 
