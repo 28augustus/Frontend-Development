@@ -330,7 +330,8 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Je uitkomst - karakteristiek screenshots:
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/week_5_eind_1.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/week_5_eind_2.png" width="375px" alt="uitomst opdracht 2">
 
 ### Dit ging goed/Heb ik geleerd:
 
