@@ -136,6 +136,8 @@ WCAG checklist wat niet goed is HvA:
 ### Stand van zaken
 
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Hier was de tekst nog aan de linkerkant en de afbeelding max-widt:100%, waardoor die ook super groot waren
+<img src="readme-images/week_1_time.png" width="375px" alt="Tekst links op beeld">
 
 ### Agenda voor meeting
 
