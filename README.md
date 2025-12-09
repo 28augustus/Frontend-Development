@@ -23,15 +23,15 @@ Blauw
 #### Je focus:
 
 Surface plane:
+
 1. prefers-reduced-motion
 2. Animaties: hover, micro-interactie
 3. SVG stylen en animeren
 4. Custom properties (meer dan alleen kleur)
-5. Micro interacties 
+5. Micro interacties
 6. States van controls (hover, focused etc.)
 
-EXTRA
-7. Ik heb 1x has() gebruikt, maar wel met hulp, maar zelf bedacht dat ik het kon gebruiken
+EXTRA 7. Ik heb 1x has() gebruikt, maar wel met hulp, maar zelf bedacht dat ik het kon gebruiken
 
 </details>
 
@@ -87,24 +87,24 @@ Lijst met je bevindingen die in de test naar voren kwamen:
 8. Iets dat mij opviel is dat op de CMD pagina zijn de H2 kleiner dan de H3, maar specifiek gedeelte
    <img src="readme-images/hva_cmd_h2_en_h3.png" width="375px" alt="Blauw vak in scherm op hva home pagina">
 
-
 WCAG checklist wat niet goed is HvA:
+
 1. Hun HTML heeft errors (meer errors dan op de afbeelding te zien is)
-  <img src="readme-images/1_wcag_html_validation.png" width="375px" alt="Errors op validator checker, waarvan 1 attribute text not allowed on element a at this point. 2 Element div not allowed as child of element button in this context"> 
-  <img src="readme-images/1_wcag_html_validation_all.png" width="375px" alt="Alle erros, warnings en info's gegroepeerd"> 
+   <img src="readme-images/1_wcag_html_validation.png" width="375px" alt="Errors op validator checker, waarvan 1 attribute text not allowed on element a at this point. 2 Element div not allowed as child of element button in this context">
+   <img src="readme-images/1_wcag_html_validation_all.png" width="375px" alt="Alle erros, warnings en info's gegroepeerd">
 
 2. Check to see that keyboard focus order matches the visual layout: Moet het plusje als eerst? Voor mij voelt dat gewoon niet heel goed, maar ik heb er ook niet heel veel ervaring in.
-  <img src="readme-images/1_wcag_keyboard.png" width="375px" alt="Website van HvA Over de opleiding met een rode cirkel om een plusje"> 
+   <img src="readme-images/1_wcag_keyboard.png" width="375px" alt="Website van HvA Over de opleiding met een rode cirkel om een plusje">
 
 3. YouTube video's spelen op een andere pagina af? geen idee wat het precies is, maar het is makkelijk te sluiten, maar ik schrijf het als nog even hier op.
-  <img src="readme-images/1_wcag_controls_aparte_tab.png" width="375px" alt="Website van HvA Video Aftudeerproject van CMD-student Joop"> 
+   <img src="readme-images/1_wcag_controls_aparte_tab.png" width="375px" alt="Website van HvA Video Aftudeerproject van CMD-student Joop">
 
 4. Ze hebben geen Light/Dark mode, alleen 1 modus (zie alle vorige afbeeldingen van de website)
 
 5. Voor high contrast mode had ik no, ben vergeten waarom, maar heb het niet kunnen vinden, dus ook geen voorbeeld dan, maar wel gewoon even opschrijven, zodat het genoteerd staat.
 
 6. De roze contrast voor kleine letters op de CMD pagina is niet goed.
-  <img src="readme-images/1_wcag_color_contrast.png" width="375px" alt="Carousel op de HvA website neem een virtueel kijke bij CMD"> 
+   <img src="readme-images/1_wcag_color_contrast.png" width="375px" alt="Carousel op de HvA website neem een virtueel kijke bij CMD">
 
 </details>
 
@@ -191,6 +191,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
 ### Stand van zaken
+
 De time was nog niet goed <img src="readme-images/week_1_time.png" width="375px" alt="Time blok">
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
@@ -245,13 +246,19 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 Sommigen dingen waren niet van toepassing, omdat ik die niet heb gemaakt, zoals video's, dus daar ga ik het niet over hebben.
-1. Ik heb uitgebreidere img teksten geschreven
-2. Ook een skip to main link, maar daar ook meer uitleg bij geplaatst
-3. Het logo img heeft ook een iets bredere beschrijving
-4. De zoekbalk heeft een bredere beschrijving
+
+1. Ik heb uitgebreidere img alt teksten geschreven <img src="readme-images/week_4_uitgebreide_img_txt.png.png" width="375px" alt="Uitgebreide tekst">
+2. Ook een skip to main link, maar daar ook meer uitleg bij geplaatst <img src="readme-images/week_4_skip_to_main_deel_1.png" width="375px" alt="Skip to main code deel 1">
+
+<img src="readme-images/week_4_skip_to_main_deel_2.png" width="375px" alt="Skip to main code deel 2">
+
+3. Het logo img heeft ook een iets bredere alt beschrijving, zie de 1e afbeelding hierboven (nr1)
+4. De zoekbalk heeft een bredere alt beschrijving
+   <img src="readme-images/week_4_zoekbalk.png" width="375px" alt="Zoekbalk alt tekst">
 
 WCAG Checklist
-1. HTML is validated en geen errors 
+
+1. HTML is validated en geen errors
 
 2. Does the site only allow portrait orientation?. Mehh op computer is het niet echt mooi.
 
@@ -263,8 +270,6 @@ WCAG Checklist
 
 6. Ik heb mijn contrast gecontroleerd en was goed
 
-
-
 </details>
 
 ## Voortgang 3 (week 4)
@@ -273,6 +278,7 @@ WCAG Checklist
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
 ### Stand van zaken
+
 Mijn carousel liet de tekst buiten beeld gaan, en je kon niet scrollen er op.
 
 Maar voor de rest, ik heb best snel de pagina kunnen maken en schrijven, dus ben er tevreden mee.
@@ -340,7 +346,7 @@ Ook heb ik geleerd dat je een p of svg in een a element kan doen, en dat een h1 
 
   <img src="readme-images/eindopdracht_1_elementen_in_a.png" width="375px" alt="Top">
 
-  Ook heb ik geleerd animaties maken en vele andere dingen tijdens de les, zoals root, keyframes, etc. Ik kan mij nu niet alles herrineren, maar wel veel nieuwe dingen geleerd, of ik het nou heb toegepast of niet.
+Ook heb ik geleerd animaties maken en vele andere dingen tijdens de les, zoals root, keyframes, etc. Ik kan mij nu niet alles herrineren, maar wel veel nieuwe dingen geleerd, of ik het nou heb toegepast of niet.
 
 Voor de focus kan je blijkbaar niet op een svg zetten, dus eerst werkte de img focus niet, ik had het met rust gelaten, maar na ChaGPT gevraagd waarom het niet werkte vertelde hij dat het niet kan op svg en liet een voorbeeld zien. Dit was voor mijn vergrootglas, dus ik heb het toegepast ook op de img en het werkte daar ook.
 
@@ -358,8 +364,6 @@ De tijd blok was verandert, nadat ik de error had opgelost. Ik moest 2 tijdblokk
 
   <img src="readme-images/eindopdracht_2_tijd_blok_verbeteren.png" width="375px" alt="bummer">
 
-
-  
 </details>
 
 ## Bronnenlijst
@@ -372,35 +376,37 @@ Nb. ChatGpT en andere AI horen er ook bij.
 Nb. Vermeld de bronnen ook in je code.
 
 1. ChatGPT:
+
 - https://css-tricks.com/snippets/css/a-guide-to-flexbox/ Chatgpt heeft uitgelegd wat ik nodig had om mijn menu te centreren en de website heeft het verder uitgelegd
 - Code laten uitleggen wat het doet en errors laten bekijken uitleggen (Header menu, Niet gelukt en heb het gevraagd aan een klas genoot : Roos Buskermolen)
-- has(): PROMPT: Oh sorry ik wil dat de p die nu onder aan de pagina staat, wil ik direct onder de h1 hebben. Dus hoe spreek ik de p direct onder de h1 aan? ANTWOORD: 
-/* De p direct onder h1 moet bovenaan */
-main h1:has(+ p) + p {
+- has(): PROMPT: Oh sorry ik wil dat de p die nu onder aan de pagina staat, wil ik direct onder de h1 hebben. Dus hoe spreek ik de p direct onder de h1 aan? ANTWOORD:
+  /_ De p direct onder h1 moet bovenaan _/
+  main h1:has(+ p) + p {
   order: 0;
-}
+  }
 
-- PROMPT: Waarom werkt dit niet? header > a > svg:focus{ background-color: var(--focus-header-state); }, want zonder svg werkt het wel. ANTWOORD: Je moet de focus op de <a> zetten, niet op de <svg>. 
-header > a:focus svg {
+- PROMPT: Waarom werkt dit niet? header > a > svg:focus{ background-color: var(--focus-header-state); }, want zonder svg werkt het wel. ANTWOORD: Je moet de focus op de <a> zetten, niet op de <svg>.
+  header > a:focus svg {
   background-color: var(--focus-header-state);
-}
-
-
+  }
 
 2. HTML:
+
 - BRONVERMELDING, skip to main https://www.a11y-collective.com/blog/skip-to-main-content/ (uitleggen hoe je de skip to main link kan maken en waar ik wat moet plaatsen)
 
 3. CSS:
+
 - BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll (Hoe de header sticky show hide kan maken)
 - BRONVERMELDING: skip to main https://www.a11y-collective.com/blog/skip-to-main-content/ En Roos Buskermolen: body > a code uitgeleg, zodat het wel werkt, ik had de vekeerde naam gegeven
 - BRONVERMELDING: Roos Buskermolen (nav (translate) en nav.geopend) Ze heeft geholpen met js code de nav schrijven en in html de regels toevoegen van translate, zodat het werkte en open ging (menu)
-- BRONVERMELDING: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ Vermeld flex of inline flex.  en bij align-self kan alleen vertical-align op non flex-items
+- BRONVERMELDING: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ Vermeld flex of inline flex. en bij align-self kan alleen vertical-align op non flex-items
 - BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll Weer de sticky header met hulp van Sanne 't Hooft om het te laten werken
 
 - BRONVERMELDING: Carousel: https://codepen.io/shooft/pen/QwjQGZe?editors=1100* hoe de carousel gemaakt moet worden
 - BRONVERMELDING: Carousel: https://codepen.io/shooft/pen/QwjQGZe Hoe de buttons moeten worden gemaakt
 
 4. JS:
+
 - BRONVERMELDING Roos Buskermolen: deNav (geholpen wat ik moest plaatsen in js)
 - BRONVERMELDING sticky header: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll + Sanne 't Hooft (Hoe de header weg gaat als je omlaag scrolt en terug wanneer je omhoog scrolt)
 </details>
