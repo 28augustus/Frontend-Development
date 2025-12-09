@@ -1,4 +1,10 @@
-/* BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll */
+/* 
+BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll
+BRONVERMELDING: skip to main https://www.a11y-collective.com/blog/skip-to-main-content/ En Roos Buskermolen: body > a code 
+BRONVERMELDING: Roos Buskermolen (nav (translate) en nav.geopend)
+BRONVERMELDING: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ Vermeld flex of inline flex.  en bij align-self kan alleen vertical-align op non flex-items
+BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll
+*/
 
 /**************/
 /* FONTS */
@@ -45,6 +51,12 @@
   --color-h3-heading-carousel: #f35279;
   --color-after-line-h2: #f35279;
   --color-after-line-h3: #f35279;
+  --underline: underline .2em #fff;
+
+  /* Fonts */
+  --size: 1em;
+  --weight-heavy: 900;
+  --weight-bold: 700;
 
   /* spacing */
   --padding-0: 0;
@@ -74,7 +86,6 @@
   --focus-text: #21146b;
 
   --focus-padding: 1em;
-  --focus-font-weight-p: 900;
 
   --visited-pink: #fff;
   --visited-main: #f35279;
@@ -116,7 +127,7 @@
     --color-after-line-h3: #fff;
 
     /* font */
-    --font-pink-weight: 900;
+    --weight-heavy: 900;
 
     /* states */
     --hover-lijn: underline .5em #f35279;
@@ -161,12 +172,16 @@ button {
   background: none;
 }
 
-.a {
+/* Bronvermelding, skip to main https://www.a11y-collective.com/blog/skip-to-main-content/ 
+En Roos Buskermolen: body > a code */
+
+body > a {
   position: absolute;
   left: -9999em;
+  z-index: 100;
 }
 
-.a:focus {
+body > a:focus {
   left: 0em;
 }
 
@@ -209,8 +224,6 @@ header {
   top: 0;
   z-index: 1;
 
-  /* position: fixed;/ */
-  /* top: 0; */
   transition: var(--transition-7);
 }
 
@@ -240,7 +253,7 @@ nav.geopend {
 /* Zet de hele ul wat lager */
 header nav ul {
   padding: 15% 0;
-  font-weight: var(--font-pink-weight);
+  font-weight: var(--weight-heavy);
 }
 
 /* Zet tussenruimtes bij elke li item */
@@ -292,7 +305,7 @@ button[aria-label="toggle menu"] {
   appearance: none;
   z-index: 1;
 
-  /* width: 0.5em; */
+
   aspect-ratio: 1/1;
 
   background-color: var(--color-header-background);
@@ -358,12 +371,6 @@ header ul {
 main {
   background-color: var(--color-background);
   display: grid;
-  /* display: flex;
-  flex-direction: column; */
-}
-
-main section:nth-of-type(1) {
-  background-color: var(--color-nav-background);
 }
 
 /**************
@@ -384,7 +391,8 @@ footer section:nth-of-type(5) {
 }
 
 footer h2 {
-  font-size: var();
+  font-size: var(--size);
+  font-weight: var(--weight-heavy);
   position: relative;
 
   width: fit-content;
@@ -446,7 +454,7 @@ footer a:focus {
   background-color: var(--focus-background-pink);
   color: var(--focus-text);
 
-  font-weight: var(--focus-font-weight-p);
+  font-weight: var(--weight-heavy);
   padding: var(--focus-padding);
 }
 
@@ -454,11 +462,19 @@ header button:focus {
   background-color: var(--focus-header-state);
 }
 
+header > a:focus svg{
+  background-color: var(--focus-header-state);
+}
+
+header > a:focus img{
+  background-color: var(--focus-header-state);
+}
+
 main a:focus {
   background-color: var(--focus-background-main);
   color: var(--focus-text);
 
-  font-weight: var(--focus-font-weight-p);
+  font-weight: var(--weight-heavy);
   padding: var(--focus-padding);
 }
 
@@ -487,32 +503,10 @@ main a:visited {
   font-weight: var(--visited-font-weight);
 }
 
-/* 
-Unvisited
-Visited
-Hover
-Active
-Focus */
 
-
-
-/*
-
-a:focus {
-
-}
-
-a:focus-visible {
-
-}
-
-a:visited {
-
-}
-
-a:link {
-
-} */
+/**************
+Animatie
+**************/
 
 /* Facebook animatie */
 @keyframes facebook-animation {
