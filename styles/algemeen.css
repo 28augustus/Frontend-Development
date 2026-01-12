@@ -1,0 +1,502 @@
+/**************/
+/* FONTS */
+/**************/
+
+@font-face {
+  font-family: "MY POPPINS";
+  src: url("../fonts/e807dee2426166ad-s.p.woff2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MY POPPINS";
+  src: url("../fonts/851c14db057e20c2-s.p.woff2");
+  font-style: italic;
+}
+
+/*********************/
+/* KLEURTJES */
+/*********************/
+
+/* 
+✔️ Kleuren
+✔️ Spacing
+✔️ Fontgroottes
+✔️ Hover-waardes
+✔️ Overgangen
+✔️ Schaduwen
+✔️ Border-radius 
+*/
+
+/* 
+Kleur
+
+backgrounds (page, header, nav, footer)
+
+text (primary, secondary, muted)
+
+accent / brand / heading / link / icon / button / after-line / time-block
+Typografie
+
+font-sizes (scale: xs / sm / base / lg / xl / 2xl)
+
+font-weights (light / regular / bold)
+
+spacing scale (xs / sm / md / lg) of percentages voor padding
+
+container max-width
+Layout & geometry
+
+grid gaps, gutter, border-radius, aspect ratios
+States & transitions
+
+hover/active sizes or colors, transition-duration, easing
+Sizes for icons / images
+
+focus outline color/width, reduced-motion threshold */
+
+:root {
+  /* colors */
+
+  /* color backgrounds */
+
+
+  /* colors icons (buttons, links, after, svg etc) */
+  --link-before-bg: #f35279;
+  --link-after-footer: #000;
+  --time-block-bg: #000;
+  --time-block-txt: #fff;
+  --header-icons: #fff;
+
+  --color-icon-pink: #f35279;
+  --color-icon-black: #000;
+  --color-icon-blue: #25167a;
+
+  /* Fonts */
+
+  /* GEBRUIK CLAMP
+  --font-size-base: clamp(1rem, 2vw, 1.5rem);
+  --font-size-heading: clamp(1.5rem, 4vw, 3rem);
+  
+  */
+  --font-size-xxsmall: 0.8em;
+  --font-size-xsmall: 1em;
+  --font-size-small: 1.5em;
+  --font-size-medium: 2em;
+  --font-size-large: 3em;
+  --font-size-x-large: 4em;
+  --font-size-xx-large: 5em;
+
+  --weight-bolder: 900;
+  --weight-bold: 700;
+  --weight-normal: 400;
+  --weight-light: 300;
+  --weight-lighter: 100;
+
+  /* spacing */
+  --white-space-none: 0;
+  --white-space-small: 1em;
+  --white-space-medium: 2em;
+  --white-space-large: 4em;
+  --white-space-xl: 8em;
+
+  --white-space-none-small: 0 1em;
+  --white-space-none-medium: 0 2em;
+  --white-space-none-large: 0 4em;
+  --white-space-none-xl: 0 8em;
+
+  --white-space-small-none: 1em 0;
+  --white-space-medium-none: 2em 0;
+  --white-space-large-none: 4em 0;
+  --white-space-xl-none: 8em 0em;
+
+  --white-space-small-medium: 1em 2em;
+  --white-space-small-large: 1em 4em;
+  --white-space-small-xl: 1em 8em;
+
+  --white-space-medium-small: 2em 1em;
+  --white-space-medium-large: 2em 4em;
+  --white-space-medium-xl: 2em 8em;
+  
+  --white-space-large-small: 4em 1em;
+  --white-space-large-medium: 4em 2em;
+  --white-space-large-xl: 4em 8em;
+  
+  --white-space-xl-small: 8em 1em;
+  --white-space-xl-medium: 8em 2em;
+  --white-space-xl-large: 8em 4em;
+
+  /* animatie */
+  --animation-duration: 1s;
+  --animation-iteration-count: 3;
+
+  --transition-short: 0.3s;
+  --transition-normal: 0.5s;
+  --transition-long: 0.7s;
+
+  --transform: scale(0.8);
+  --transform-footer: scale(0.5);
+
+  /* States */
+  --hover-lijn: underline 0.5em #25167a;
+  --hover-header-img: #21146b;
+  --hover-button: #21146b;
+
+  --focus-header-state: #21146b; /* Als het symbool/state wit is dan gebruik deze kleur*/
+  --focus-background-pink: #fff;
+  --focus-background-main: #f35279;
+  --focus-text: #21146b;
+
+  --focus-padding: 1em;
+
+  --visited-pink: #fff;
+  --visited-main: #f35279;
+  --visited-nav: #fff;
+
+  --visited-font-weight: 900;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-header-background: #351fb7;
+    --color-background: #351fb7;
+    --color-menu-color: #fff;
+    --color-nav-background: #25167a;
+
+    --color-text-nav-p: #fff;
+    --color-text-nav-a: #f35279;
+    --icon-color-nav-svg: #fff;
+
+    --color-text: #fff;
+    --icon-color: #fff;
+
+    --color-button: #000;
+    --color-after-line: #fff;
+    --color-footer-background: #000;
+
+    --color-detail-summary: #fff;
+
+    /* 2e pagina colors */
+    --block-color: #000;
+    --color-h3-heading-carousel: #f35279;
+    --color-after-line-h2: #f35279;
+    --color-after-line-h3: #fff;
+
+    /* font */
+    --weight-heavy: 900;
+
+    /* states */
+    --hover-lijn: underline 0.5em #f35279;
+    --hover-header-img: #f35279;
+    --hover-button: #f35279;
+
+    --focus-header-state: #f35278; /* Als het symbool/state wit is dan gebruik deze kleur*/
+    --focus-background-pink: #fff;
+    --focus-text: #21146b;
+
+    --visited-pink: #f35279;
+    --visited-main: #f35279;
+    --visited-nav: #fff;
+  }
+}
+
+/* @media (prefers-reduced-motion: reduce) {
+  *{ 
+  }
+}  */
+/* Sommigen mogen wel, zoals opacity maar minder heftig
+verschijven en knipper mag niet. Minder intens */
+
+/**************/
+/*ALGEMENE STYLING */
+/**************/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "MY POPPINS";
+}
+
+body li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+/* body > a {
+  position: absolute;
+  left: -9999em;
+  z-index: 100;
+} */
+
+/**************/
+/* HEADER */
+/**************/
+/****************
+  TO DO
+  VAR TOEVOEGEN 
+*****************/
+/* header {
+  background-color: lightblue;
+  display: flex;
+  justify-content: start;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  transition: var(--transition-long);
+} */
+
+/*
+header.foetsie {
+  translate: 0 -100%;
+} */
+
+/* BRONVERMELDING: Roos Buskermolen (nav (translate) en nav.geopend) */
+/* nav {
+  position: fixed;
+  inset: 0;
+
+  translate: 0 -1000%;
+  transition: var(--transition-short);
+  background-color: var(--color-header-background);
+
+}
+
+nav.geopend {
+  translate: 0 0;
+} */
+
+/* Als de nav is geopen dan hieronder 
+zorgt dat je het kan openen nog een keer */
+/* header nav {
+  position: relative;
+}
+
+header section {
+  position: absolute;
+  background-color: lightgreen;
+} */
+
+/* BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll */
+/* Sticky Header */
+
+/* menu button */
+button[aria-label="toggle menu"] {
+  appearance: none;
+  z-index: 1;
+
+  aspect-ratio: 1/1;
+
+  background-color: darkblue;
+  border: none;
+  padding: var(--white-space-none);
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+button span {
+  display: block;
+
+  width: 2.5em;
+  height: 0.3em;
+  background-color: var(--header-icons);
+  border-radius: 2em;
+
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+button span:nth-of-type(1) {
+  translate: 0 -1em;
+  transition: var(--transition-short);
+}
+
+button span:nth-of-type(3) {
+  translate: 0 1em;
+  transition: var(--transition-short);
+}
+
+button.is-open span:nth-of-type(1) {
+  translate: 0 0;
+  rotate: 45deg;
+  transition: var(--transition-short);
+}
+
+button.is-open span:nth-of-type(2) {
+  scale: 0 1;
+  transition: var(--transition-short);
+}
+
+button.is-open span:nth-of-type(3) {
+  translate: 0 0;
+  rotate: -45deg;
+  transition: var(--transition-short);
+}
+
+/* nav header */
+header ul {
+  position: static;
+  translate: 0 0;
+  padding: var(--white-space-none);
+  background: none;
+}
+
+/* nav > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+nav > button {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* Submenu area */
+
+/**************/
+/* MAIN */
+/**************/
+
+/* Semantisch coderen
+de 
+h1, h2, h3 {
+  color: white/Dark blue;
+}
+
+h2 {
+  font-size: 20em;
+}
+*/
+
+img {
+  max-width: 100%;
+}
+
+/**************/
+/* Footer */
+/**************/
+
+/* TO DO: Padding is too much when small 
+
+MAYBE ASK ABOUT SIZING RESPONSIVENESS AND HOW IT WORKS?
+*/
+
+/* footer {
+  padding: var(--white-space-none-xl);
+} */
+
+footer h2 {
+  /* font-size: var(--size); */
+  /* font-weight: var(--weight-heavy); */
+  position: relative;
+
+  width: fit-content;
+}
+
+/* streepje */
+footer h2::after {
+  content: "";
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--link-after-footer);
+  position: absolute;
+  bottom: -0.4em;
+  left: 0.8em;
+}
+
+section[aria-label="footer grid"] {
+  display: grid;
+}
+
+/* Zorgt voor witruimte voor laatste svg */
+footer > section:nth-of-type(2) ul {
+  padding: var(--white-space-medium-none);
+}
+
+footer section > svg {
+  max-width: 30vh;
+}
+
+/* BRONVERMELDING: https://codepen.io/28augustus/pen/dPMxwaW */
+@media (width > 43em) {
+  section[aria-label="footer grid"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: var(--white-space-large-none);
+  }
+
+  footer > section:nth-of-type(2) ul {
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    gap: var(--white-space-small);
+  }
+}
+
+/* Zet de laatse sectie en de picture ook in een sectie,
+Kijk wel even naar alle anderen delen waar je de ul aanspreekt */
+@media (width > 67em) {
+  section[aria-label="footer grid"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  footer > section:nth-last-of-type(1) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    /* Zorgt er voor dat de creating tommorow
+    aan de linker kant blijft */
+    gap: 20em;
+  }
+
+  footer > section:nth-of-type(2) ul,
+  footer section > svg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--white-space-small);
+  }
+
+  /* De laatste ul naast de svg, 
+  zorgt voor dat button boven blijft en
+  aan de rechterkant van de pagina */
+  footer > section:nth-of-type(2) ul {
+    display: flex;
+
+    justify-content: flex-end;
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media (width > 70em) {
+  footer > section:nth-last-of-type(1) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    /* Zorgt er voor dat de creating tommorow
+    aan de linker kant blijft */
+    gap: 35em;
+  }
+}
+
+/**************
+STATES
+**************/
+
+/**************
+Animatie
+**************/
