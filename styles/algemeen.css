@@ -72,6 +72,9 @@ focus outline color/width, reduced-motion threshold */
   --color-icon-black: #000;
   --color-icon-blue: #25167a;
 
+  --color-button-carousel: #000;
+  --color-txt-button-carousel: #fff;
+
   /* Fonts */
 
   /* GEBRUIK CLAMP

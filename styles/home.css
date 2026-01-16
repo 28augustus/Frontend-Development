@@ -48,8 +48,6 @@ main section:nth-of-type(1) > svg:nth-last-of-type(3) {
 main section:nth-of-type(2) {
   display: grid;
 
-  position: relative;
-
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(4, auto);
 
@@ -83,17 +81,21 @@ main section:nth-of-type(2) a::before {
   z-index: -1;
 }
 
+/* 
+HERE: TO DO:
+Zet met align self de andere beter
+*/
 main section:nth-of-type(2) p:first-of-type {
-  position: absolute;
   display: block;
 
-  grid-row: 2;
+  grid-column-start:1;
+  grid-row-start:2;
   z-index: 1;
 
   background-color: var(--time-block-bg);
   color: var(--time-block-txt);
   padding-top: var(--white-space-small);
-  /* align-self: end; */
+  align-self: end;
 
   height: 7em;
   width: 7em;
@@ -114,6 +116,7 @@ main section:nth-of-type(2) span {
 main section:nth-of-type(2) img {
   position: relative;
   grid-column: 1 / span 4;
+  grid-row: 2;
 
   padding: var(--white-space-none-medium);
 }

@@ -6,6 +6,108 @@
 /* MAIN */
 /**************/
 
+/* Carousel area */
+main section:nth-of-type(2) {
+  display: grid;
+  position: relative;
+
+  /* Zodat de knoppen ruimte hebben */
+  padding: var(--white-space-medium-none);
+}
+
+/* BRONVERMELDING: 
+https://codepen.io/shooft/pen/QwjQGZe Carousel oefening school
+https://youtu.be/g03Yldh9Nkw?si=wqSNR9LvJ2BQV50v YouTube video titel: 
+Learning how CSS-only carousels are going to work (Kevin Powell) */
+main section:nth-of-type(2) ul {
+  display: grid;
+  grid-auto-flow: column;
+
+  overflow: auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  
+  /* zodat je niet per ongeluk 'back' scrollt */
+  overscroll-behavior-x:contain;
+
+}
+
+main section:nth-of-type(2) li {
+  display: grid;
+
+  flex-basis:100%;
+  flex-shrink:0;
+  scroll-snap-align:center;
+}
+
+main section:nth-of-type(2) li > a {
+  display: flex;
+  flex-direction: column;
+
+  background-color: greenyellow;
+
+  padding: var(--white-space-none-small);
+}
+
+main section:nth-of-type(2) a > h3 {
+  order: 2;
+}
+
+main section:nth-of-type(2) a > p {
+  order: 3;
+}
+
+main section:nth-of-type(2) a > img {
+  order: 1;
+  
+  max-width: 58vw;
+  /* height: 58vh; */
+  /* height: 17,5em; */
+
+  object-fit: cover;
+
+}
+
+/* Alle verhalen opschuiven */
+main section:nth-of-type(2) > a {
+  position: absolute;
+
+  bottom: -5em;
+}
+
+
+/* Styling buttons */
+main section:nth-of-type(2) ul::scroll-button(*) {
+  height: 4.5em;
+  aspect-ratio: 1/1; 
+
+  position: absolute;
+
+  bottom: 0;
+
+  background-color: var(--color-button-carousel);
+  color: var(--color-txt-button-carousel);
+}
+
+main section:nth-of-type(2) ul::scroll-button(*):disabled {
+  opacity: .5;
+}
+
+main section:nth-of-type(2) ul::scroll-button(right) {
+  content: '→' / 'Right';
+
+  position: absolute;
+  left: 5em;
+}
+
+main section:nth-of-type(2) ul::scroll-button(left) {
+  content: '←' / 'Left';
+
+  position: absolute;
+  left: 0;
+}
+
+
 main section:nth-of-type(3) {
   display: grid;
   gap: var(--white-space-medium);
@@ -28,9 +130,9 @@ main section:nth-of-type(4) svg {
   min-width: 8vh;
 }
 
-main section:nth-of-type(2) img {
+/* main section:nth-of-type(2) img {
   max-width: 20em;
-}
+} */
 
 /* Dit past de Order aan voor: Voor wie? */
 main section:nth-of-type(4) h2 {
@@ -46,6 +148,27 @@ main section:nth-of-type(4) img {
 }
 
 @media (width > 44em) {
+  /* Carousel area */
+  /* main section:nth-of-type(2) a > img {
+    order: 1;
+    
+    max-width: 15em;
+    height: 20em;
+
+    object-fit: cover;
+
+  } */
+
+  /* Alle verhalen opschuiven */
+  /* main section:nth-of-type(2) > a {
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+  } */
+
+  /* CAROUSEL AREA END */
+
   /* Voor wie section */
   main section:nth-of-type(4) {
     display: grid;
@@ -54,7 +177,6 @@ main section:nth-of-type(4) img {
 
     padding: var(--white-space-medium);
     column-gap: var(--white-space-small);
-    /* background-color: red; */
   }
 
   main section:nth-of-type(4) h2 {
@@ -64,7 +186,13 @@ main section:nth-of-type(4) img {
 
   main section:nth-of-type(4) ul {
     grid-column: 3 / span 5;
+
     padding: var(--white-space-none);
+  }
+
+  /* Zet de checklist netjes naast de img */
+  main section:nth-of-type(4) p {
+    margin: var(--white-space-none);
   }
 
   main section:nth-of-type(4) img {
@@ -82,6 +210,19 @@ linker kant staan */
 
 /* Article naast elkaar als groter dan 64em */
 @media (width > 58em) {
+  /* Carousel area */
+
+  /* main section:nth-of-type(2) {
+    grid-template-columns: 20em 1fr;
+  }
+
+  main section:nth-last-of-type(2) ul {
+    grid-column: 2 / span 4;
+  } */
+
+  /* CAROUSEL AREA END */
+
+
   main section:nth-of-type(3) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -102,7 +243,6 @@ linker kant staan */
 
     padding: var(--white-space-medium);
     column-gap: var(--white-space-small);
-    /* background-color: blue; */
   }
 
   main section:nth-of-type(4) h2 {
@@ -188,3 +328,19 @@ main section:nth-of-type(4) p {
   display: flex;
   align-items: center;
 }
+
+
+
+/* GROTERE FORMAAT
+main section:nth-of-type(2) a > img {
+  order: 1;
+  
+  max-width: 20em;
+  height: 27em;
+
+  object-fit: cover;
+
+}
+*/
+
+
