@@ -4,7 +4,66 @@
 
 /**************/
 /* MAIN */
-/**************/
+/**************
+
+/* subnav */
+main section:nth-of-type(1) {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  /* justify-content: space-between; */
+
+  padding: var(--white-space-none-small);
+
+  box-shadow: -0.3em 0.5em var(--color-bg-shadow);
+  color: var(--color-text-p);
+  background-color: var(--color-bg-nav);
+}
+
+/* Zorgt dat de blok niet te dik wordt */
+main section:nth-of-type(1) p {
+  display: inline-block;
+}
+
+main section:nth-of-type(1) ul {
+  position: absolute;
+  padding: var(--white-space-none);
+}
+
+main section:nth-of-type(1) ul:nth-of-type(2) {
+  display: flex;
+  gap: var(--white-space-medium);
+}
+
+main section:nth-of-type(1) a {
+
+  line-height: var(--line-height-medium);
+  color: var(--color-text-p);
+}
+
+main section:nth-of-type(1).geopend ul {
+  position: static;
+  transition: var(--transition-long);
+}
+
+main nav button > svg {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  color: var(--color-icon-plus);
+}
+
+main nav button > svg {
+  color: var(--color-icon-plus);
+}
+
+main section:nth-of-type(1).geopend button > svg {
+  rotate: 45deg;
+  transition: var(--transition-short);
+}
+
+
+
 
 /* Carousel area */
 main section:nth-of-type(2) {
@@ -13,6 +72,10 @@ main section:nth-of-type(2) {
 
   /* Zodat de knoppen ruimte hebben */
   padding: var(--white-space-medium-none);
+}
+
+main section:nth-of-type(2) h2 {
+  font-size: var(--font-size-medium-large);
 }
 
 /* BRONVERMELDING: 
@@ -128,7 +191,6 @@ main section:nth-of-type(4) {
 main section:nth-of-type(4) svg {
   min-width: 8vh;
 }
-
 
 /* Dit past de Order aan voor: Voor wie? */
 main section:nth-of-type(4) h2 {

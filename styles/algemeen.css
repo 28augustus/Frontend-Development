@@ -57,8 +57,11 @@ focus outline color/width, reduced-motion threshold */
 
 :root {
   /* colors */
+  --color-text-p: #fff;
 
   /* color backgrounds */
+  --color-bg-nav: #25167a;
+  --color-bg-shadow: #000;
 
   /* colors icons (buttons, links, after, svg etc) */
   --link-before-bg: #f35279;
@@ -66,6 +69,8 @@ focus outline color/width, reduced-motion threshold */
   --time-block-bg: #000;
   --time-block-txt: #fff;
   --header-icons: #fff;
+
+  --color-icon-plus: #fff;
 
   --color-icon-pink: #f35279;
   --color-icon-black: #000;
@@ -97,6 +102,11 @@ focus outline color/width, reduced-motion threshold */
   --weight-lighter: 100;
 
   /* spacing */
+  --line-height-small: 1em;
+  --line-height-medium: 2em;
+  --line-height-large: 4em;
+  --line-height-xl: 8em;
+
   --white-space-none: 0;
   --white-space-xsmall: 0.5em;
   --white-space-small: 1em;
@@ -240,6 +250,10 @@ button {
   background: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* body > a {
   position: absolute;
   left: -9999em;
@@ -249,10 +263,156 @@ button {
 /**************/
 /* HEADER */
 /**************/
-/****************
-  TO DO
-  VAR TOEVOEGEN 
-*****************/
+
+/* TO DO: kijk nog of bij cmd the toggle goed werkt ofzo */
+
+/* Waarom doet de header zo raar als flex doet?? */
+
+/* header {
+  display: flex;
+  align-items: center;
+  gap: var(--white-space-none-medium);
+} */
+
+header nav {
+  position: absolute;
+
+  transform: translateY(-999%);
+  transition: var(--transition-short);
+}
+
+header nav.geopend {
+  position: static;
+
+  inset: 0;
+  transform: translateY(0);
+  /* transition: transform .3s ease; */
+  transition: var(--transition-short);
+}
+
+header ul {
+  position: absolute;
+}
+
+/* Bronvermelding:
+Ai prompt: Ik wil een has() maken. Het moet het volgende zeggen:
+Als er in de header een ul zit met een directe li 
+en in die li moet een directe p hebben dan...
+
+Antwoord:
+header:has(ul > li > p) {
+*/
+header:has(ul > li > p) {
+  position: relative;
+  background-color: red;
+}
+
+section[aria-label="nav headersubmenu"] {
+  position: absolute;
+
+  transform: translateY(-999%);
+  transition: var(--transition-short);
+}
+
+section[aria-label="nav headersubmenu"].geopend {
+  position: static;
+
+  transform: translateY(0);
+  transition: var(--transition-short);
+}
+
+button[aria-label="toggle headersubmenu"].is-open > svg {
+  transform: rotate(45deg);
+  transition: var(--transition-short);
+}
+
+/* header ul > li:nth-of-type(1) li,
+header ul > li:nth-of-type(1) section {
+  position: absolute;
+  overflow: hidden;
+  transition: var(--transition-short);
+  background-color: blueviolet;
+}
+
+header ul > li:nth-of-type(1) li.open,
+header ul > li:nth-of-type(1) section.open {
+  position: static;
+
+  inset: 0;
+  transform: translateY(0);
+  transition: var(--transition-short);
+} */
+
+/* header section [aria-label="nav headersubmenu"] {
+  background-color: red;
+} */
+
+/* section[aria-label="nav headersubmenu"] {
+  position: absolute;
+
+  transform: translateY(-999%);
+  transition: var(--transition-short);
+  background-color: red;
+}
+
+section[aria-label="nav headersubmenu"].geopend {
+  max-height: 1000px; 
+  background-color: red;
+} */
+
+/* main section:nth-of-type(1) {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  padding: var(--white-space-none-small);
+
+  box-shadow: -0.3em 0.5em var(--color-bg-shadow);
+  color: var(--color-text-p);
+  background-color: var(--color-bg-nav);
+}
+
+main section:nth-of-type(1) p {
+  display: inline-block;
+}
+
+main section:nth-of-type(1) ul {
+  position: absolute;
+  padding: var(--white-space-none);
+}
+
+main section:nth-of-type(1) ul:nth-of-type(2) {
+  display: flex;
+  gap: var(--white-space-medium);
+}
+
+main section:nth-of-type(1) a {
+
+  line-height: var(--line-height-medium);
+  color: var(--color-text-p);
+}
+
+main section:nth-of-type(1).geopend ul {
+  position: static;
+  transition: var(--transition-long);
+}
+
+main nav button > svg {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  color: var(--color-icon-plus);
+}
+
+main nav button > svg {
+  color: var(--color-icon-plus);
+}
+
+main section:nth-of-type(1).geopend button > svg {
+  rotate: 45deg;
+  transition: var(--transition-short);
+} */
+
 /* header {
   background-color: lightblue;
   display: flex;
