@@ -34,7 +34,7 @@
         <ul>
           <li>
             <p>Studeren</p>
-            <button>
+            <button aria-label="toggle headersubmenu">
               <!-- <span>
                 Studeren
               </span> -->
@@ -64,7 +64,7 @@
               </svg>
             </button>
 
-            <section aria-label="toggle submenu">
+            <section aria-label="nav headersubmenu">
               <a href="#">Alles over studeren</a>
 
               <p>Onderwijs</p>
@@ -234,10 +234,34 @@
       <h1>Communication and Multimedia Design</h1>
       <p>Bachelor, voltijd, 4 jaar</p>
 
-      <section>
-        <nav aria-label="subnav">
-          <p>Ga direct naar</p>
+      <section aria-label="subnav">
+        <nav>
+          <p>
+            Ga direct naar
+          </p>
+          <button aria-label="subnavKnop">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                width="3em"
+              >
+                <g stroke-width="0"></g>
 
+                <g stroke-linecap="round" stroke-linejoin="round"></g>
+
+                <g>
+                  <path
+                    d="M4 12H20M12 4V20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+          
           <ul>
             <li>
               <a href="#">Over de opleiding</a>
@@ -276,18 +300,18 @@
                 <g stroke-linecap="round" stroke-linejoin="round"></g>
 
                 <g>
-                  <title>youtube [#168]</title>
+                  <title>youtube</title>
                   <desc>Created with Sketch.</desc>
                   <defs></defs>
                   <g
                     stroke="none"
                     stroke-width="1"
-                    fill="none"
+                    fill="currentColor"
                     fill-rule="evenodd"
                   >
                     <g
                       transform="translate(-300.000000, -7442.000000)"
-                      fill="#000000"
+                      fill="currentColor"
                     >
                       <g transform="translate(56.000000, 160.000000)">
                         <path
@@ -302,8 +326,11 @@
               <a
                 href="#"
                 aria-label="Bezoek de YouTube pagina van de Hogeschool van Amsterdam"
-                >YouTube</a
-              >
+                >
+                <title>
+                  YouTube
+                </title>
+              </a>
             </li>
             <li>
               <svg
@@ -312,14 +339,14 @@
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                fill="#ffffff"
+                fill="currentColor"
                 stroke="currentColor"
                 height="1.5em"
               >
                 <g stroke-width="0"></g>
                 <g stroke-linecap="round" stroke-linejoin="round"></g>
                 <g>
-                  <title>facebook [#ffffff]</title>
+                  <title>facebook</title>
                   <desc>Created with Sketch.</desc>
                   <defs></defs>
                   <g
@@ -344,8 +371,9 @@
               <a
                 href="#"
                 aria-label="Bezoek de Facebook pagina van de Hogeschool van Amsterdam"
-                >Facebook</a
-              >
+                > 
+                <title>Facebook</title>
+              </a>
             </li>
 
             <li>
@@ -360,6 +388,7 @@
                 <g stroke-width="0"></g>
                 <g stroke-linecap="round" stroke-linejoin="round"></g>
                 <g>
+                  <title>Instagram</title>
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -382,8 +411,9 @@
               <a
                 href="#"
                 aria-label="Bezoek de Instagram pagina van de Hogeschool van Amsterdam"
-                >Instagram</a
-              >
+                >
+                <title>Instagram</title>
+              </a>
             </li>
           </ul>
         </nav>

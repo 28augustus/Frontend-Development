@@ -28,7 +28,16 @@
     <!-- Skip naar main -->
     <a href="#main-content">Het menu overslaan en naar de inhoud gaan</a>
 
-    <!-- Zorgt dat de header weg gaat als je scrolt en terug komt als je omhoog gaat -->
+    <!-- Zorgt dat de header weg gaat als je scrolt 
+     en terug komt als je omhoog gaat.
+     Zorg dat de header de volle ruimte inneemt 
+     en je niet omlaag kan scrollen, maar dan
+     niet verdern dan de content yk.
+
+     En voor CMD kijk toch even of de
+     Ga direct naar ook vervangen kan worden
+     
+     -->
     <header aria-label="StickyHeader">
       <button aria-label="toggle menu">
         <span> </span>
@@ -41,7 +50,7 @@
         <ul>
           <li>
             <p>Studeren</p>
-            <button>
+            <button aria-label="toggle headersubmenu">
               <!-- <span>
                 Studeren
               </span> -->
@@ -71,7 +80,7 @@
               </svg>
             </button>
 
-            <section aria-label="toggle submenu">
+            <section aria-label="nav headersubmenu">
               <a href="#">Alles over studeren</a>
 
               <p>Onderwijs</p>
