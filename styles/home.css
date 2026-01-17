@@ -238,48 +238,50 @@ main section:nth-of-type(3) a::after {
     right: -4.5em;
   }
 
-  /* DO DO: whitespace 2 values */
-  main section:nth-of-type(2) {
+
+main section:nth-of-type(2) {
     grid-template-columns: 1fr 20em;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
 
     padding: var(--white-space-xl-small);
   }
 
   main section:nth-of-type(2) h2 {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 2;
+
+    font-size: var(--font-size-medium-large);
   }
 
   main section:nth-of-type(2) p:first-of-type {
     grid-column: 2;
-    grid-row: 3;
-
-    /* align-self: flex-end; */
+    grid-row: 3 / -1;
   }
 
   main section:nth-of-type(2) p:nth-of-type(2) {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 3;
   }
 
   main section:nth-of-type(2) img {
     grid-column: 2;
-    grid-row: 1 / span 4;
+    grid-row: 1 / -1;
 
-    height: 50vh;
-    /* width: 100vw; */
+    /* height: 50vh;
     height: 100%;
-    /* width: 100%; */
 
     aspect-ratio: 1 / 1;
-    object-fit: cover;
+    object-fit: cover; */
   }
 
   main section:nth-of-type(2) a {
     grid-column: 1;
-    grid-row: 3;
-  }
+    grid-row: 4;
+  } 
+ 
+
+
+
 
   /* TO DO: Style de Actueel articles meer naar links
 Style het gewoon beter (zie original file HvA) */
@@ -338,7 +340,7 @@ Style het gewoon beter (zie original file HvA) */
     height: 30em;
   }
 
-  main section:nth-of-type(2) {
+  /* main section:nth-of-type(2) {
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(5, 1fr);
   }
@@ -369,9 +371,45 @@ Style het gewoon beter (zie original file HvA) */
   main section:nth-of-type(2) img {
     grid-column: 5 / -1;
     grid-row: 1 / -1;
+  } */
+
+
+  main section:nth-of-type(2) {
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(5, auto);
   }
 
+  main section:nth-of-type(2) h2 {
+    grid-column: 3 / span 4;
+    grid-row: 2;
+  }
+  
+  
+  main section:nth-of-type(2) p:first-of-type {
+    grid-column: 1 / span 2;
+    grid-row: 2;
 
+    align-self: flex-start;
+
+    width: 8em;
+    height: 8em;
+  }
+
+  main section:nth-of-type(2) p:last-of-type {
+    grid-column: 1 / span 4;
+    grid-row: 3;
+  }
+
+  main section:nth-of-type(2) a {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+  }
+
+  main section:nth-of-type(2) img {
+    grid-column: 5 / -1;
+    grid-row: 1 / -1;
+  } 
+  
 
   main section:nth-of-type(3) {
     display: grid;
@@ -415,12 +453,10 @@ Style het gewoon beter (zie original file HvA) */
   }
 
   main section:nth-of-type(2) {
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-
     padding: var(--white-space-xl);
   }
-
+   
+  /*
   main section:nth-of-type(2) h2 {
     grid-column: 2 / span 6;
     grid-row: 3;
@@ -445,9 +481,9 @@ Style het gewoon beter (zie original file HvA) */
   main section:nth-of-type(2) p:first-of-type {
     grid-column: 1 / span 4;
     grid-row: 2;
-  }
+  } */
 
-  /* TO DO: Fix it idk man */
+ 
   main section:nth-of-type(3) {
     padding: var(--white-space-none-xl);
   }

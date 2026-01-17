@@ -60,7 +60,6 @@ focus outline color/width, reduced-motion threshold */
 
   /* color backgrounds */
 
-
   /* colors icons (buttons, links, after, svg etc) */
   --link-before-bg: #f35279;
   --link-after-footer: #000;
@@ -86,6 +85,7 @@ focus outline color/width, reduced-motion threshold */
   --font-size-xsmall: 1em;
   --font-size-small: 1.5em;
   --font-size-medium: 2em;
+  --font-size-medium-large: 2.5em;
   --font-size-large: 3em;
   --font-size-x-large: 4em;
   --font-size-xx-large: 5em;
@@ -98,33 +98,40 @@ focus outline color/width, reduced-motion threshold */
 
   /* spacing */
   --white-space-none: 0;
+  --white-space-xsmall: 0.5em;
   --white-space-small: 1em;
   --white-space-medium: 2em;
   --white-space-large: 4em;
   --white-space-xl: 8em;
 
+  --white-space-none-xsmall: 0 0.5em;
   --white-space-none-small: 0 1em;
   --white-space-none-medium: 0 2em;
   --white-space-none-large: 0 4em;
   --white-space-none-xl: 0 8em;
 
+  --white-space-xsmall-none: 0.5em 0;
   --white-space-small-none: 1em 0;
   --white-space-medium-none: 2em 0;
   --white-space-large-none: 4em 0;
   --white-space-xl-none: 8em 0em;
 
+  --white-space-small-xsmall: 1em 0.5em;
   --white-space-small-medium: 1em 2em;
   --white-space-small-large: 1em 4em;
   --white-space-small-xl: 1em 8em;
 
+  --white-space-medium-xsmall: 2em 0.5em;
   --white-space-medium-small: 2em 1em;
   --white-space-medium-large: 2em 4em;
   --white-space-medium-xl: 2em 8em;
-  
+
+  --white-space-large-xsmall: 4em 0.5em;
   --white-space-large-small: 4em 1em;
   --white-space-large-medium: 4em 2em;
   --white-space-large-xl: 4em 8em;
-  
+
+  --white-space-xl-xsmall: 8em 0.5em;
   --white-space-xl-small: 8em 1em;
   --white-space-xl-medium: 8em 2em;
   --white-space-xl-large: 8em 4em;

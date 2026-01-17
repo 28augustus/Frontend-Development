@@ -24,29 +24,30 @@ main section:nth-of-type(2) ul {
   grid-auto-flow: column;
 
   overflow: auto;
-  scroll-snap-type:x mandatory;
-  scroll-behavior:smooth;
-  
-  /* zodat je niet per ongeluk 'back' scrollt */
-  overscroll-behavior-x:contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 
+  /* zodat je niet per ongeluk 'back' scrollt */
+  overscroll-behavior-x: contain;
 }
 
 main section:nth-of-type(2) li {
   display: grid;
 
-  flex-basis:100%;
-  flex-shrink:0;
-  scroll-snap-align:center;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+
+  padding: var(--white-space-none-xsmall);
 }
 
 main section:nth-of-type(2) li > a {
   display: flex;
   flex-direction: column;
 
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
 
-  padding: var(--white-space-none-small);
+  /* padding: var(--white-space-none-small); */
 }
 
 main section:nth-of-type(2) a > h3 {
@@ -59,13 +60,13 @@ main section:nth-of-type(2) a > p {
 
 main section:nth-of-type(2) a > img {
   order: 1;
-  
-  max-width: 58vw;
-  /* height: 58vh; */
-  /* height: 17,5em; */
+
+  max-width: 50vw;
+  min-width: 20em;
+
+  /* aspect-ratio: 1/1; */
 
   object-fit: cover;
-
 }
 
 /* Alle verhalen opschuiven */
@@ -75,11 +76,10 @@ main section:nth-of-type(2) > a {
   bottom: -5em;
 }
 
-
 /* Styling buttons */
 main section:nth-of-type(2) ul::scroll-button(*) {
   height: 4.5em;
-  aspect-ratio: 1/1; 
+  aspect-ratio: 1/1;
 
   position: absolute;
 
@@ -90,23 +90,22 @@ main section:nth-of-type(2) ul::scroll-button(*) {
 }
 
 main section:nth-of-type(2) ul::scroll-button(*):disabled {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 main section:nth-of-type(2) ul::scroll-button(right) {
-  content: '→' / 'Right';
+  content: "→" / "Right";
 
   position: absolute;
   left: 5em;
 }
 
 main section:nth-of-type(2) ul::scroll-button(left) {
-  content: '←' / 'Left';
+  content: "←" / "Left";
 
   position: absolute;
   left: 0;
 }
-
 
 main section:nth-of-type(3) {
   display: grid;
@@ -130,9 +129,6 @@ main section:nth-of-type(4) svg {
   min-width: 8vh;
 }
 
-/* main section:nth-of-type(2) img {
-  max-width: 20em;
-} */
 
 /* Dit past de Order aan voor: Voor wie? */
 main section:nth-of-type(4) h2 {
@@ -149,25 +145,20 @@ main section:nth-of-type(4) img {
 
 @media (width > 44em) {
   /* Carousel area */
-  /* main section:nth-of-type(2) a > img {
-    order: 1;
-    
-    max-width: 15em;
-    height: 20em;
+  main section:nth-of-type(2) a > img {
+    /* width: 2em; */
+    height: 40vh;
 
-    object-fit: cover;
-
-  } */
+    /* object-fit: cover; */
+  }
 
   /* Alle verhalen opschuiven */
-  /* main section:nth-of-type(2) > a {
+  main section:nth-of-type(2) > a {
     position: absolute;
 
     bottom: 0;
     right: 0;
-  } */
-
-  /* CAROUSEL AREA END */
+  }
 
   /* Voor wie section */
   main section:nth-of-type(4) {
@@ -212,21 +203,40 @@ linker kant staan */
 @media (width > 58em) {
   /* Carousel area */
 
-  /* main section:nth-of-type(2) {
+  main section:nth-of-type(2) {
     grid-template-columns: 20em 1fr;
   }
 
-  main section:nth-last-of-type(2) ul {
+  main section:nth-of-type(2) ul {
     grid-column: 2 / span 4;
+  }
+
+  /* main section:nth-of-type(2) img {
+    max-width: 24vw;
   } */
 
-  /* CAROUSEL AREA END */
+  /* Alle verhalen opschuiven */
+  main section:nth-of-type(2) > a {
+    position: absolute;
 
+    bottom: 0;
+    right: 0;
+  }
+
+  main section:nth-of-type(2) ul::scroll-button(right) {
+    left: 32em;
+  }
+
+  main section:nth-of-type(2) ul::scroll-button(left) {
+    left: 27em;
+  }
+
+  /* CAROUSEL AREA END */
 
   main section:nth-of-type(3) {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   /* padding: var(--white-space-large-medium); */
   main section:nth-of-type(3) article {
     display: flex;
@@ -264,8 +274,31 @@ linker kant staan */
   }
 }
 
-
 @media (width > 90em) {
+  /* Carousel area */
+  main section:nth-of-type(2) {
+    grid-template-columns: 35em 1fr;
+  }
+
+  main section:nth-of-type(2) a > img {
+    width: 20vw;
+    height: 47vh;
+  }
+
+  /* Perfect format, but does not scale */
+  /* main section:nth-of-type(2) a > img {
+    width: 20em;
+    height: 27em;
+  } */
+
+  main section:nth-of-type(2) ul::scroll-button(right) {
+    left: 44em;
+  }
+
+  main section:nth-of-type(2) ul::scroll-button(left) {
+    left: 39em;
+  }
+
   main section:nth-of-type(3) {
     padding: var(--white-space-xl);
   }
@@ -329,8 +362,6 @@ main section:nth-of-type(4) p {
   align-items: center;
 }
 
-
-
 /* GROTERE FORMAAT
 main section:nth-of-type(2) a > img {
   order: 1;
@@ -342,5 +373,3 @@ main section:nth-of-type(2) a > img {
 
 }
 */
-
-
