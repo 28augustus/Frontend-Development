@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
@@ -23,6 +23,13 @@
 
     <!-- Zorgt dat de header weg gaat als je scrolt en terug komt als je omhoog gaat -->
     <header aria-label="StickyHeader">
+      <a href="#">
+        <img
+          src="images/hva_logo_small.png"
+          alt="Logo van Hogeschool van Amsterdam. Het logo navigeerd naar hun home pagina. Dat is de huidige pagina waarop u zich bevindt"
+        />
+      </a>
+
       <button aria-label="toggle menu">
         <span> </span>
         <span> </span>
@@ -111,7 +118,7 @@
           <li>
             <p>Onderzoek</p>
 
-            <button>
+            <button aria-label="toggle headersubmenu">
               Ontdek ons onderzoek
 
               <svg
@@ -135,12 +142,55 @@
                 </g>
               </svg>
             </button>
+
+            <section aria-label="nav headersubmenu">
+              <a href="#">Alles over studeren</a>
+
+              <p>Onderwijs</p>
+              <ul>
+                <li><a href="#">Studeren bij de HvA</a></li>
+                <li><a href="#">Studeren aan het hbo</a></li>
+                <li><a href="#">Bachelors</a></li>
+                <li><a href="#">Masters</a></li>
+                <li><a href="#">Associate degrees</a></li>
+                <li><a href="#">3-jarige trajecten</a></li>
+                <li><a href="#">Extra uitdaging</a></li>
+                <li><a href="#">Minoren</a></li>
+                <li><a href="#">Cursussen</a></li>
+                <li><a href="#">Omscholingstrajecten</a></li>
+                <li><a href="#">Alle opleidingen en curssusen</a></li>
+              </ul>
+
+              <p>Studiekeuze</p>
+              <ul>
+                <li><a href="#">Hoe kies ik</a></li>
+                <li><a href="#">Hulp bij studiekeuze</a></li>
+                <li><a href="#">Open dagen</a></li>
+                <li><a href="#">Meelopen</a></li>
+                <li><a href="#">Online oriënteren</a></li>
+                <li><a href="#">Keuze gemaakt</a></li>
+                <li><a href="#">Naast je opleiding</a></li>
+                <li><a href="#">Alle studiekeuzeactiviteiten</a></li>
+              </ul>
+
+              <p>Informatie voor</p>
+              <ul>
+                <li><a href="#">Havisten</a></li>
+                <li><a href="#">Vwo'ers</a></li>
+                <li><a href="#">Mbo'ers</a></li>
+                <li><a href="#">Hbo'ers en wo'ers</a></li>
+                <li><a href="#">Werkenden</a></li>
+                <li><a href="#">Ouders en begeleiders</a></li>
+                <li><a href="#">Scholen</a></li>
+                <li><a href="#">Studenten met speciale behoeften</a></li>
+              </ul>
+            </section>
           </li>
 
           <li>
             <p>Over de HvA</p>
 
-            <button>
+            <button aria-label="toggle headersubmenu">
               Alles over onze organisatie
 
               <svg
@@ -164,69 +214,108 @@
                 </g>
               </svg>
             </button>
+
+            <section aria-label="nav headersubmenu">
+              <a href="#">Alles over studeren</a>
+
+              <p>Onderwijs</p>
+              <ul>
+                <li><a href="#">Studeren bij de HvA</a></li>
+                <li><a href="#">Studeren aan het hbo</a></li>
+                <li><a href="#">Bachelors</a></li>
+                <li><a href="#">Masters</a></li>
+                <li><a href="#">Associate degrees</a></li>
+                <li><a href="#">3-jarige trajecten</a></li>
+                <li><a href="#">Extra uitdaging</a></li>
+                <li><a href="#">Minoren</a></li>
+                <li><a href="#">Cursussen</a></li>
+                <li><a href="#">Omscholingstrajecten</a></li>
+                <li><a href="#">Alle opleidingen en curssusen</a></li>
+              </ul>
+
+              <p>Studiekeuze</p>
+              <ul>
+                <li><a href="#">Hoe kies ik</a></li>
+                <li><a href="#">Hulp bij studiekeuze</a></li>
+                <li><a href="#">Open dagen</a></li>
+                <li><a href="#">Meelopen</a></li>
+                <li><a href="#">Online oriënteren</a></li>
+                <li><a href="#">Keuze gemaakt</a></li>
+                <li><a href="#">Naast je opleiding</a></li>
+                <li><a href="#">Alle studiekeuzeactiviteiten</a></li>
+              </ul>
+
+              <p>Informatie voor</p>
+              <ul>
+                <li><a href="#">Havisten</a></li>
+                <li><a href="#">Vwo'ers</a></li>
+                <li><a href="#">Mbo'ers</a></li>
+                <li><a href="#">Hbo'ers en wo'ers</a></li>
+                <li><a href="#">Werkenden</a></li>
+                <li><a href="#">Ouders en begeleiders</a></li>
+                <li><a href="#">Scholen</a></li>
+                <li><a href="#">Studenten met speciale behoeften</a></li>
+              </ul>
+            </section>
           </li>
         </ul>
 
         <!-- Taal dropdown-->
-
-        <!--*************************************************
-         Onderzoek doen naar hoe details en summaries werken
-        ***************************************************-->
-        <details>
-          <summary>NL</summary>
-        </details>
+        <button
+          aria-label="Huidige taal: Nederlands. selecteer een andere taal"
+        >
+          NL
+        </button>
       </nav>
 
-      <a href="#">
-        <img
-          src="images/hva_logo_small.png"
-          alt="Logo van Hogeschool van Amsterdam. Het logo navigeerd naar hun home pagina. Dat is de huidige pagina waarop u zich bevindt"
-        />
-      </a>
+      <!-- Zoekbalk (vergrootglas) Pas aria label aan ook in algemeen -->
+      <button aria-label="zoekbalk: gesloten">
+        <svg
+          aria-label="Zoekbalk om naar de cmd pagina te gaan"
+          viewBox="0 0 32 32"
+          enable-background="new 0 0 32 32"
+          version="1.1"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          fill="#000000"
+          stroke="#000000"
+          height="3em"
+        >
+          <g stroke-width="0"></g>
+          <g stroke-linecap="round" stroke-linejoin="round"></g>
+          <g>
+            <circle
+              cx="14"
+              cy="14"
+              fill="none"
+              r="9"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-miterlimit="10"
+              stroke-width="3.2"
+            ></circle>
 
-      <!-- Zoekbalk (vergrootglas) -->
-      <form></form>
-      <svg
-        aria-label="Zoekbalk om naar de cmd pagina te gaan"
-        viewBox="0 0 32 32"
-        enable-background="new 0 0 32 32"
-        version="1.1"
-        xml:space="preserve"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        fill="#000000"
-        stroke="#000000"
-        height="3em"
-      >
-        <g stroke-width="0"></g>
-        <g stroke-linecap="round" stroke-linejoin="round"></g>
-        <g>
-          <circle
-            cx="14"
-            cy="14"
-            fill="none"
-            r="9"
-            stroke="#000000"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-miterlimit="10"
-            stroke-width="3.2"
-          ></circle>
+            <line
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-miterlimit="10"
+              stroke-width="3.2"
+              x1="27"
+              x2="20.366"
+              y1="27"
+              y2="20.366"
+            ></line>
+          </g>
+        </svg>
+      </button>
 
-          <line
-            fill="none"
-            stroke="#000000"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-miterlimit="10"
-            stroke-width="3.2"
-            x1="27"
-            x2="20.366"
-            y1="27"
-            y2="20.366"
-          ></line>
-        </g>
-      </svg>
+      <form>
+        <input type="search" />
+      </form>
     </header>
 
     <!-- Waar de main content begint -->
@@ -234,34 +323,33 @@
       <h1>Communication and Multimedia Design</h1>
       <p>Bachelor, voltijd, 4 jaar</p>
 
-      <section aria-label="subnav">
+      <section>
         <nav>
-          <p>
-            Ga direct naar
-          </p>
-          <button aria-label="subnavKnop">
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                width="3em"
-              >
-                <g stroke-width="0"></g>
+          <h2>Ga direct naar</h2>
 
-                <g stroke-linecap="round" stroke-linejoin="round"></g>
+          <button>
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              width="3em"
+            >
+              <g stroke-width="0"></g>
 
-                <g>
-                  <path
-                    d="M4 12H20M12 4V20"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </g>
-              </svg>
-            </button>
-          
+              <g stroke-linecap="round" stroke-linejoin="round"></g>
+
+              <g>
+                <path
+                  d="M4 12H20M12 4V20"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+
           <ul>
             <li>
               <a href="#">Over de opleiding</a>
@@ -326,10 +414,8 @@
               <a
                 href="#"
                 aria-label="Bezoek de YouTube pagina van de Hogeschool van Amsterdam"
-                >
-                <title>
-                  YouTube
-                </title>
+              >
+                <title>YouTube</title>
               </a>
             </li>
             <li>
@@ -371,7 +457,7 @@
               <a
                 href="#"
                 aria-label="Bezoek de Facebook pagina van de Hogeschool van Amsterdam"
-                > 
+              >
                 <title>Facebook</title>
               </a>
             </li>
@@ -411,7 +497,7 @@
               <a
                 href="#"
                 aria-label="Bezoek de Instagram pagina van de Hogeschool van Amsterdam"
-                >
+              >
                 <title>Instagram</title>
               </a>
             </li>
@@ -1060,5 +1146,6 @@
     </footer>
 
     <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/cmd.js"></script>
   </body>
 </html>
