@@ -5,38 +5,35 @@ console.log("hi");
 const deMenuButton = document.querySelector("button");
 const deNav = document.querySelector("nav");
 
-const deHeadersubmenu = document.querySelector('button[aria-label="toggle headersubmenu"]');
-const deHeadersubnav = document.querySelector('section[aria-label="nav headersubmenu"]');
-
-const subnavButton = document.querySelector('button[aria-label="subnavKnop"]');
-const desubNav = document.querySelector('section[aria-label="subnav"]');
-
-// 2
 const headerElem = document.querySelector("header");
+const bodyElem = document.body;
 
-/* set the offset on which the hide effect has to wait */
-const scrollOffset = 200;
+const deHeadersubmenuButtons = document.querySelectorAll("header nav button");
 
-//1
+// hamburger
 deMenuButton.onclick = toggleMenu;
-deHeadersubmenu.onclick = toggleheadersub;
-subnavButton.onclick = togglesubMenu;
-
 
 function toggleMenu() {
   deMenuButton.classList.toggle("is-open");
   deNav.classList.toggle("geopend");
+  bodyElem.classList.toggle("hidden");
 }
 
-function toggleheadersub() {
-  deHeadersubmenu.classList.toggle("is-open");
-  deHeadersubnav.classList.toggle("geopend");
+// submenu
+deHeadersubmenuButtons.forEach(function (deHeadersubmenuButton) {
+  deHeadersubmenuButton.onclick = toggleheadersub;
+});
+
+function toggleheadersub(event) {
+  let deButton = event.currentTarget;
+  let deNav = deButton.nextElementSibling;
+
+  deButton.classList.toggle("is-open");
+  deNav.classList.toggle("geopend");
 }
 
-function togglesubMenu() {
-  subnavButton.classList.toggle("is-open");
-  desubNav.classList.toggle("geopend");
-}
+/* set the offset on which the hide effect has to wait */
+const scrollOffset = 200;
 
 //Bronvermelding sticky header: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll + Sanne 't Hooft
 
