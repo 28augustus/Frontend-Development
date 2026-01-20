@@ -327,6 +327,8 @@ linker kant staan */
 
 /* Article naast elkaar als groter dan 64em */
 @media (width > 58em) {
+
+
   /* Carousel area */
 
   main section:nth-of-type(2) {
