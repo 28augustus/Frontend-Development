@@ -56,11 +56,22 @@ Sizes for icons / images
 focus outline color/width, reduced-motion threshold */
 
 :root {
+  interpolate-size: allow-keywords;
+
   /* colors */
   --color-text-p: #fff;
 
   /* color backgrounds */
-  --color-bg-nav: #25167a;
+
+  /* 
+  --color-bg-header: ;
+  --color-bg-main: ; 
+  --color-bg-footer: ;
+  */
+
+  --color-bg-nav: #f35279;
+  --color-bg-subnav: #25167a;
+  --color-bg-skip-link: #fff;
   --color-bg-shadow: #000;
 
   /* colors icons (buttons, links, after, svg etc) */
@@ -71,6 +82,7 @@ focus outline color/width, reduced-motion threshold */
   --header-icons: #fff;
 
   --color-icon-plus: #fff;
+  --color-icon-bg: #000;
 
   --color-icon-pink: #f35279;
   --color-icon-black: #000;
@@ -104,6 +116,7 @@ focus outline color/width, reduced-motion threshold */
   /* spacing */
   --line-height-small: 1em;
   --line-height-medium: 2em;
+  --line-height-medium-large: 3em;
   --line-height-large: 4em;
   --line-height-xl: 8em;
 
@@ -150,9 +163,10 @@ focus outline color/width, reduced-motion threshold */
   --animation-duration: 1s;
   --animation-iteration-count: 3;
 
-  --transition-short: 0.3s;
-  --transition-normal: 0.5s;
-  --transition-long: 0.7s;
+  --transition-short: 0.3s ease;
+  --transition-normal: 0.5s ease;
+  --transition-long: 0.7s ease;
+  --transition-xl: 1s;
 
   --transform: scale(0.8);
   --transform-footer: scale(0.5);
@@ -239,6 +253,7 @@ verschijven en knipper mag niet. Minder intens */
 
 body {
   font-family: "MY POPPINS";
+  margin: 0;
 }
 
 body li {
@@ -263,36 +278,46 @@ a {
 /**************/
 /* HEADER */
 /**************/
+body.hidden {
+  overflow: hidden;
+}
+
+body > a {
+  position: absolute;
+  left: -9999em;
+  z-index: 100;
+}
+
+body > a:focus {
+  left: 0em;
+  background-color: var(--color-bg-skip-link);
+}
 
 /* TO DO: kijk nog of bij cmd the toggle goed werkt ofzo */
 
 /* Waarom doet de header zo raar als flex doet?? */
 
-/* header {
-  display: flex;
-  align-items: center;
+header {
+  /* position: sticky;  */
+  /* top: 0; */
+  /* transition: transform 0.3s ease; */
+
+  /* background-color: var(--color-bg-nav); */
+
+  z-index: 1;
   gap: var(--white-space-none-medium);
+
+  padding: 0.5em;
+}
+
+
+
+
+/* header.foetsie {
+  transform: translateY(-100%);
+  background: red;
+  translate: 0 -100%;
 } */
-
-header nav {
-  position: absolute;
-
-  transform: translateY(-999%);
-  transition: var(--transition-short);
-}
-
-header nav.geopend {
-  position: static;
-
-  inset: 0;
-  transform: translateY(0);
-  /* transition: transform .3s ease; */
-  transition: var(--transition-short);
-}
-
-header ul {
-  position: absolute;
-}
 
 /* Bronvermelding:
 Ai prompt: Ik wil een has() maken. Het moet het volgende zeggen:
@@ -303,22 +328,77 @@ Antwoord:
 header:has(ul > li > p) {
 */
 header:has(ul > li > p) {
-  position: relative;
-  background-color: red;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 10vh;
+  transition: transform 0.3s ease;
+
+  background-color: var(--color-bg-nav);
 }
 
-section[aria-label="nav headersubmenu"] {
-  position: absolute;
+header:has(ul > li > p).foetsie {
+  transform: translateY(-100%);
+}
 
-  transform: translateY(-999%);
-  transition: var(--transition-short);
+/* header:has(ul > li > p) {
+  translate: 0 -100%;
+} */
+
+/* header.foetsie {
+  translate: 0 -100%;
+} */
+
+/* Co-pilot prompt: Kan niet scrollen (copy paste code)
+Antwoord: zet overflow-y: auto;
+
+*/
+
+header nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  translate: 0% -100%;
+  transition: translate 0.3s;
+
+  overflow-y: auto;
+
+  background-color: var(--color-bg-nav);
+}
+
+header nav.geopend {
+  translate: 0% 0%;
+
+  z-index: -1;
+  transition: var(--transition-normal);
+  padding: var(--white-space-xl-medium);
+}
+
+
+header img {
+  max-width: 12em;
+  background-color: var(--color-bg-nav);
+}
+
+/* Zorgt dat sub menu niet in zicht komt
+als menu open is*/
+section[aria-label="nav headersubmenu"] {
+  max-height: 0;
+  overflow: hidden;
 }
 
 section[aria-label="nav headersubmenu"].geopend {
-  position: static;
+  max-height: 200em;
 
   transform: translateY(0);
-  transition: var(--transition-short);
 }
 
 button[aria-label="toggle headersubmenu"].is-open > svg {
@@ -424,8 +504,7 @@ main section:nth-of-type(1).geopend button > svg {
   transition: var(--transition-long);
 } */
 
-/*
-header.foetsie {
+/* header.foetsie {
   translate: 0 -100%;
 } */
 
@@ -472,6 +551,8 @@ button[aria-label="toggle menu"] {
   display: grid;
   justify-items: center;
   align-items: center;
+
+  order: -1;
 }
 
 button span {
@@ -514,12 +595,12 @@ button.is-open span:nth-of-type(3) {
 }
 
 /* nav header */
-header ul {
+/* header ul {
   position: static;
   translate: 0 0;
   padding: var(--white-space-none);
   background: none;
-}
+} */
 
 /* nav > ul {
   display: flex;
@@ -619,6 +700,10 @@ footer section > svg {
 /* Zet de laatse sectie en de picture ook in een sectie,
 Kijk wel even naar alle anderen delen waar je de ul aanspreekt */
 @media (width > 67em) {
+  header:has(ul > li > p) {
+    height: 15vh;
+  }
+
   section[aria-label="footer grid"] {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

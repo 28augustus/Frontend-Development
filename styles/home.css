@@ -90,7 +90,7 @@ main section:nth-of-type(2) p:first-of-type {
 
   grid-column-start:1;
   grid-row-start:2;
-  z-index: 1;
+  z-index: -1;
 
   background-color: var(--time-block-bg);
   color: var(--time-block-txt);
@@ -117,6 +117,8 @@ main section:nth-of-type(2) img {
   position: relative;
   grid-column: 1 / span 4;
   grid-row: 2;
+
+  z-index: -2;
 
   padding: var(--white-space-none-medium);
 }
@@ -236,6 +238,7 @@ main section:nth-of-type(3) a::after {
     color: #25167a;
     top: -3.7em;
     right: -4.5em;
+
   }
 
 
