@@ -133,43 +133,48 @@ main section:nth-of-type(1) ul:nth-of-type(1) li:nth-of-type(1) a::after {
   left: 0.8em;
 }
 
-/* main section:nth-of-type(2) h3::after,
-main section:nth-of-type(3) a::after {
+
+
+main section:nth-of-type(2) h3,
+main section:nth-of-type(2) a,
+main section:nth-of-type(3) a {
+  position: relative;
+  width: fit-content;
+}
+
+main section:nth-of-type(2) h3::after {
   content: "";
-  width: 50%;
-  height: 0.5em;
-  background-color: #000;
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--link-after-main-special);
   position: absolute;
   bottom: -0.4em;
   left: 0.8em;
-} */
+}
 
-/* main section:nth-of-type(2) h3,
-main section:nth-of-type(3) a{
-  color: red;
+main section:nth-of-type(2) > a::after {
+  content: "";
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--link-after-main);
+  position: absolute;
+  bottom: -0.5em;
+  left: 2em;
+}
+
+
+main section:nth-of-type(3) a::after {
+  content: "";
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--link-after-main);
+  position: absolute;
+  bottom: -0.4em;
+  left: 3em;
 }
 
 
 
-main section:nth-of-type(3) h3::after {
-  content: "";
-  width: 50%;
-  height: 0.5em;
-  background-color: #000;
-  position: absolute;
-  bottom: -0.4em;
-  left: 0.8em;
-} */
-
-/* main section:nth-of-type(4) h2::before {
-  content: "";
-  width: fit-content;
-  height: 1em;
-  background-color: #000;
-  position: absolute;
-  bottom: -0.4em;
-  left: 0.8em;
-}  */
 
 /* Carousel area */
 main section:nth-of-type(2) {
@@ -192,7 +197,7 @@ main section:nth-of-type(2) ul {
   display: grid;
   grid-auto-flow: column;
 
-  /* overflow: auto; */
+  overflow: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 
@@ -327,6 +332,7 @@ main section:nth-of-type(4) img {
     bottom: 0;
     right: 0;
   }
+
 
   /* Voor wie section */
   main section:nth-of-type(4) {
@@ -543,3 +549,12 @@ main section:nth-of-type(2) a > img {
 
 }
 */
+
+/**************
+STATES
+**************/
+/* Styling buttons */
+main section:nth-of-type(2) ul::scroll-button(*):hover {
+  background-color: var(--hover-bg-button-ca);
+  border: .5em solid var(--hover-bg-button-ca);
+}
