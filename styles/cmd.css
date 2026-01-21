@@ -5,7 +5,6 @@
 /**************/
 /* MAIN */
 /**************/
-
 main {
   display: flex;
   flex-direction: column;
@@ -17,16 +16,25 @@ main {
 
 main h1 {
   color: var(--color-text-special-heading);
+
+  font-size: var(--font-size-medium-large);
+  font-weight: var(--weight-bolder);
+
+  padding: var(--white-space-none-xsmall);
 }
 
 main > p {
   color: var(--color-text);
+  font-weight: var(--weight-bolder);
+
+  padding: var(--white-space-none-medium);
 }
 
 main section:nth-of-type(2) h2,
 main section:nth-of-type(2) p,
 main section:nth-of-type(2) a {
   color: var(--color-text);
+  font-weight: var(--weight-bolder);
 }
 
 main section:nth-of-type(2) h3 {
@@ -35,12 +43,23 @@ main section:nth-of-type(2) h3 {
 
 main section:nth-of-type(3) h2 {
   color: var(--color-special-text);
+
+  font-size: var(--font-size-xsmall);
 }
 
 main section:nth-of-type(3) h3,
 main section:nth-of-type(3) p,
 main section:nth-of-type(3) a {
   color: var(--color-text);
+}
+
+main section:nth-of-type(3) h3 {
+  font-size: var(--font-size-medium);
+  font-weight: var(--weight-bolder);
+}
+
+main section:nth-of-type(3) a {
+  font-weight: var(--weight-bolder);
 }
 
 main section:nth-of-type(4) h2,
@@ -56,10 +75,6 @@ main section:nth-of-type(1) {
   z-index: 1;
 
   padding-inline: 2em;
-
-  padding: 0 2em 0 2em;
-
-  /* background-color: green; */
 }
 
 main section:nth-of-type(1) nav {
@@ -85,11 +100,9 @@ main section:nth-of-type(1) nav.is-open {
 }
 
 main section:nth-of-type(1) h2 {
-  /* background-color: green; */
-
   margin: 0;
 
-  line-height: 4rem;
+  line-height: var(--line-height-large);
 }
 
 main section:nth-of-type(1) button > svg {
@@ -104,7 +117,6 @@ main section:nth-of-type(1) nav.is-open button > svg {
 main section:nth-of-type(1) ul {
   margin: 0;
   padding: var(--white-space-none);
-  /* background-color: red; */
 
   width: 100%;
 }
@@ -142,6 +154,10 @@ main section:nth-of-type(3) a {
   width: fit-content;
 }
 
+main section:nth-of-type(3) h2 {
+  position: relative;
+}
+
 main section:nth-of-type(2) h3::after {
   content: "";
   width: 100%;
@@ -162,6 +178,16 @@ main section:nth-of-type(2) > a::after {
   left: 2em;
 }
 
+
+
+main section:nth-of-type(3) h2::before {
+  content: "";
+  height: 200%;
+  width: 0.09em;
+  background-color: var(--link-before-main);
+  position: absolute;
+  left: -.5em;
+}
 
 main section:nth-of-type(3) a::after {
   content: "";
@@ -186,7 +212,9 @@ main section:nth-of-type(2) {
 }
 
 main section:nth-of-type(2) h2 {
-  font-size: var(--font-size-medium-large);
+  font-size: var(--font-size-medium);
+
+  padding: var(--white-space-none-small);
 }
 
 /* BRONVERMELDING: 
@@ -238,8 +266,6 @@ main section:nth-of-type(2) a > img {
   max-width: 50vw;
   min-width: 20em;
 
-  /* aspect-ratio: 1/1; */
-
   object-fit: cover;
 }
 
@@ -248,6 +274,7 @@ main section:nth-of-type(2) > a {
   position: absolute;
 
   bottom: -5em;
+
 }
 
 /* Styling buttons */
@@ -261,6 +288,7 @@ main section:nth-of-type(2) ul::scroll-button(*) {
 
   background-color: var(--color-button-carousel);
   color: var(--color-txt-button-carousel);
+
 }
 
 main section:nth-of-type(2) ul::scroll-button(*):disabled {
@@ -271,14 +299,14 @@ main section:nth-of-type(2) ul::scroll-button(right) {
   content: "→" / "Right";
 
   position: absolute;
-  left: 5em;
+  left: 7em;
 }
 
 main section:nth-of-type(2) ul::scroll-button(left) {
   content: "←" / "Left";
 
   position: absolute;
-  left: 0;
+  left: 2em;
 }
 
 main section:nth-of-type(3) {
@@ -287,11 +315,7 @@ main section:nth-of-type(3) {
   padding: var(--white-space-xl-medium);
 }
 
-/* @media (width > 40em) {
-    main section:nth-last-of-type(3) {
-        font-size: ;
-    }
-} */
+
 
 main section:nth-of-type(4) {
   display: flex;
@@ -306,6 +330,11 @@ main section:nth-of-type(4) svg {
 /* Dit past de Order aan voor: Voor wie? */
 main section:nth-of-type(4) h2 {
   order: 1;
+
+  font-size: var(--font-size-medium);
+  font-weight: var(--weight-bolder);
+
+  padding: var(--white-space-none-xsmall);
 }
 
 main section:nth-of-type(4) ul {
@@ -314,6 +343,8 @@ main section:nth-of-type(4) ul {
 
 main section:nth-of-type(4) img {
   order: 2;
+
+  padding: var(--white-space-none-small);
 }
 
 @media (width > 44em) {
@@ -330,7 +361,7 @@ main section:nth-of-type(4) img {
     position: absolute;
 
     bottom: 0;
-    right: 0;
+    right: 5em;
   }
 
 
@@ -375,6 +406,37 @@ linker kant staan */
 
 /* Article naast elkaar als groter dan 64em */
 @media (width > 58em) {
+  /* subnav */
+  main section:nth-of-type(1) nav {
+    position: relative;
+  }
+
+  main section:nth-of-type(1) h2 {
+    display: none;
+  }
+
+  main section:nth-of-type(1) button > svg {
+    display: none;
+  }
+
+  main section:nth-of-type(1) ul {
+    display: flex;
+    gap: var(--white-space-none-medium);
+
+    width: fit-content;
+  }
+
+  main section:nth-of-type(1) ul:nth-of-type(1) {
+    position: absolute;
+  }
+
+  main section:nth-of-type(1) ul:nth-of-type(2) {
+    display: flex;
+    align-self: end;
+
+    gap: var(--white-space-small);
+  }
+
 
 
   /* Carousel area */
@@ -387,16 +449,12 @@ linker kant staan */
     grid-column: 2 / span 4;
   }
 
-  /* main section:nth-of-type(2) img {
-    max-width: 24vw;
-  } */
-
   /* Alle verhalen opschuiven */
   main section:nth-of-type(2) > a {
     position: absolute;
 
     bottom: 0;
-    right: 0;
+    right: 5em;
   }
 
   main section:nth-of-type(2) ul::scroll-button(right) {
@@ -407,7 +465,7 @@ linker kant staan */
     left: 27em;
   }
 
-  /* CAROUSEL AREA END */
+
 
   main section:nth-of-type(3) {
     grid-template-columns: repeat(3, 1fr);
@@ -451,6 +509,10 @@ linker kant staan */
 }
 
 @media (width > 90em) {
+  /* main section:nth-of-type(1) {
+    padding-inline: 5em;
+  } */
+
   /* Carousel area */
   main section:nth-of-type(2) {
     grid-template-columns: 35em 1fr;
@@ -549,12 +611,3 @@ main section:nth-of-type(2) a > img {
 
 }
 */
-
-/**************
-STATES
-**************/
-/* Styling buttons */
-main section:nth-of-type(2) ul::scroll-button(*):hover {
-  background-color: var(--hover-bg-button-ca);
-  border: .5em solid var(--hover-bg-button-ca);
-}

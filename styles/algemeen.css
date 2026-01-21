@@ -17,35 +17,6 @@
 /*********************/
 /* KLEURTJES */
 /*********************/
-
-/* 
-✔️ Kleuren
-✔️ Fontgroottes
-✔️ Hover-waardes
-✔️ Overgangen
-✔️ Schaduwen
-✔️ Border-radius 
-*/
-
-/* 
-Kleur
-
-backgrounds (page, header, nav, footer)
-text (primary, secondary, muted)
-accent / brand / heading / link / icon / button / after-line / time-block
-Typografie
-
-container max-width
-Layout & geometry
-
-grid gaps, gutter, border-radius, aspect ratios
-States & transitions
-
-hover/active sizes or colors, transition-duration, easing
-Sizes for icons / images
-
-focus outline color/width, reduced-motion threshold */
-
 /* Bronvermelding voor de interpolate-size: https://developer.chrome.com/docs/css-ui/animate-to-height-auto?hl=ja */
 
 :root {
@@ -58,15 +29,13 @@ focus outline color/width, reduced-motion threshold */
   --color-special-text: #f35279;
 
   /* color backgrounds */
-
-  
-  /* --color-bg-header: #341EB3;  */
+  --color-bg-header: #341EB3; 
   --color-bg-main: #fff; 
   --color-bg-section:#f35279;
   --color-bg-footer: #f35279;
  
 
-  --color-bg-hamburger: #f35279;
+  --color-bg-hamburger: #ff5279;
   --color-bg-nav: #ff5279;
   --color-bg-subnav: #ff5279;
   --color-bg-skip-link: #fff;
@@ -76,6 +45,7 @@ focus outline color/width, reduced-motion threshold */
   --link-before-bg: #25167A;
   --link-after-main: #25167A;
   --link-after-main-special: #f35279;
+  --link-before-main: #f35279;
   --link-after-footer: #25167A;
   --time-block-bg: #f35279;
   --time-block-txt: #fff;
@@ -98,7 +68,7 @@ focus outline color/width, reduced-motion threshold */
   --font-size-heading: clamp(1.5rem, 4vw, 3rem);
   
   */
-  --font-size-xxsmall: 0.8em;
+  --font-size-xxsmall: 0.9em;
   --font-size-xsmall: 1em;
   --font-size-small: 1.5em;
   --font-size-medium: 2em;
@@ -109,16 +79,17 @@ focus outline color/width, reduced-motion threshold */
 
   --weight-bolder: 900;
   --weight-bold: 700;
+  --weight-normal-bold: 622;
   --weight-normal: 400;
   --weight-light: 300;
   --weight-lighter: 100;
 
   /* spacing */
-  --line-height-small: 1em;
-  --line-height-medium: 2em;
-  --line-height-medium-large: 3em;
-  --line-height-large: 4em;
-  --line-height-xl: 8em;
+  --line-height-small: 1rem;
+  --line-height-medium: 2.5rem;
+  --line-height-medium-large: 3rem;
+  --line-height-large: 4rem;
+  --line-height-xl: 8rem;
 
   --white-space-none: 0;
   --white-space-xsmall: 0.5em;
@@ -172,6 +143,13 @@ focus outline color/width, reduced-motion threshold */
   --transform-footer: scale(0.5);
 
   /* States */
+  --hover-special-svg: #fff;
+  --hover-main-a: #f35279;
+  --hover-special-a: #fff;
+  --hover-footer-a: #fff;
+  --hover-footer-button: #fff;
+
+  --text-decoration-underline: underline #fff;
 
   --hover-bg-main: #f35279;
   --hover-bg-button-ca: #f35279;
@@ -208,7 +186,7 @@ focus outline color/width, reduced-motion threshold */
     --color-bg-header: #341EB3;
     --color-bg-main: #351FB7; 
     --color-bg-section:#25167A;
-    --color-bg-footer: #000000;
+    --color-bg-footer: #000;
   
     --color-bg-hamburger: #341EB3;
     --color-bg-nav: #341EB3;
@@ -220,7 +198,7 @@ focus outline color/width, reduced-motion threshold */
     /* colors icons (buttons, links, after, svg etc) */
     --link-before-bg: #25167A;
     --link-after-main: #fff;
-    --link-after-footer: #000;
+    --link-after-footer: #fff;
     --time-block-bg: #000;
     --time-block-txt: #fff;
     --header-icons: #fff;
@@ -241,6 +219,16 @@ focus outline color/width, reduced-motion threshold */
 
     
     /* states */
+    --hover-special-svg: #f35279;
+    --hover-main-a: #f35279;
+    --hover-special-a: #f35279;
+    --hover-footer-a: #f35279;
+    --hover-footer-button: #f35279;
+
+    --text-decoration-underline: underline #f35279;
+
+
+
     --hover-lijn: underline 0.5em #f35279;
     --hover-header-img: #f35279;
     --hover-button: #f35279;
@@ -275,6 +263,7 @@ verschijven en knipper mag niet. Minder intens */
 body {
   font-family: "MY POPPINS";
   margin: 0;
+  overflow-x: hidden;
 }
 
 body li {
@@ -310,12 +299,11 @@ body > a:focus {
 }
 
 
-
 header {
   z-index: 1;
   gap: var(--white-space-none-medium);
 
-  padding: 0.5em;
+  padding: var(--white-space-xsmall);
 }
 
  
@@ -338,8 +326,6 @@ header nav li section a{
 }
 
 
-
-
 /* Bronvermelding:
 Ai prompt: Ik wil een has() maken. Het moet het volgende zeggen:
 Als er in de header een ul zit met een directe li 
@@ -348,13 +334,15 @@ en in die li moet een directe p hebben dan...
 Antwoord:
 header:has(ul > li > p) {
 */
+
+/* Here is the problem */
 header:has(ul > li > p) {
   position: sticky;
   top: 0;
   z-index: 999;
 
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
 
   height: 10vh;
@@ -370,7 +358,6 @@ header:has(ul > li > p).foetsie {
 
 /* Co-pilot prompt: Kan niet scrollen (copy paste code)
 Antwoord: zet overflow-y: auto;
-
 */
 
 /* BRONVERMELDING: Roos Buskermolen (nav (translate) en nav.geopend) */
@@ -419,10 +406,6 @@ button[aria-label="toggle headersubmenu"].is-open > svg {
   transform: rotate(45deg);
   transition: var(--transition-short);
 }
-
-
-
-
 
 
 
@@ -487,26 +470,119 @@ button.is-open span:nth-of-type(3) {
   transition: var(--transition-short);
 }
 
-/* form {
 
-} */
+
+
+header button [aria-label="zoekbalk: gesloten"] {
+  position: relative;
+}
+
+/* To Do: var en weghalen JS om te openen */
+/* Bronvermelding: https://www.w3schools.com/css/tryit.asp?filename=trycss_forms */
+header form {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 1em solid red;
+  background-color: #02857D;
+  padding: var(--white-space-medium);
+} 
+
+input[type=search] {
+  background-color: #027069;
+  padding: 1em;
+  border: 5px solid #fff;
+}
+
+
+/*
+main section:nth-of-type(1) {
+  height: 4em;
+  position: relative;
+  z-index: 1;
+
+  padding-inline: 2em;
+}
+
+main section:nth-of-type(1) nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: var(--white-space-none-small);
+
+  box-shadow: -0.3em 0.5em var(--color-bg-shadow);
+  color: var(--color-text);
+  background-color: var(--color-bg-subnav);
+
+  height: 4em;
+  overflow: hidden;
+
+  transition: 0.5s;
+}
+
+main section:nth-of-type(1) nav.is-open {
+  height: auto;
+}
+
+main section:nth-of-type(1) h2 {
+  margin: 0;
+
+  line-height: var(--line-height-large);
+}
+
+main section:nth-of-type(1) button > svg {
+  color: var(--color-svg);
+  transition: var(--transition-short);
+}
+
+main section:nth-of-type(1) nav.is-open button > svg {
+  rotate: 45deg;
+}
+
+main section:nth-of-type(1) ul {
+  margin: 0;
+  padding: var(--white-space-none);
+
+  width: 100%;
+}
+
+main section:nth-of-type(1) ul:nth-of-type(2) {
+  display: flex;
+  gap: var(--white-space-medium);
+}
+
+main section:nth-of-type(1) a {
+  line-height: var(--line-height-medium-large);
+  color: var(--color-text);
+}
+
+main section:nth-of-type(1) ul:nth-of-type(1) li:nth-of-type(1) a {
+  position: relative;
+}
+
+main section:nth-of-type(1) ul:nth-of-type(1) li:nth-of-type(1) a::after {
+  content: "";
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--color-text);
+  position: absolute;
+  bottom: -0.1em;
+  left: 0.8em;
+}
+
+
+
+
+
+
+*/
 
 
 /**************/
 /* MAIN */
 /**************/
-
-/* Semantisch coderen
-de 
-h1, h2, h3 {
-  color: white/Dark blue;
-}
-
-h2 {
-  font-size: 20em;
-}
-*/
-
 
 img {
   max-width: 100%;
@@ -518,6 +594,7 @@ img {
 
 footer {
   background-color: var(--color-bg-footer);
+  padding: var(--white-space-none-small);
 }
 
 footer h2,
@@ -527,9 +604,16 @@ footer button {
   color: var(--color-text);
 }
 
+footer a {
+  line-height: var(--line-height-medium);
+
+  font-size: var(--font-size-xxsmall);
+  font-weight: var(--weight-bold);
+}
+
 footer h2 {
-  /* font-size: var(--size); */
-  /* font-weight: var(--weight-heavy); */
+  font-size: var(--size);
+  font-weight: var(--weight-bolder);
   position: relative;
 
   width: fit-content;
@@ -551,10 +635,6 @@ section[aria-label="footer grid"] {
   display: grid;
 }
 
-/* Zorgt voor witruimte voor laatste svg */
-footer > section:nth-of-type(2) ul {
-  padding: var(--white-space-medium-none);
-}
 
 footer section > svg {
   max-width: 30vh;
@@ -609,24 +689,28 @@ footer section > svg {
     position: relative;
   }
 
+  /* The align-self:start */
   header nav {
     display: flex;
     flex-direction: row;
-    background-color: green;
 
+    /* align-self:start; */
+
+    /* background-color: green; */
   }
 
   header nav ul {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-self: start;
 
-    background-color: greenyellow;
+    background-color: var(--color-bg-nav);
   }
 
   header nav li {
     display: flex;
     flex-direction: column;
+    align-items: center;
     /* background-color: purple; */
   }
 
@@ -654,13 +738,12 @@ footer section > svg {
   header nav li section ul > li {
     display: flex;
     flex-direction: column;
+    align-items: start;
     /* background-color: azure; */
   }
 
-
-
-
 }
+
 
 
 /* Zet de laatse sectie en de picture ook in een sectie,
@@ -714,6 +797,12 @@ Kijk wel even naar alle anderen delen waar je de ul aanspreekt */
   }
 }
 
+@media (width > 90em) {
+  footer {
+    padding: var(--white-space-none-xl);
+  }
+}
+
 /**************
 STATES
 **************/
@@ -724,7 +813,7 @@ STATES
 } */
 
 header svg:hover {
-  color: #21146b;
+  color: var(--hover-special-svg);
 }
 
 header img:hover,
@@ -737,19 +826,32 @@ header button[aria-label="toggle menu"]:hover {
 main section:nth-of-type(1) a:hover,
 header ul a:hover,
 footer a:hover {
-  background-color: #fff;
-  border: .5em solid white;
+  color: var(--hover-special-a);
+  font-size: var(--font-size-small);
+
+  text-decoration: var(--text-decoration-underline);
+}
+
+footer button:hover {
+  color: var(--hover-special-a);
+  font-size: var(--font-size-xsmall);
 }
 
 main section:nth-of-type(2) > a:hover,
 main section:nth-of-type(3) a:hover {
-  background-color: var(--hover-bg-main);
-  border: .5em solid white;
+  color: var(--hover-main-a);
+  font-size: var(--font-size-small);
 }
 
 main nav ul > li svg:hover {
-  color: #fff;
+  color: var(--hover-special-svg);
   /* padding: var(--white-space-small); */
+}
+
+/* Styling buttons */
+main section:nth-of-type(2) ul::scroll-button(*):hover {
+  background-color: var(--hover-bg-button-ca);
+  border: .5em solid var(--hover-bg-button-ca);
 }
 
 
