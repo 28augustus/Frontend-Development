@@ -52,29 +52,35 @@ focus outline color/width, reduced-motion threshold */
   interpolate-size: allow-keywords;
 
   /* colors */
-  --color-text-p: #fff;
+  --color-text-special-heading: #f35279;
+  --color-text-header-span: #fff;
+  --color-text: #21146b;
+  --color-special-text: #f35279;
 
   /* color backgrounds */
 
-  /* 
-  --color-bg-header: ;
-  --color-bg-main: ; 
-  --color-bg-footer: ;
-  */
+  
+  /* --color-bg-header: #341EB3;  */
+  --color-bg-main: #fff; 
+  --color-bg-section:#f35279;
+  --color-bg-footer: #f35279;
+ 
 
-  --color-bg-nav: #f35279;
-  --color-bg-subnav: #25167a;
+  --color-bg-hamburger: #f35279;
+  --color-bg-nav: #ff5279;
+  --color-bg-subnav: #ff5279;
   --color-bg-skip-link: #fff;
-  --color-bg-shadow: #000;
+  --color-bg-shadow: #25167A;
 
   /* colors icons (buttons, links, after, svg etc) */
-  --link-before-bg: #f35279;
-  --link-after-footer: #000;
-  --time-block-bg: #000;
+  --link-before-bg: #25167A;
+  --link-after-main: #25167A;
+  --link-after-footer: #25167A;
+  --time-block-bg: #f35279;
   --time-block-txt: #fff;
   --header-icons: #fff;
 
-  --color-icon-plus: #fff;
+  --color-svg: #fff;
   --color-icon-bg: #000;
 
   --color-icon-pink: #f35279;
@@ -165,6 +171,10 @@ focus outline color/width, reduced-motion threshold */
   --transform-footer: scale(0.5);
 
   /* States */
+
+  --hover-bg-main: #f35279;
+
+
   --hover-lijn: underline 0.5em #25167a;
   --hover-header-img: #21146b;
   --hover-button: #21146b;
@@ -185,33 +195,49 @@ focus outline color/width, reduced-motion threshold */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-header-background: #351fb7;
-    --color-background: #351fb7;
-    --color-menu-color: #fff;
-    --color-nav-background: #25167a;
-
-    --color-text-nav-p: #fff;
-    --color-text-nav-a: #f35279;
-    --icon-color-nav-svg: #fff;
-
+    /* colors */
+    --color-text-special-heading: #f35279;
+    --color-text-header-span: #f35279;
     --color-text: #fff;
-    --icon-color: #fff;
+    --color-special-text: #f35279;
 
-    --color-button: #000;
-    --color-after-line: #fff;
-    --color-footer-background: #000;
 
-    --color-detail-summary: #fff;
+    /* color backgrounds */
+    --color-bg-header: #341EB3;
+    --color-bg-main: #351FB7; 
+    --color-bg-section:#25167A;
+    --color-bg-footer: #000000;
+  
+    --color-bg-hamburger: #341EB3;
+    --color-bg-nav: #341EB3;
+    --color-bg-subnav: #25167a;
+    --color-bg-skip-link: #fff;
+    --color-bg-shadow: #000;
 
-    /* 2e pagina colors */
-    --block-color: #000;
-    --color-h3-heading-carousel: #f35279;
-    --color-after-line-h2: #f35279;
-    --color-after-line-h3: #fff;
+
+    /* colors icons (buttons, links, after, svg etc) */
+    --link-before-bg: #25167A;
+    --link-after-main: #fff;
+    --link-after-footer: #000;
+    --time-block-bg: #000;
+    --time-block-txt: #fff;
+    --header-icons: #fff;
+
+    --color-svg: #fff;
+    --color-icon-bg: #000;
+
+    --color-icon-pink: #f35279;
+    --color-icon-black: #000;
+    --color-icon-blue: #25167a;
+
+    --color-button-carousel: #000;
+    --color-txt-button-carousel: #fff;
+
 
     /* font */
     --weight-heavy: 900;
 
+    
     /* states */
     --hover-lijn: underline 0.5em #f35279;
     --hover-header-img: #f35279;
@@ -262,11 +288,6 @@ a {
   text-decoration: none;
 }
 
-/* body > a {
-  position: absolute;
-  left: -9999em;
-  z-index: 100;
-} */
 
 /**************/
 /* HEADER */
@@ -286,28 +307,36 @@ body > a:focus {
   background-color: var(--color-bg-skip-link);
 }
 
-/* TO DO: kijk nog of bij cmd the toggle goed werkt ofzo */
 
-/* Waarom doet de header zo raar als flex doet?? */
 
 header {
-  /* position: sticky;  */
-  /* top: 0; */
-  /* transition: transform 0.3s ease; */
-
-  /* background-color: var(--color-bg-nav); */
-
   z-index: 1;
   gap: var(--white-space-none-medium);
 
   padding: 0.5em;
 }
 
-/* header.foetsie {
-  transform: translateY(-100%);
-  background: red;
-  translate: 0 -100%;
-} */
+ 
+header button svg {
+  color: var(--color-svg);
+}
+
+
+header nav li {
+  color: var(--color-text);
+}
+
+header nav li button {
+ color: var(--color-text-header-span);
+}
+
+
+header nav li section a{
+  color: var(--color-text);
+}
+
+
+
 
 /* Bronvermelding:
 Ai prompt: Ik wil een has() maken. Het moet het volgende zeggen:
@@ -336,19 +365,13 @@ header:has(ul > li > p).foetsie {
   transform: translateY(-100%);
 }
 
-/* header:has(ul > li > p) {
-  translate: 0 -100%;
-} */
-
-/* header.foetsie {
-  translate: 0 -100%;
-} */
 
 /* Co-pilot prompt: Kan niet scrollen (copy paste code)
 Antwoord: zet overflow-y: auto;
 
 */
 
+/* BRONVERMELDING: Roos Buskermolen (nav (translate) en nav.geopend) */
 header nav {
   position: fixed;
   left: 0;
@@ -395,133 +418,12 @@ button[aria-label="toggle headersubmenu"].is-open > svg {
   transition: var(--transition-short);
 }
 
-/* header ul > li:nth-of-type(1) li,
-header ul > li:nth-of-type(1) section {
-  position: absolute;
-  overflow: hidden;
-  transition: var(--transition-short);
-  background-color: blueviolet;
-}
 
-header ul > li:nth-of-type(1) li.open,
-header ul > li:nth-of-type(1) section.open {
-  position: static;
 
-  inset: 0;
-  transform: translateY(0);
-  transition: var(--transition-short);
-} */
 
-/* header section [aria-label="nav headersubmenu"] {
-  background-color: red;
-} */
 
-/* section[aria-label="nav headersubmenu"] {
-  position: absolute;
 
-  transform: translateY(-999%);
-  transition: var(--transition-short);
-  background-color: red;
-}
 
-section[aria-label="nav headersubmenu"].geopend {
-  max-height: 1000px; 
-  background-color: red;
-} */
-
-/* main section:nth-of-type(1) {
-  display: flex;
-  position: relative;
-  overflow: hidden;
-
-  padding: var(--white-space-none-small);
-
-  box-shadow: -0.3em 0.5em var(--color-bg-shadow);
-  color: var(--color-text-p);
-  background-color: var(--color-bg-nav);
-}
-
-main section:nth-of-type(1) p {
-  display: inline-block;
-}
-
-main section:nth-of-type(1) ul {
-  position: absolute;
-  padding: var(--white-space-none);
-}
-
-main section:nth-of-type(1) ul:nth-of-type(2) {
-  display: flex;
-  gap: var(--white-space-medium);
-}
-
-main section:nth-of-type(1) a {
-
-  line-height: var(--line-height-medium);
-  color: var(--color-text-p);
-}
-
-main section:nth-of-type(1).geopend ul {
-  position: static;
-  transition: var(--transition-long);
-}
-
-main nav button > svg {
-  position: absolute;
-  top: 0.5em;
-  right: 1em;
-  color: var(--color-icon-plus);
-}
-
-main nav button > svg {
-  color: var(--color-icon-plus);
-}
-
-main section:nth-of-type(1).geopend button > svg {
-  rotate: 45deg;
-  transition: var(--transition-short);
-} */
-
-/* header {
-  background-color: lightblue;
-  display: flex;
-  justify-content: start;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-
-  transition: var(--transition-long);
-} */
-
-/* header.foetsie {
-  translate: 0 -100%;
-} */
-
-/* BRONVERMELDING: Roos Buskermolen (nav (translate) en nav.geopend) */
-/* nav {
-  position: fixed;
-  inset: 0;
-
-  translate: 0 -1000%;
-  transition: var(--transition-short);
-  background-color: var(--color-header-background);
-
-}
-
-nav.geopend {
-  translate: 0 0;
-} */
-
-/* Als de nav is geopen dan hieronder 
-zorgt dat je het kan openen nog een keer */
-/* header nav {
-  position: relative;
-}
-
-header section {
-  position: absolute;
-  background-color: lightgreen;
-} */
 
 /* BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll */
 /* Sticky Header */
@@ -533,7 +435,7 @@ button[aria-label="toggle menu"] {
 
   aspect-ratio: 1/1;
 
-  background-color: darkblue;
+  background-color: var(--color-bg-hamburger);
   border: none;
   padding: var(--white-space-none);
 
@@ -587,25 +489,6 @@ button.is-open span:nth-of-type(3) {
 
 } */
 
-/* nav header */
-/* header ul {
-  position: static;
-  translate: 0 0;
-  padding: var(--white-space-none);
-  background: none;
-} */
-
-/* nav > ul {
-  display: flex;
-  flex-direction: column;
-}
-
-nav > button {
-  display: flex;
-  flex-direction: column;
-} */
-
-/* Submenu area */
 
 /**************/
 /* MAIN */
@@ -622,6 +505,7 @@ h2 {
 }
 */
 
+
 img {
   max-width: 100%;
 }
@@ -630,14 +514,16 @@ img {
 /* Footer */
 /**************/
 
-/* TO DO: Padding is too much when small 
+footer {
+  background-color: var(--color-bg-footer);
+}
 
-MAYBE ASK ABOUT SIZING RESPONSIVENESS AND HOW IT WORKS?
-*/
-
-/* footer {
-  padding: var(--white-space-none-xl);
-} */
+footer h2,
+footer a,
+footer svg,
+footer button {
+  color: var(--color-text);
+}
 
 footer h2 {
   /* font-size: var(--size); */
@@ -646,6 +532,7 @@ footer h2 {
 
   width: fit-content;
 }
+
 
 /* streepje */
 footer h2::after {
@@ -828,6 +715,87 @@ Kijk wel even naar alle anderen delen waar je de ul aanspreekt */
 /**************
 STATES
 **************/
+button:hover {
+  background-color: var(--hover-button);
+  transition: var(--transition-5);
+  border: .5em solid var(--hover-button);
+}
+
+header img:hover {
+  background-color: var(--hover-header-img);
+  transition: var(--transition-5);
+  border: .5em solid var(--hover-button);
+}
+
+main section:nth-of-type(1) a:hover,
+footer a:hover {
+  background-color: #fff;
+  border: .5em solid white;
+}
+
+main section:nth-of-type(2) a:hover,
+main section:nth-of-type(3) a:hover {
+  background-color: var(--hover-bg-main);
+  border: .5em solid white;
+}
+
+
+/* header li> a:focus,
+main section:nth-of-type(1) a:focus, 
+footer a:focus {
+  background-color: var(--focus-background-pink);
+  color: var(--focus-text);
+
+  font-weight: var(--weight-heavy);
+  padding: var(--focus-padding);
+} */
+
+/* header button:focus {
+  background-color: var(--focus-header-state);
+} */
+
+/* header > a:focus svg{
+  background-color: var(--focus-header-state);
+} */
+
+/* header > a:focus img{
+  background-color: var(--focus-header-state);
+} */
+
+/* main a:focus {
+  background-color: var(--focus-background-main);
+  color: var(--focus-text);
+
+  font-weight: var(--weight-heavy);
+  padding: var(--focus-padding);
+} */
+
+
+/* a:active,
+button:active {
+  transform: var(--transform);
+} */
+
+/* footer a:active {
+  transform: var(--transform-footer);
+} */
+
+
+/* main section:nth-of-type(1) a:visited, 
+footer a:visited {
+  background-color: var(--visited-pink);
+} */
+
+/* header li> a:visited{
+  background-color: var(--visited-nav);
+} */
+
+/* main a:visited {
+  background-color: var(--visited-main);
+  font-weight: var(--visited-font-weight);
+} */
+
+
 
 /**************
 Animatie
