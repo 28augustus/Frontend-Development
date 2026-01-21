@@ -1,0 +1,917 @@
+/**************/
+/* FONTS */
+/**************/
+
+@font-face {
+  font-family: "MY POPPINS";
+  src: url("../fonts/e807dee2426166ad-s.p.woff2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MY POPPINS";
+  src: url("../fonts/851c14db057e20c2-s.p.woff2");
+  font-style: italic;
+}
+
+/*********************/
+/* KLEURTJES */
+/*********************/
+/* Bronvermelding voor de interpolate-size: https://developer.chrome.com/docs/css-ui/animate-to-height-auto?hl=ja */
+
+:root {
+  interpolate-size: allow-keywords;
+
+  /* colors */
+  --color-text-special-heading: #f35279;
+  --color-text-header-span: #fff;
+  --color-text: #21146b;
+  --color-special-text: #f35279;
+
+  /* color backgrounds */
+  --color-bg-header: #341EB3; 
+  --color-bg-main: #fff; 
+  --color-bg-section:#f35279;
+  --color-bg-footer: #f35279;
+ 
+
+  --color-bg-hamburger: #ff5279;
+  --color-bg-nav: #ff5279;
+  --color-bg-subnav: #ff5279;
+  --color-bg-skip-link: #fff;
+  --color-bg-shadow: #25167A;
+
+  /* colors icons (buttons, links, after, svg etc) */
+  --link-before-bg: #25167A;
+  --link-after-main: #25167A;
+  --link-after-main-special: #f35279;
+  --link-before-main: #f35279;
+  --link-after-footer: #25167A;
+  --time-block-bg: #f35279;
+  --time-block-txt: #fff;
+  --header-icons: #fff;
+
+  --color-svg: #fff;
+  --color-icon-bg: #000;
+
+  --color-icon-pink: #f35279;
+  --color-icon-black: #000;
+  --color-icon-blue: #25167a;
+
+  --color-button-carousel: #000;
+  --color-txt-button-carousel: #fff;
+
+  /* Fonts */
+
+  /* GEBRUIK CLAMP
+  --font-size-base: clamp(1rem, 2vw, 1.5rem);
+  --font-size-heading: clamp(1.5rem, 4vw, 3rem);
+  
+  */
+  --font-size-xxsmall: 0.9em;
+  --font-size-xsmall: 1em;
+  --font-size-small: 1.5em;
+  --font-size-medium: 2em;
+  --font-size-medium-large: 2.5em;
+  --font-size-large: 3em;
+  --font-size-x-large: 4em;
+  --font-size-xx-large: 5em;
+
+  --weight-bolder: 900;
+  --weight-bold: 700;
+  --weight-normal-bold: 622;
+  --weight-normal: 400;
+  --weight-light: 300;
+  --weight-lighter: 100;
+
+  /* spacing */
+  --line-height-small: 1rem;
+  --line-height-medium: 2.5rem;
+  --line-height-medium-large: 3rem;
+  --line-height-large: 4rem;
+  --line-height-xl: 8rem;
+
+  --white-space-none: 0;
+  --white-space-xsmall: 0.5em;
+  --white-space-small: 1em;
+  --white-space-medium: 2em;
+  --white-space-large: 4em;
+  --white-space-xl: 8em;
+
+  --white-space-none-xsmall: 0 0.5em;
+  --white-space-none-small: 0 1em;
+  --white-space-none-medium: 0 2em;
+  --white-space-none-large: 0 4em;
+  --white-space-none-xl: 0 8em;
+
+  --white-space-xsmall-none: 0.5em 0;
+  --white-space-small-none: 1em 0;
+  --white-space-medium-none: 2em 0;
+  --white-space-large-none: 4em 0;
+  --white-space-xl-none: 8em 0em;
+
+  --white-space-small-xsmall: 1em 0.5em;
+  --white-space-small-medium: 1em 2em;
+  --white-space-small-large: 1em 4em;
+  --white-space-small-xl: 1em 8em;
+
+  --white-space-medium-xsmall: 2em 0.5em;
+  --white-space-medium-small: 2em 1em;
+  --white-space-medium-large: 2em 4em;
+  --white-space-medium-xl: 2em 8em;
+
+  --white-space-large-xsmall: 4em 0.5em;
+  --white-space-large-small: 4em 1em;
+  --white-space-large-medium: 4em 2em;
+  --white-space-large-xl: 4em 8em;
+
+  --white-space-xl-xsmall: 8em 0.5em;
+  --white-space-xl-small: 8em 1em;
+  --white-space-xl-medium: 8em 2em;
+  --white-space-xl-large: 8em 4em;
+
+  /* animatie */
+  --animation-duration: 1s;
+  --animation-iteration-count: 3;
+
+  --transition-short: 0.3s ease;
+  --transition-normal: 0.5s ease;
+  --transition-long: 0.7s ease;
+  --transition-xl: 1s;
+
+  --transform: scale(0.8);
+  --transform-footer: scale(0.5);
+
+  /* States */
+  --hover-special-svg: #fff;
+  --hover-main-a: #f35279;
+  --hover-special-a: #fff;
+  --hover-footer-a: #fff;
+  --hover-footer-button: #fff;
+
+  --text-decoration-underline: underline #fff;
+
+  --hover-bg-main: #f35279;
+  --hover-bg-button-ca: #f35279;
+
+
+  --hover-lijn: underline 0.5em #25167a;
+  --hover-header-img: #21146b;
+  --hover-button: #21146b;
+
+  --focus-header-state: #21146b; /* Als het symbool/state wit is dan gebruik deze kleur*/
+  --focus-background-pink: #fff;
+  --focus-background-main: #f35279;
+  --focus-text: #21146b;
+
+  --focus-padding: 1em;
+
+  --visited-pink: #fff;
+  --visited-main: #f35279;
+  --visited-nav: #fff;
+
+  --visited-font-weight: 900;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* colors */
+    --color-text-special-heading: #f35279;
+    --color-text-header-span: #f35279;
+    --color-text: #fff;
+    --color-special-text: #f35279;
+
+
+    /* color backgrounds */
+    --color-bg-header: #341EB3;
+    --color-bg-main: #351FB7; 
+    --color-bg-section:#25167A;
+    --color-bg-footer: #000;
+  
+    --color-bg-hamburger: #341EB3;
+    --color-bg-nav: #341EB3;
+    --color-bg-subnav: #25167a;
+    --color-bg-skip-link: #fff;
+    --color-bg-shadow: #000;
+
+
+    /* colors icons (buttons, links, after, svg etc) */
+    --link-before-bg: #25167A;
+    --link-after-main: #fff;
+    --link-after-footer: #fff;
+    --time-block-bg: #000;
+    --time-block-txt: #fff;
+    --header-icons: #fff;
+
+    --color-svg: #fff;
+    --color-icon-bg: #000;
+
+    --color-icon-pink: #f35279;
+    --color-icon-black: #000;
+    --color-icon-blue: #25167a;
+
+    --color-button-carousel: #000;
+    --color-txt-button-carousel: #fff;
+
+
+    /* font */
+    --weight-heavy: 900;
+
+    
+    /* states */
+    --hover-special-svg: #f35279;
+    --hover-main-a: #f35279;
+    --hover-special-a: #f35279;
+    --hover-footer-a: #f35279;
+    --hover-footer-button: #f35279;
+
+    --text-decoration-underline: underline #f35279;
+
+
+
+    --hover-lijn: underline 0.5em #f35279;
+    --hover-header-img: #f35279;
+    --hover-button: #f35279;
+
+    --focus-header-state: #f35278; /* Als het symbool/state wit is dan gebruik deze kleur*/
+    --focus-background-pink: #fff;
+    --focus-text: #21146b;
+
+    --visited-pink: #f35279;
+    --visited-main: #f35279;
+    --visited-nav: #fff;
+  }
+}
+
+/* @media (prefers-reduced-motion: reduce) {
+  *{ 
+  }
+}  */
+/* Sommigen mogen wel, zoals opacity maar minder heftig
+verschijven en knipper mag niet. Minder intens */
+
+/**************/
+/*ALGEMENE STYLING */
+/**************/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "MY POPPINS";
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/**************/
+/* HEADER */
+/**************/
+body.hidden {
+  overflow: hidden;
+}
+
+body > a {
+  position: absolute;
+  left: -9999em;
+  z-index: 100;
+}
+
+body > a:focus {
+  left: 0em;
+  background-color: var(--color-bg-skip-link);
+}
+
+
+header {
+  z-index: 1;
+  gap: var(--white-space-none-medium);
+
+  padding: var(--white-space-xsmall);
+}
+
+ 
+header button svg {
+  color: var(--color-svg);
+}
+
+
+header nav li {
+  color: var(--color-text);
+}
+
+header nav li button {
+ color: var(--color-text-header-span);
+}
+
+
+header nav li section a{
+  color: var(--color-text);
+}
+
+
+/* Bronvermelding:
+Ai prompt: Ik wil een has() maken. Het moet het volgende zeggen:
+Als er in de header een ul zit met een directe li 
+en in die li moet een directe p hebben dan...
+
+Antwoord:
+header:has(ul > li > p) {
+*/
+
+/* Here is the problem */
+header:has(ul > li > p) {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+
+  height: 10vh;
+  transition: transform 0.3s ease;
+
+  background-color: var(--color-bg-nav);
+}
+
+header:has(ul > li > p).foetsie {
+  transform: translateY(-100%);
+}
+
+
+/* Co-pilot prompt: Kan niet scrollen (copy paste code)
+Antwoord: zet overflow-y: auto;
+*/
+
+/* BRONVERMELDING: Roos Buskermolen (nav (translate) en nav.geopend) */
+header nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  translate: 0% -100%;
+  transition: translate 0.3s;
+
+  overflow-y: auto;
+
+  background-color: var(--color-bg-nav);
+}
+
+header nav.geopend {
+  translate: 0% 0%;
+
+  z-index: -1;
+  transition: var(--transition-normal);
+  padding: var(--white-space-xl-medium);
+}
+
+header img {
+  max-width: 12em;
+  background-color: var(--color-bg-nav);
+}
+
+/* Zorgt dat sub menu niet in zicht komt
+als menu open is*/
+section[aria-label="nav headersubmenu"] {
+  max-height: 0;
+  overflow: hidden;
+}
+
+section[aria-label="nav headersubmenu"].geopend {
+  max-height: 200em;
+
+  transform: translateY(0);
+}
+
+button[aria-label="toggle headersubmenu"].is-open > svg {
+  transform: rotate(45deg);
+  transition: var(--transition-short);
+}
+
+
+
+
+/* BRONVERMELDING: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll */
+/* Sticky Header */
+
+/* menu button */
+button[aria-label="toggle menu"] {
+  appearance: none;
+  z-index: 1;
+
+  aspect-ratio: 1/1;
+
+  background-color: var(--color-bg-hamburger);
+  border: none;
+  padding: var(--white-space-none);
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+  order: -1;
+}
+
+button span {
+  display: block;
+
+  width: 2.5em;
+  height: 0.3em;
+  background-color: var(--header-icons);
+  border-radius: 2em;
+
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+button span:nth-of-type(1) {
+  translate: 0 -1em;
+  transition: var(--transition-short);
+}
+
+button span:nth-of-type(3) {
+  translate: 0 1em;
+  transition: var(--transition-short);
+}
+
+button.is-open span:nth-of-type(1) {
+  translate: 0 0;
+  rotate: 45deg;
+  transition: var(--transition-short);
+}
+
+button.is-open span:nth-of-type(2) {
+  scale: 0 1;
+  transition: var(--transition-short);
+}
+
+button.is-open span:nth-of-type(3) {
+  translate: 0 0;
+  rotate: -45deg;
+  transition: var(--transition-short);
+}
+
+
+
+
+header button [aria-label="zoekbalk: gesloten"] {
+  position: relative;
+}
+
+/* To Do: var en weghalen JS om te openen */
+/* Bronvermelding: https://www.w3schools.com/css/tryit.asp?filename=trycss_forms */
+header form {
+  /* position: absolute; */
+  right: 0;
+  top: 0;
+  border-radius: 1em solid red;
+  background-color: #02857D;
+  padding: var(--white-space-medium);
+} 
+
+input[type=search] {
+  background-color: #027069;
+  padding: 1em;
+  border: 5px solid #fff;
+}
+
+
+/*
+main section:nth-of-type(1) {
+  height: 4em;
+  position: relative;
+  z-index: 1;
+
+  padding-inline: 2em;
+}
+
+main section:nth-of-type(1) nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: var(--white-space-none-small);
+
+  box-shadow: -0.3em 0.5em var(--color-bg-shadow);
+  color: var(--color-text);
+  background-color: var(--color-bg-subnav);
+
+  height: 4em;
+  overflow: hidden;
+
+  transition: 0.5s;
+}
+
+main section:nth-of-type(1) nav.is-open {
+  height: auto;
+}
+
+main section:nth-of-type(1) h2 {
+  margin: 0;
+
+  line-height: var(--line-height-large);
+}
+
+main section:nth-of-type(1) button > svg {
+  color: var(--color-svg);
+  transition: var(--transition-short);
+}
+
+main section:nth-of-type(1) nav.is-open button > svg {
+  rotate: 45deg;
+}
+
+main section:nth-of-type(1) ul {
+  margin: 0;
+  padding: var(--white-space-none);
+
+  width: 100%;
+}
+
+main section:nth-of-type(1) ul:nth-of-type(2) {
+  display: flex;
+  gap: var(--white-space-medium);
+}
+
+main section:nth-of-type(1) a {
+  line-height: var(--line-height-medium-large);
+  color: var(--color-text);
+}
+
+main section:nth-of-type(1) ul:nth-of-type(1) li:nth-of-type(1) a {
+  position: relative;
+}
+
+main section:nth-of-type(1) ul:nth-of-type(1) li:nth-of-type(1) a::after {
+  content: "";
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--color-text);
+  position: absolute;
+  bottom: -0.1em;
+  left: 0.8em;
+}
+
+
+
+
+
+
+*/
+
+
+/**************/
+/* MAIN */
+/**************/
+
+img {
+  max-width: 100%;
+}
+
+/**************/
+/* Footer */
+/**************/
+
+footer {
+  background-color: var(--color-bg-footer);
+  padding: var(--white-space-none-small);
+}
+
+footer h2,
+footer a,
+footer svg,
+footer button {
+  color: var(--color-text);
+}
+
+footer a {
+  line-height: var(--line-height-medium);
+
+  font-size: var(--font-size-xxsmall);
+  font-weight: var(--weight-bold);
+}
+
+footer h2 {
+  font-size: var(--size);
+  font-weight: var(--weight-bolder);
+  position: relative;
+
+  width: fit-content;
+}
+
+
+/* streepje */
+footer h2::after {
+  content: "";
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--link-after-footer);
+  position: absolute;
+  bottom: -0.4em;
+  left: 0.8em;
+}
+
+section[aria-label="footer grid"] {
+  display: grid;
+}
+
+
+footer section > svg {
+  max-width: 30vh;
+}
+
+/* BRONVERMELDING: https://codepen.io/28augustus/pen/dPMxwaW */
+@media (width > 43em) {
+  section[aria-label="footer grid"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: var(--white-space-large-none);
+  }
+
+  footer > section:nth-of-type(2) ul {
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    gap: var(--white-space-small);
+  }
+}
+
+@media (width > 57em) {
+  header button[aria-label="toggle menu"] {
+    display: none;
+  }
+
+  header nav {
+    position: static;
+    translate: unset;
+    overflow: visible;
+    padding: var(--white-space-none);
+
+  }
+
+  /* Header nav ul {
+    position:static;
+    translate:unset;
+  } */
+  
+  /* header nav li {
+    flex-basis:unset;
+    flex-grow:unset;
+  } */
+  
+  nav button[aria-label="toggle headersubmenu"] {
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+  }
+
+  /* The align-self:start */
+  header nav {
+    display: flex;
+    flex-direction: row;
+
+    /* align-self:start; */
+
+    /* background-color: green; */
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    align-self: start;
+
+    background-color: var(--color-bg-nav);
+  }
+
+  header nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: purple; */
+  }
+
+  header nav li button {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    /* background-color: yellow; */
+  }
+
+  header nav li section {
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+  }
+
+  
+  header nav li section ul {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+  }
+
+  header nav li section ul > li {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* background-color: azure; */
+  }
+
+}
+
+
+
+/* Zet de laatse sectie en de picture ook in een sectie,
+Kijk wel even naar alle anderen delen waar je de ul aanspreekt */
+@media (width > 67em) {
+  header:has(ul > li > p) {
+    height: 15vh;
+  }
+
+  section[aria-label="footer grid"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  footer > section:nth-last-of-type(1) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    /* Zorgt er voor dat de creating tommorow
+    aan de linker kant blijft */
+    gap: 20em;
+  }
+
+  footer > section:nth-of-type(2) ul,
+  footer section > svg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--white-space-small);
+  }
+
+  /* De laatste ul naast de svg, 
+  zorgt voor dat button boven blijft en
+  aan de rechterkant van de pagina */
+  footer > section:nth-of-type(2) ul {
+    display: flex;
+
+    justify-content: flex-end;
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media (width > 70em) {
+  footer > section:nth-last-of-type(1) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    /* Zorgt er voor dat de creating tommorow
+    aan de linker kant blijft */
+    gap: 35em;
+  }
+}
+
+@media (width > 90em) {
+  footer {
+    padding: var(--white-space-none-xl);
+  }
+}
+
+/**************
+STATES
+**************/
+/* button:hover {
+  background-color: var(--hover-button);
+  transition: var(--transition-5);
+  border: .5em solid var(--hover-button);
+} */
+
+header svg:hover {
+  color: var(--hover-special-svg);
+}
+
+header img:hover,
+header button[aria-label="toggle menu"]:hover {
+  background-color: var(--hover-header-img);
+  transition: var(--transition-5);
+  border: .5em solid var(--hover-button);
+}
+
+main section:nth-of-type(1) a:hover,
+header ul a:hover,
+footer a:hover {
+  color: var(--hover-special-a);
+  font-size: var(--font-size-small);
+
+  text-decoration: var(--text-decoration-underline);
+}
+
+footer button:hover {
+  color: var(--hover-special-a);
+  font-size: var(--font-size-xsmall);
+}
+
+main section:nth-of-type(2) > a:hover,
+main section:nth-of-type(3) a:hover {
+  color: var(--hover-main-a);
+  font-size: var(--font-size-small);
+}
+
+main nav ul > li svg:hover {
+  color: var(--hover-special-svg);
+  /* padding: var(--white-space-small); */
+}
+
+/* Styling buttons */
+main section:nth-of-type(2) ul::scroll-button(*):hover {
+  background-color: var(--hover-bg-button-ca);
+  border: .5em solid var(--hover-bg-button-ca);
+}
+
+
+/* header li> a:focus,
+main section:nth-of-type(1) a:focus, 
+footer a:focus {
+  background-color: var(--focus-background-pink);
+  color: var(--focus-text);
+
+  font-weight: var(--weight-heavy);
+  padding: var(--focus-padding);
+} */
+
+/* header button:focus {
+  background-color: var(--focus-header-state);
+} */
+
+/* header > a:focus svg{
+  background-color: var(--focus-header-state);
+} */
+
+/* header > a:focus img{
+  background-color: var(--focus-header-state);
+} */
+
+/* main a:focus {
+  background-color: var(--focus-background-main);
+  color: var(--focus-text);
+
+  font-weight: var(--weight-heavy);
+  padding: var(--focus-padding);
+} */
+
+
+/* a:active,
+button:active {
+  transform: var(--transform);
+} */
+
+/* footer a:active {
+  transform: var(--transform-footer);
+} */
+
+
+/* main section:nth-of-type(1) a:visited, 
+footer a:visited {
+  background-color: var(--visited-pink);
+} */
+
+/* header li> a:visited{
+  background-color: var(--visited-nav);
+} */
+
+/* main a:visited {
+  background-color: var(--visited-main);
+  font-weight: var(--visited-font-weight);
+} */
+
+
+
+/**************
+Animatie
+**************/
