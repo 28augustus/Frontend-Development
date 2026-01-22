@@ -5,6 +5,9 @@ console.log("hi");
 const deMenuButton = document.querySelector("button");
 const deNav = document.querySelector("nav");
 
+const deSearchbutton = document.querySelector('button[aria-label="zoekbalk: gesloten"]');
+const deFrom = document.querySelector("form")
+
 const headerElem = document.querySelector("header");
 const bodyElem = document.body;
 
@@ -13,12 +16,24 @@ const deHeadersubmenuButtons = document.querySelectorAll("header nav button");
 // hamburger
 deMenuButton.onclick = toggleMenu;
 
+// search button
+deSearchbutton.onclick = toggleSearch
+
 function toggleMenu() {
   deMenuButton.classList.toggle("is-open");
   deNav.classList.toggle("geopend");
   bodyElem.classList.toggle("hidden");
 }
 
+//Search button
+function toggleSearch() {
+  deSearchbutton.classList.toggle("is-open");
+  deFrom.classList.toggle("geopend");
+}
+
+
+//Bronvermelding: Sanne 't Hooft geholpen met JavaScript 
+// schrijven voor het uitklappen hamburgermenu
 // submenu
 deHeadersubmenuButtons.forEach(function (deHeadersubmenuButton) {
   deHeadersubmenuButton.onclick = toggleheadersub;
