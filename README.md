@@ -22,18 +22,6 @@ Blauw
 
 #### Je focus:
 Responsive plane
-Surface plane:
-
-4. Custom properties (meer dan alleen kleur)
-1. prefers-reduced-motion <!-- Fixen -->
-
-2. Animaties: hover, micro-interactie <!-- Deze niet bijzonder -->
-5. Micro interacties <!-- Deze niet hoort bij 2 -->
-6. States van controls (hover, focused etc.) <!-- Deze niet -->
-
-3. SVG stylen en animeren <!-- Deze niet helemaal niet de svg zit buiten de link  deze doe je nu niet-->
-
-EXTRA 7. Ik heb 1x has() gebruikt, maar wel met hulp, maar zelf bedacht dat ik het kon gebruiken
 
 </details>
 
@@ -377,25 +365,38 @@ De tijd blok was verandert, nadat ik de error had opgelost. Ik moest 2 tijdblokk
 
 ### Je uitkomst - karakteristiek screenshots:
 
-  <img src="" width="375px" alt="uitomst opdracht 1">
-  <img src="" width="375px" alt="uitomst opdracht 2">
+  <img src="readme-images-new/readme_start_home.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images-new/readme_start_cmd.png" width="375px" alt="uitomst opdracht 2">
 
 ### Dit ging goed/Heb ik geleerd:
+De website responsive maken met grid en flex, waardoor dingen zijn verbetert die eerst mis gingen of niet goed waren.
 
-  <img src="" width="375px" alt="Top">
+Veel meer er uit kunnen halen en begrijpen wat grid is en hoe het werkt.
+  <img src="readme-images-new/readme_top_full_screen.png.png" width="375px" alt="Top">
 
-  <img src="" width="375px" alt="Top">
+  <img src="readme-images-new/readme_top_responsive.png.png" width="375px" alt="Top">
 
-  <img src="r" width="375px" alt="Top">
+  <img src="readme-images-new/readme_top_responsive_carousel.png" width="375px" alt="Top">
 
 
 ### Dit was lastig/Is niet gelukt:
+De time block was erg lastig goed te krijgen, maar uit eindelijk is het gelukt
+  <img src="readme-images-new/readme_opendag_time_fout.png" width="375px" alt="bummer">
 
-  <img src="" width="375px" alt="bummer">
+  <img src="readme-images-new/readme_opendag_time_fout_again.png" width="375px" alt="bummer">
 
-  <img src="" width="375px" alt="bummer">
+De header steekt uit mijn beeld
+  <img src="readme-images-new/readme_header_steekt_uit_fout.png" width="375px" alt="bummer">
 
-  <img src="" width="375px" alt="bummer">
+De submenu klapt niet goed open, niet zoals HvA iniedergeval
+  <img src="readme-images-new/readme_header_klapt_niet_goed_uit_fout.png" width="375px" alt="bummer">
+
+Ik mis nog de Zoek en zoek icon naast de search area (achtergrond was ook anders)
+  <img src="readme-images-new/readme_header_search_area_missing_fout.png" width="375px" alt="bummer">
+
+De footer disclaimer is niet gegaan hoe ik wilde
+  <img src="readme-images-new/readme_footer_disclaimer_fout.png" width="375px" alt="bummer">
+
 
 </details>
 
@@ -412,7 +413,7 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 Nb. ChatGpT en andere AI horen er ook bij.
 Nb. Vermeld de bronnen ook in je code.
 
-1. ChatGPT:
+1. Ai:
 
 - https://css-tricks.com/snippets/css/a-guide-to-flexbox/ Chatgpt heeft uitgelegd wat ik nodig had om mijn menu te centreren en de website heeft het verder uitgelegd
 - Code laten uitleggen wat het doet en errors laten bekijken uitleggen (Header menu, Niet gelukt en heb het gevraagd aan een klas genoot : Roos Buskermolen)
@@ -427,10 +428,31 @@ Nb. Vermeld de bronnen ook in je code.
   background-color: var(--focus-header-state);
   }
 
+- Ai prompt: Ik wil een has() maken. Het moet het volgende zeggen:
+Als er in de header een ul zit met een directe li 
+en in die li moet een directe p hebben dan...
+
+Antwoord:
+header:has(ul > li > p)
+
+- ChatGPT gebruikt om img zo groot als hele ding gezet
+    Prompt: Hoe kan ik zorgen dat mijn img in mijn grid van boven tot onder 
+    staat ongeacht of de groote kleiner of groter is dan de bestaande img? 
+    in mijn voorbeeld zie je gewoon minder van de afbeelding, als of er ee 
+    mask over zit
+  
+    Antwoord:
+    .grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
 2. HTML:
 
 - BRONVERMELDING, skip to main https://www.a11y-collective.com/blog/skip-to-main-content/ (uitleggen hoe je de skip to main link kan maken en waar ik wat moet plaatsen)
 - BRONVERMELDING, co-pilot gebruikt voor betere naam aria-labels
+- https://www.w3schools.com/cssref/tryit.php?filename=trycss_grid-column de span gemaakt
 
 3. CSS:
 
@@ -442,19 +464,15 @@ Nb. Vermeld de bronnen ook in je code.
 
 - BRONVERMELDING: Carousel: https://codepen.io/shooft/pen/QwjQGZe?editors=1100* hoe de carousel gemaakt moet worden
 - BRONVERMELDING: Carousel: https://codepen.io/shooft/pen/QwjQGZe Hoe de buttons moeten worden gemaakt
+- BRONVERMELDING: https://codepen.io/shooft/pen/QwjQGZe Carousel oefening school
+https://youtu.be/g03Yldh9Nkw?si=wqSNR9LvJ2BQV50v YouTube video titel: 
+Learning how CSS-only carousels are going to work (Kevin Powell)
+- BRONVERMELDING: voor de interpolate-size: https://developer.chrome.com/docs/css-ui/animate-to-height-auto?hl=ja
+
+- https://www.w3schools.com/css/tryit.asp?filename=trycss_forms */ (hoe ik een form moet maken en hoe ik het kan stylen)
 
 4. JS:
 
 - BRONVERMELDING Roos Buskermolen: deNav (geholpen wat ik moest plaatsen in js)
 - BRONVERMELDING sticky header: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll + Sanne 't Hooft (Hoe de header weg gaat als je omlaag scrolt en terug wanneer je omhoog scrolt)
 </details>
-
-
-
-<!-- Todo:
-- Website responsive maken, zodat op verschillende telefoons goed is
-- Body heeft margin nog
-- Minder padding gebruiken (white space, small - medium- large) 
-- Reduce-motion werkt niet
-- Donderdag 13 december grid is van de hele sectie af 
-- De after moet worden aangepast nu komt er een dubbele streep-->
