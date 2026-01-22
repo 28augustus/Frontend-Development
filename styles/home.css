@@ -10,6 +10,7 @@ main section:nth-of-type(1) {
   position: relative;
   
   background-color: var(--color-bg-section);
+  padding: var(--white-space-none);
 }
 
 
@@ -68,27 +69,27 @@ main section:nth-of-type(3) h2 {
 }
 
 
-
+/* Svg eerste section */
 main section:nth-of-type(1) > svg:nth-last-of-type(1) {
   position: absolute;
   top: 0;
   bottom: 0;
   color: var(--color-icon-pink);
-  top: 37.1em;
+  top: 40.1em;
   right: 1.8em;
 }
 
 main section:nth-of-type(1) > svg:nth-last-of-type(2) {
   position: absolute;
   color: var(--color-icon-black);
-  top: 37em;
+  top: 40em;
   right: 0;
 }
 
 main section:nth-of-type(1) > svg:nth-last-of-type(3) {
   position: absolute;
   color: var(--color-icon-blue);
-  top: 27em;
+  top: 29em;
   right: -4.5em;
 }
 
