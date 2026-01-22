@@ -1,8 +1,4 @@
 /**************/
-/*ALGEMENE STYLING */
-/**************/
-
-/**************/
 /* MAIN */
 /**************/
 main {
@@ -246,10 +242,6 @@ main section:nth-of-type(2) li {
 main section:nth-of-type(2) li > a {
   display: flex;
   flex-direction: column;
-
-  /* background-color: greenyellow; */
-
-  /* padding: var(--white-space-none-small); */
 }
 
 main section:nth-of-type(2) a > h3 {
@@ -350,10 +342,7 @@ main section:nth-of-type(4) img {
 @media (width > 44em) {
   /* Carousel area */
   main section:nth-of-type(2) a > img {
-    /* width: 2em; */
     height: 40vh;
-
-    /* object-fit: cover; */
   }
 
   /* Alle verhalen opschuiven */
@@ -400,11 +389,9 @@ main section:nth-of-type(4) img {
   }
 }
 
-/* TO DO: VOOR WIE? De afbeelding schaalt
-niet goed mee, en de uitlijning moet aan de
-linker kant staan */
 
-/* Article naast elkaar als groter dan 64em */
+
+
 @media (width > 58em) {
   /* subnav */
   main section:nth-of-type(1) nav {
@@ -471,7 +458,7 @@ linker kant staan */
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* padding: var(--white-space-large-medium); */
+  
   main section:nth-of-type(3) article {
     display: flex;
     flex-direction: column;
@@ -509,10 +496,6 @@ linker kant staan */
 }
 
 @media (width > 90em) {
-  /* main section:nth-of-type(1) {
-    padding-inline: 5em;
-  } */
-
   /* Carousel area */
   main section:nth-of-type(2) {
     grid-template-columns: 35em 1fr;
@@ -522,12 +505,6 @@ linker kant staan */
     width: 20vw;
     height: 47vh;
   }
-
-  /* Perfect format, but does not scale */
-  /* main section:nth-of-type(2) a > img {
-    width: 20em;
-    height: 27em;
-  } */
 
   main section:nth-of-type(2) ul::scroll-button(right) {
     left: 44em;
@@ -549,7 +526,6 @@ linker kant staan */
 
     padding: var(--white-space-none-xl);
     column-gap: var(--white-space-small);
-    /* background-color: purple; */
   }
 
   main section:nth-of-type(4) h2 {
@@ -573,25 +549,6 @@ linker kant staan */
   }
 }
 
-/* main section:nth-of-type(4) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-} */
-
-/* main section:nth-of-type(4) h2 {
-    grid-column: 1 / span 2;
-}
-
-main section:nth-of-type(4) p {
-    display: flex;
-    flex-direction: row;
-}
-
-main section:nth-of-type(4) img {
-    grid-row: 2;
-} */
-
 /* align a met svg arrows + tekst*/
 main section:nth-of-type(2) a,
 main article a,
@@ -599,15 +556,3 @@ main section:nth-of-type(4) p {
   display: flex;
   align-items: center;
 }
-
-/* GROTERE FORMAAT
-main section:nth-of-type(2) a > img {
-  order: 1;
-  
-  max-width: 20em;
-  height: 27em;
-
-  object-fit: cover;
-
-}
-*/

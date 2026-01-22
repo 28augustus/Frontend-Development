@@ -1,8 +1,4 @@
 /**************/
-/*ALGEMENE STYLING */
-/**************/
-
-/**************/
 /* MAIN */
 /**************/
 main section {
@@ -71,7 +67,8 @@ main section:nth-of-type(3) h2 {
   margin: 0;
 }
 
-/* TO DO: FIX THE COLOR WITH VAR pls */
+
+
 main section:nth-of-type(1) > svg:nth-last-of-type(1) {
   position: absolute;
   top: 0;
@@ -122,22 +119,7 @@ main section:nth-of-type(2) a {
   font-weight: var(--weight-bold);
 
   z-index: 1;
-  /* background-color: yellow; */
 }
-
-
-/* main section:nth-of-type(2) a::before {
-  content: "";
-  position: absolute;
-
-  height: 5em;
-  width: 18em;
-  left: 1em;
-  
-  background-color: var(--link-before-bg);
-  z-index: 0;
-} */
-
 
 
 main section:nth-of-type(2) p:first-of-type {
@@ -162,7 +144,7 @@ main section:nth-of-type(2) time {
   font-size: var(--font-size-small);
 }
 
-/* TO DO: VAR FONT SIZE */
+
 main section:nth-of-type(2) span {
   display: flex;
   font-size: var(--font-size-xsmall);
@@ -199,7 +181,6 @@ main article p {
 main article a {
   grid-row: 4;
 
-  /* font-size: var(--font-size-xsmall); */
   font-weight: var(--weight-bolder);
 }
 
@@ -331,12 +312,6 @@ main section:nth-of-type(2) {
   main section:nth-of-type(2) img {
     grid-column: 2;
     grid-row: 1 / -1;
-
-    /* height: 50vh;
-    height: 100%;
-
-    aspect-ratio: 1 / 1;
-    object-fit: cover; */
   }
 
   main section:nth-of-type(2) a {
@@ -348,8 +323,6 @@ main section:nth-of-type(2) {
 
 
 
-  /* TO DO: Style de Actueel articles meer naar links
-Style het gewoon beter (zie original file HvA) */
   /* Articles */
   /* Article naast elkaar als groter dan 48em */
   main section:nth-of-type(3) {
@@ -375,6 +348,8 @@ Style het gewoon beter (zie original file HvA) */
     order: -1;
   }
 }
+
+
 
 @media (width > 57em) {
   main section:nth-of-type(1) {
@@ -454,6 +429,8 @@ Style het gewoon beter (zie original file HvA) */
   }
 }
 
+
+
 @media (width > 90em) {
   main section:nth-of-type(1) {
     grid-template-columns: repeat(5, 1fr);
@@ -487,53 +464,9 @@ Style het gewoon beter (zie original file HvA) */
   main section:nth-of-type(2) {
     padding: var(--white-space-xl);
   }
-   
-  /*
-  main section:nth-of-type(2) h2 {
-    grid-column: 2 / span 6;
-    grid-row: 3;
-  }
-
-  main section:nth-of-type(2) p:last-of-type {
-    grid-column: 1 / span 5;
-    grid-row: 4;
-  }
-
-  main section:nth-of-type(2) a {
-    grid-column: 1 / span 5;
-    grid-row: 5;
-  }
-
-  main section:nth-of-type(2) img {
-    grid-column: 6 / -1;
-
-    height: 90vh;
-  }
-
-  main section:nth-of-type(2) p:first-of-type {
-    grid-column: 1 / span 4;
-    grid-row: 2;
-  } */
 
  
   main section:nth-of-type(3) {
     padding: var(--white-space-xl);
   }
 }
-
-/* 
-TO DO:
-
-  - Actueel gap between ruimtes horizontaal,
-   En verticaal wanneer het beeld 
-   groter wordt
-
-  - Als het beeld te groot wordt verandert
-    Het ook weer dus let daar op
-
-  - FOOTER heeft ruimte nodig tussen 
-    de teksten
-
-
-*/
-
