@@ -369,6 +369,40 @@ De tijd blok was verandert, nadat ik de error had opgelost. Ik moest 2 tijdblokk
 
 </details>
 
+
+## Eindgesprek Herkansing
+
+<details>
+  <summary>uitwerken voor eindgesprek herkansing</summary>
+
+### Je uitkomst - karakteristiek screenshots:
+
+  <img src="" width="375px" alt="uitomst opdracht 1">
+  <img src="" width="375px" alt="uitomst opdracht 2">
+
+### Dit ging goed/Heb ik geleerd:
+
+  <img src="" width="375px" alt="Top">
+
+  <img src="" width="375px" alt="Top">
+
+  <img src="r" width="375px" alt="Top">
+
+
+### Dit was lastig/Is niet gelukt:
+
+  <img src="" width="375px" alt="bummer">
+
+  <img src="" width="375px" alt="bummer">
+
+  <img src="" width="375px" alt="bummer">
+
+</details>
+
+
+
+
+
 ## Bronnenlijst
 
 <details open>
