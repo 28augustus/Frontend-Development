@@ -16,29 +16,11 @@
   <!--*************************************************************************************
    Bronvermelding, skip to main https://www.a11y-collective.com/blog/skip-to-main-content/ 
    ****************************************************************************************-->
-
-  <!--*************************************************************************************
-   To do to figure out how this all works:
-   - Codepen de menu buttons. Hoe staat hun html
-   - Kijk hoe de elementen er uit zien
-   - Google het hoe een menu button uit rekt en een menu wordt, want het lijken op meerdere knoppen 
-   - groot is anders dan klein namelijk 
-   ****************************************************************************************-->
   <body>
     <!-- Skip naar main -->
     <a href="#main-content">Het menu overslaan en naar de inhoud gaan</a>
 
-    <!-- Zorgt dat de header weg gaat als je scrolt 
-     en terug komt als je omhoog gaat.
-     Zorg dat de header de volle ruimte inneemt 
-     en je niet omlaag kan scrollen, maar dan
-     niet verdern dan de content yk.
-
-     En voor CMD kijk toch even of de
-     Ga direct naar ook vervangen kan worden
-     
-     -->
-    <header aria-label="StickyHeader">
+    <header aria-label="Hoofdnavigatie">
       <a href="cmd.html">
         <img
           src="images/hva_logo_small.png"
@@ -57,14 +39,8 @@
         <ul>
           <li>
             <p>Studeren</p>
-            <button aria-label="toggle headersubmenu">
-              <!-- <span>
-                Studeren
-              </span> -->
-
-              <!-- <span> -->
+            <button aria-label="header submenu studeren">
               Vind de opleiding of cursus die bij je past
-              <!-- </span> -->
 
               <svg
                 viewBox="0 0 24 24"
@@ -87,7 +63,7 @@
               </svg>
             </button>
 
-            <section aria-label="nav headersubmenu">
+            <section aria-label="header submenu studeren open">
               <a href="#">Alles over studeren</a>
 
               <p>Onderwijs</p>
@@ -134,7 +110,7 @@
           <li>
             <p>Onderzoek</p>
 
-            <button aria-label="toggle headersubmenu">
+            <button aria-label="header submenu onderzoek">
               Ontdek ons onderzoek
 
               <svg
@@ -159,7 +135,7 @@
               </svg>
             </button>
 
-            <section aria-label="nav headersubmenu">
+            <section aria-label="header submenu onderzoek open">
               <a href="#">Alles over studeren</a>
 
               <p>Onderwijs</p>
@@ -206,7 +182,7 @@
           <li>
             <p>Over de HvA</p>
 
-            <button aria-label="toggle headersubmenu">
+            <button aria-label="header submenu Over de HvA">
               Alles over onze organisatie
 
               <svg
@@ -231,7 +207,7 @@
               </svg>
             </button>
 
-            <section aria-label="nav headersubmenu">
+            <section aria-label="header submenu over de HvA open">
               <a href="#">Alles over studeren</a>
 
               <p>Onderwijs</p>
@@ -322,8 +298,9 @@
         </svg>
       </button>
 
+      <!-- Bronvermelding: https://www.w3schools.com/css/tryit.asp?filename=trycss_forms -->
       <form>
-        <input type="search" />
+        <input type="search" search="Zoeken naar" placeholder="Zoeken naar"/>
       </form>
     </header>
 
@@ -520,7 +497,6 @@
 
         <a href="#">
           <svg
-            aria-label="Koppeling naar"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -563,7 +539,6 @@
 
           <a href="#">
             <svg
-              aria-label="Koppeling naar"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -602,7 +577,6 @@
 
           <a href="#">
             <svg
-              aria-label="Koppeling naar"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -641,7 +615,6 @@
 
           <a href="#"
             ><svg
-              aria-label="Koppeling naar"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -912,20 +885,6 @@
             <button>Aanpassen cookie-instellingen</button>
           </li>
         </ul>
-
-        <!-- </section> -->
-
-        <!-- Footer afbeelding van creating tommorow, Light en Dark mode -->
-        <!-- <picture>
-          <source
-            srcset="images/creating_tommorow.png"
-            media="(prefers-color-scheme: dark)"
-          />
-          <img
-            src="images/creating_tommorow_pink.png"
-            alt="Creatig Tommorow Product logo"
-          />
-        </picture> -->
 
         <!-- Copy pasted uit original file hva.nl -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 229 24">

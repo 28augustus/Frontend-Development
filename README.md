@@ -21,15 +21,17 @@ Jada Sedoc
 Blauw
 
 #### Je focus:
-
+Responsive plane
 Surface plane:
 
-1. prefers-reduced-motion
-2. Animaties: hover, micro-interactie
-3. SVG stylen en animeren
 4. Custom properties (meer dan alleen kleur)
-5. Micro interacties
-6. States van controls (hover, focused etc.)
+1. prefers-reduced-motion <!-- Fixen -->
+
+2. Animaties: hover, micro-interactie <!-- Deze niet bijzonder -->
+5. Micro interacties <!-- Deze niet hoort bij 2 -->
+6. States van controls (hover, focused etc.) <!-- Deze niet -->
+
+3. SVG stylen en animeren <!-- Deze niet helemaal niet de svg zit buiten de link  deze doe je nu niet-->
 
 EXTRA 7. Ik heb 1x has() gebruikt, maar wel met hulp, maar zelf bedacht dat ik het kon gebruiken
 
@@ -394,6 +396,7 @@ Nb. Vermeld de bronnen ook in je code.
 2. HTML:
 
 - BRONVERMELDING, skip to main https://www.a11y-collective.com/blog/skip-to-main-content/ (uitleggen hoe je de skip to main link kan maken en waar ik wat moet plaatsen)
+- BRONVERMELDING, co-pilot gebruikt voor betere naam aria-labels
 
 3. CSS:
 
@@ -411,3 +414,13 @@ Nb. Vermeld de bronnen ook in je code.
 - BRONVERMELDING Roos Buskermolen: deNav (geholpen wat ik moest plaatsen in js)
 - BRONVERMELDING sticky header: https://johandejong.dev/blog/sticky-header-with-show-hide-on-scroll + Sanne 't Hooft (Hoe de header weg gaat als je omlaag scrolt en terug wanneer je omhoog scrolt)
 </details>
+
+
+
+<!-- Todo:
+- Website responsive maken, zodat op verschillende telefoons goed is
+- Body heeft margin nog
+- Minder padding gebruiken (white space, small - medium- large) 
+- Reduce-motion werkt niet
+- Donderdag 13 december grid is van de hele sectie af 
+- De after moet worden aangepast nu komt er een dubbele streep-->
