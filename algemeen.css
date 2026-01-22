@@ -61,6 +61,9 @@
   --color-button-carousel: #000;
   --color-txt-button-carousel: #fff;
 
+  /* Border */
+  --border-input-search: .5em solid #fff;
+
   /* Fonts */
 
   /* GEBRUIK CLAMP
@@ -387,6 +390,7 @@ header nav.geopend {
 header img {
   max-width: 12em;
   background-color: var(--color-bg-nav);
+  padding: var(--white-space-small-none);
 }
 
 /* Zorgt dat sub menu niet in zicht komt
@@ -480,22 +484,72 @@ header button [aria-label="zoekbalk: gesloten"] {
 /* To Do: var en weghalen JS om te openen */
 /* Bronvermelding: https://www.w3schools.com/css/tryit.asp?filename=trycss_forms */
 header form {
-  /* position: absolute; */
-  right: 0;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 70%;
+
+  translate: 0% -200%;
+  transition: translate 0.3s;
+  overflow-y: auto;
+
+  align-self: center;
   border-radius: 1em solid red;
   background-color: #02857D;
-  padding: var(--white-space-medium);
+  padding: var(--white-space-large-small);
 } 
+
+header form.geopend{
+  translate: 0% 30%;
+
+  z-index: -1;
+  transition: var(--transition-normal);
+}
 
 input[type=search] {
   background-color: #027069;
-  padding: 1em;
-  border: 5px solid #fff;
+  padding: var(--white-space-medium);
+  width: 80%;
+  border: var(--border-input-search);
 }
 
 
 /*
+
+header nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  translate: 0% -100%;
+  transition: translate 0.3s;
+
+  overflow-y: auto;
+
+  background-color: var(--color-bg-nav);
+}
+
+header nav.geopend {
+  translate: 0% 0%;
+
+  z-index: -1;
+  transition: var(--transition-normal);
+  padding: var(--white-space-xl-medium);
+}
+
+
+
+
+
+
+
+
+
+
+
 main section:nth-of-type(1) {
   height: 4em;
   position: relative;
@@ -642,6 +696,10 @@ footer section > svg {
 
 /* BRONVERMELDING: https://codepen.io/28augustus/pen/dPMxwaW */
 @media (width > 43em) {
+  header form.geopend{
+    translate: 0% 30%;
+  }
+
   section[aria-label="footer grid"] {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -660,6 +718,10 @@ footer section > svg {
 }
 
 @media (width > 57em) {
+  header img {
+    padding: var(--white-space-medium-small);
+  }
+
   header button[aria-label="toggle menu"] {
     display: none;
   }
@@ -671,16 +733,6 @@ footer section > svg {
     padding: var(--white-space-none);
 
   }
-
-  /* Header nav ul {
-    position:static;
-    translate:unset;
-  } */
-  
-  /* header nav li {
-    flex-basis:unset;
-    flex-grow:unset;
-  } */
   
   nav button[aria-label="toggle headersubmenu"] {
     display: flex;
@@ -742,6 +794,10 @@ footer section > svg {
     /* background-color: azure; */
   }
 
+  header form.geopend{
+    translate: 0% 50.3%;
+  }
+
 }
 
 
@@ -761,10 +817,6 @@ Kijk wel even naar alle anderen delen waar je de ul aanspreekt */
   footer > section:nth-last-of-type(1) {
     display: flex;
     flex-direction: row-reverse;
-
-    /* Zorgt er voor dat de creating tommorow
-    aan de linker kant blijft */
-    gap: 20em;
   }
 
   footer > section:nth-of-type(2) ul,
