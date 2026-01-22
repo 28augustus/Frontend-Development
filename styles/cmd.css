@@ -1,15 +1,14 @@
 /**************/
 /* MAIN */
 /**************/
+/* Haalt witte lijn weg (keep it) */
 main {
   display: flex;
   flex-direction: column;
-}
-
-main {
   background-color: var(--color-bg-main);
 }
 
+/* Color, font's padding en line height styling */
 main h1 {
   color: var(--color-text-special-heading);
 
@@ -63,8 +62,8 @@ main section:nth-of-type(4) p {
   color: var(--color-text);
 }
 
-/* subnav */
 
+/* subnav Ga direct naar*/
 main section:nth-of-type(1) {
   height: 4em;
   position: relative;
@@ -110,6 +109,7 @@ main section:nth-of-type(1) nav.is-open button > svg {
   rotate: 45deg;
 }
 
+/* Gehele submenu nav */
 main section:nth-of-type(1) ul {
   margin: 0;
   padding: var(--white-space-none);
@@ -117,6 +117,7 @@ main section:nth-of-type(1) ul {
   width: 100%;
 }
 
+/* submenu nav: Social media  */
 main section:nth-of-type(1) ul:nth-of-type(2) {
   display: flex;
   gap: var(--white-space-medium);
@@ -127,10 +128,12 @@ main section:nth-of-type(1) a {
   color: var(--color-text);
 }
 
+/* 1e a in de submenu nav (voor de after lijn) */
 main section:nth-of-type(1) ul:nth-of-type(1) li:nth-of-type(1) a {
   position: relative;
 }
 
+/* After lijn */
 main section:nth-of-type(1) ul:nth-of-type(1) li:nth-of-type(1) a::after {
   content: "";
   width: 100%;
@@ -142,16 +145,12 @@ main section:nth-of-type(1) ul:nth-of-type(1) li:nth-of-type(1) a::after {
 }
 
 
-
+/* After lijn alle secties */
 main section:nth-of-type(2) h3,
 main section:nth-of-type(2) a,
 main section:nth-of-type(3) a {
   position: relative;
   width: fit-content;
-}
-
-main section:nth-of-type(3) h2 {
-  position: relative;
 }
 
 main section:nth-of-type(2) h3::after {
@@ -174,17 +173,6 @@ main section:nth-of-type(2) > a::after {
   left: 2em;
 }
 
-
-
-main section:nth-of-type(3) h2::before {
-  content: "";
-  height: 200%;
-  width: 0.09em;
-  background-color: var(--link-before-main);
-  position: absolute;
-  left: -.5em;
-}
-
 main section:nth-of-type(3) a::after {
   content: "";
   width: 100%;
@@ -196,9 +184,31 @@ main section:nth-of-type(3) a::after {
 }
 
 
+/* Before lijn */
+main section:nth-of-type(3) h2 {
+  position: relative;
+}
+
+main section:nth-of-type(3) h2::before {
+  content: "";
+  height: 200%;
+  width: 0.09em;
+  background-color: var(--link-before-main);
+  position: absolute;
+  left: -.5em;
+}
 
 
-/* Carousel area */
+/* align a met svg arrows + tekst*/
+main section:nth-of-type(2) a,
+main article a,
+main section:nth-of-type(4) p {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Carousel area 2e sectie Ervaar de opleiding*/
 main section:nth-of-type(2) {
   display: grid;
   position: relative;
@@ -229,6 +239,7 @@ main section:nth-of-type(2) ul {
   overscroll-behavior-x: contain;
 }
 
+/* Gehele carousel lijst (alle img, h3, p en a's */
 main section:nth-of-type(2) li {
   display: grid;
 
@@ -239,6 +250,7 @@ main section:nth-of-type(2) li {
   padding: var(--white-space-none-xsmall);
 }
 
+/* Alle a's in de carousel */
 main section:nth-of-type(2) li > a {
   display: flex;
   flex-direction: column;
@@ -266,7 +278,6 @@ main section:nth-of-type(2) > a {
   position: absolute;
 
   bottom: -5em;
-
 }
 
 /* Styling buttons */
@@ -301,6 +312,8 @@ main section:nth-of-type(2) ul::scroll-button(left) {
   left: 2em;
 }
 
+
+/* 3e sectie Toelatingseisen */
 main section:nth-of-type(3) {
   display: grid;
   gap: var(--white-space-medium);
@@ -308,13 +321,13 @@ main section:nth-of-type(3) {
 }
 
 
-
+/* 4e sectie Voor wie? */
 main section:nth-of-type(4) {
   display: flex;
   flex-direction: column;
 }
 
-/* zorgt dat de ✓ goed schalen */
+/* zorgt dat de ✓ goed schalen*/
 main section:nth-of-type(4) svg {
   min-width: 8vh;
 }
@@ -339,8 +352,9 @@ main section:nth-of-type(4) img {
   padding: var(--white-space-none-small);
 }
 
+
 @media (width > 44em) {
-  /* Carousel area */
+  /* Carousel area 2e sectie Ervaar de opleiding*/
   main section:nth-of-type(2) a > img {
     height: 40vh;
   }
@@ -354,7 +368,7 @@ main section:nth-of-type(4) img {
   }
 
 
-  /* Voor wie section */
+  /* 4e sectie Voor wie */
   main section:nth-of-type(4) {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -393,7 +407,7 @@ main section:nth-of-type(4) img {
 
 
 @media (width > 58em) {
-  /* subnav */
+  /* subnav 1e sectie Ga direct naar (over de opleiding)*/
   main section:nth-of-type(1) nav {
     position: relative;
   }
@@ -406,6 +420,7 @@ main section:nth-of-type(4) img {
     display: none;
   }
 
+  /* Gehele ul navigatie */
   main section:nth-of-type(1) ul {
     display: flex;
     gap: var(--white-space-none-medium);
@@ -413,10 +428,12 @@ main section:nth-of-type(4) img {
     width: fit-content;
   }
 
+  /* 1e deel (tekst) navigatie */
   main section:nth-of-type(1) ul:nth-of-type(1) {
     position: absolute;
   }
 
+  /* 2e deel socialmedia navigatie */
   main section:nth-of-type(1) ul:nth-of-type(2) {
     display: flex;
     align-self: end;
@@ -425,13 +442,12 @@ main section:nth-of-type(4) img {
   }
 
 
-
-  /* Carousel area */
-
+  /* Carousel area 2e sectie Ervaar de opleiding */
   main section:nth-of-type(2) {
     grid-template-columns: 20em 1fr;
   }
 
+  /* Gehele Carousel lijst */
   main section:nth-of-type(2) ul {
     grid-column: 2 / span 4;
   }
@@ -444,6 +460,7 @@ main section:nth-of-type(4) img {
     right: 5em;
   }
 
+  /* Placing buttons */
   main section:nth-of-type(2) ul::scroll-button(right) {
     left: 32em;
   }
@@ -453,12 +470,11 @@ main section:nth-of-type(4) img {
   }
 
 
-
+  /* 3e sectie Toelatingseisen */
   main section:nth-of-type(3) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  
   main section:nth-of-type(3) article {
     display: flex;
     flex-direction: column;
@@ -466,7 +482,8 @@ main section:nth-of-type(4) img {
     justify-content: space-between;
   }
 
-  /* Voor wie section */
+
+  /* 4e sectie Voor wie section */
   main section:nth-of-type(4) {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -495,17 +512,20 @@ main section:nth-of-type(4) img {
   }
 }
 
+
 @media (width > 90em) {
-  /* Carousel area */
+  /* Carousel area 2e sectie Ervaar de opleiding*/
   main section:nth-of-type(2) {
     grid-template-columns: 35em 1fr;
   }
 
+  /* Alle img's in de carousel */
   main section:nth-of-type(2) a > img {
     width: 20vw;
     height: 47vh;
   }
 
+  /* Buttons placing */
   main section:nth-of-type(2) ul::scroll-button(right) {
     left: 44em;
   }
@@ -514,17 +534,20 @@ main section:nth-of-type(4) img {
     left: 39em;
   }
 
+
+  /* 3e section toelatingseisen */
   main section:nth-of-type(3) {
     padding: var(--white-space-xl);
   }
 
-  /* Voor wie section */
+
+  /* 4e section Voor wie */
   main section:nth-of-type(4) {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 5em 6em 27em 5em;
 
-    padding: var(--white-space-none-xl);
+    padding: var(--white-space-small-xl);
     column-gap: var(--white-space-small);
   }
 
@@ -533,6 +556,7 @@ main section:nth-of-type(4) img {
     grid-row: 2;
   }
 
+  /* checklist */
   main section:nth-of-type(4) ul {
     grid-column: 5 / -1;
     grid-row: 3;
@@ -547,12 +571,4 @@ main section:nth-of-type(4) img {
     height: 100%;
     object-fit: cover;
   }
-}
-
-/* align a met svg arrows + tekst*/
-main section:nth-of-type(2) a,
-main article a,
-main section:nth-of-type(4) p {
-  display: flex;
-  align-items: center;
 }

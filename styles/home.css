@@ -1,10 +1,6 @@
 /**************/
 /* MAIN */
 /**************/
-main section {
-  padding: var(--white-space-large-none);
-}
-
 main section:nth-of-type(1) {
   display: grid;
   position: relative;
@@ -13,7 +9,7 @@ main section:nth-of-type(1) {
   padding: var(--white-space-none);
 }
 
-
+/* Kleuren, font en line height's */
 main section:nth-of-type(1) h1,
 main section:nth-of-type(1) h2,
 main section:nth-of-type(1) p,
@@ -69,30 +65,32 @@ main section:nth-of-type(3) h2 {
 }
 
 
-/* Svg eerste section */
+/* Svg eerste section (driehoeken)*/
 main section:nth-of-type(1) > svg:nth-last-of-type(1) {
   position: absolute;
   top: 0;
   bottom: 0;
   color: var(--color-icon-pink);
-  top: 40.1em;
+  top: 36.1em;
   right: 1.8em;
 }
 
 main section:nth-of-type(1) > svg:nth-last-of-type(2) {
   position: absolute;
   color: var(--color-icon-black);
-  top: 40em;
+  top: 36em;
   right: 0;
 }
 
 main section:nth-of-type(1) > svg:nth-last-of-type(3) {
   position: absolute;
   color: var(--color-icon-blue);
-  top: 29em;
+  top: 26em;
   right: -4.5em;
 }
 
+
+/* 2e sectie open dag 13 december*/
 main section:nth-of-type(2) {
   display: grid;
 
@@ -109,6 +107,7 @@ main section:nth-of-type(2) h2 {
   font-weight: var(--weight-bolder);
 }
 
+/* Tekst */
 main section:nth-of-type(2) p:nth-of-type(2) {
   grid-column: 1 / span 4;
 }
@@ -122,7 +121,7 @@ main section:nth-of-type(2) a {
   z-index: 1;
 }
 
-
+/* Time block */
 main section:nth-of-type(2) p:first-of-type {
   display: block;
 
@@ -139,13 +138,12 @@ main section:nth-of-type(2) p:first-of-type {
   width: 7em;
 }
 
-/* TO DO VAR CLAMP */
 main section:nth-of-type(2) time {
   font-weight: var(--weight-bolder);
   font-size: var(--font-size-small);
 }
 
-
+/* 10.00 - 14.00 */
 main section:nth-of-type(2) span {
   display: flex;
   font-size: var(--font-size-xsmall);
@@ -161,6 +159,8 @@ main section:nth-of-type(2) img {
   padding: var(--white-space-none-medium);
 }
 
+
+/* 3e sectie Actueel*/
 main section:nth-of-type(3) article {
   display: grid;
   grid-template-rows: repeat(4, auto);
@@ -190,7 +190,14 @@ main article img {
 } 
 
 
+
 /* align a met svg arrows */
+main section:nth-of-type(2) a,
+main section:nth-of-type(3) a {
+  position: relative;
+  width: fit-content;
+}
+
 main section:nth-of-type(1) li,
 main section:nth-of-type(2) a,
 main section:nth-of-type(3) a {
@@ -198,13 +205,7 @@ main section:nth-of-type(3) a {
   align-items: center;
 }
 
-main section:nth-of-type(2) a,
-main section:nth-of-type(3) a {
-  position: relative;
-  width: fit-content;
-}
-
-
+/* After lijn */
 main section:nth-of-type(2) a::after,
 main section:nth-of-type(3) a::after {
   content: "";
@@ -216,8 +217,10 @@ main section:nth-of-type(3) a::after {
   left: 2.5em;
 }
 
+
+
 @media (width > 44em) {
-  /* Main section */
+  /* 1e section Stap in jouw toekomst */
   main section:nth-of-type(1) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 5em 5em 1fr;
@@ -235,6 +238,7 @@ main section:nth-of-type(3) a::after {
     grid-row: 2;
   }
 
+  /* navigatie */
   main section:nth-of-type(1) ul {
     grid-row: 3;
   }
@@ -247,10 +251,10 @@ main section:nth-of-type(3) a::after {
   
     Antwoord:
     .grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   */
   main section:nth-of-type(1) img {
     grid-column: 2;
@@ -260,32 +264,34 @@ main section:nth-of-type(3) a::after {
     object-fit: cover;
   }
 
-  /* TO DO: var voor kleur */
+  /* Svg eerste section (driehoeken)*/
   main section:nth-of-type(1) > svg:nth-last-of-type(1) {
     position: absolute;
     top: 0;
     bottom: 0;
-    color: #f35279;
+    color: var(--color-icon-pink);
     top: 7em;
     right: 1.8em;
   }
 
   main section:nth-of-type(1) > svg:nth-last-of-type(2) {
     position: absolute;
+    color: var(--color-icon-black);
     top: 7em;
     right: 0;
   }
 
   main section:nth-of-type(1) > svg:nth-last-of-type(3) {
     position: absolute;
-    color: #25167a;
+    color: var(--color-icon-blue);
     top: -3.7em;
     right: -4.5em;
 
   }
 
 
-main section:nth-of-type(2) {
+  /* 2e sectie Open dag 13 december */
+  main section:nth-of-type(2) {
     grid-template-columns: 1fr 20em;
     grid-template-rows: repeat(5, auto);
 
@@ -305,6 +311,7 @@ main section:nth-of-type(2) {
     grid-row: 3 / -1;
   }
 
+  /* tekst */
   main section:nth-of-type(2) p:nth-of-type(2) {
     grid-column: 1;
     grid-row: 3;
@@ -320,9 +327,6 @@ main section:nth-of-type(2) {
     grid-row: 4;
   } 
  
-
-
-
 
   /* Articles */
   /* Article naast elkaar als groter dan 48em */
@@ -353,6 +357,7 @@ main section:nth-of-type(2) {
 
 
 @media (width > 57em) {
+  /* 1e sectie Stap in jouw toekomst */
   main section:nth-of-type(1) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 5em 5em 1fr;
@@ -360,6 +365,7 @@ main section:nth-of-type(2) {
     padding: var(--white-space-none);
   }
 
+  /* driehoekjes */
   main section:nth-of-type(1) > svg:nth-last-of-type(1) {
     position: absolute;
     top: 12em;
@@ -382,6 +388,7 @@ main section:nth-of-type(2) {
   }
 
 
+  /* 2e sectie open dag 13 december */
   main section:nth-of-type(2) {
     grid-template-columns: repeat(5, auto);
     grid-template-rows: repeat(5, auto);
@@ -392,7 +399,7 @@ main section:nth-of-type(2) {
     grid-row: 2;
   }
   
-  
+  /* Time block */
   main section:nth-of-type(2) p:first-of-type {
     grid-column: 1 / span 2;
     grid-row: 2;
@@ -403,6 +410,7 @@ main section:nth-of-type(2) {
     height: 8em;
   }
 
+  /* tekst */
   main section:nth-of-type(2) p:last-of-type {
     grid-column: 1 / span 4;
     grid-row: 3;
@@ -419,6 +427,7 @@ main section:nth-of-type(2) {
   } 
   
 
+  /* 3e sectie Actueel */
   main section:nth-of-type(3) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -433,6 +442,7 @@ main section:nth-of-type(2) {
 
 
 @media (width > 90em) {
+  /* 1e sectie Stap in jouw toekomst */
   main section:nth-of-type(1) {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(9, 5em);
@@ -450,6 +460,7 @@ main section:nth-of-type(2) {
     grid-row: 5;
   }
 
+  /* navigatie */
   main section:nth-of-type(1) ul {
     grid-row: 6;
   }
@@ -462,11 +473,14 @@ main section:nth-of-type(2) {
     object-fit: cover;
   }
 
+
+  /* 2e sectie open dag 13 december */
   main section:nth-of-type(2) {
     padding: var(--white-space-xl);
   }
 
  
+  /* 3e sectie Actueel */
   main section:nth-of-type(3) {
     padding: var(--white-space-xl);
   }
