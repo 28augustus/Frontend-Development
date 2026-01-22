@@ -389,7 +389,7 @@ header nav.geopend {
 }
 
 header img {
-  max-width: 12em;
+  max-width: 10em;
   background-color: var(--color-bg-nav);
   padding: var(--white-space-small-none);
 }
